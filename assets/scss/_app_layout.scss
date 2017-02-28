@@ -1,0 +1,78 @@
+.app {
+  overflow-x: hidden;
+
+  & > .inner {
+    @include make-row();
+  }
+
+  .main-nav {
+    background-color: $gray-dark;
+    overflow: hidden;
+    @include make-sm-column(1);
+    @media screen and (min-width: $screen-sm) {
+      height: 100vh;
+      padding-right: 0;
+    }
+    @include make-md-column(4);
+
+    .source-item {
+      margin-bottom: 0;
+
+      .panel-title {
+        .jobnumber {
+          display: none;
+        }
+      }
+
+      .job {
+        border-bottom: solid 1px $gray-darker;
+
+        .status {
+          display: none;
+        }
+        .jobnumber {
+          float: right;
+        }
+      }
+
+      &:hover {
+        border-left-width: 5px;
+      }
+
+      & + .source-item {
+        .source {
+          border-top: solid 1px rgba(#fff,0.1);
+        }
+      }
+    }
+  }
+
+  .source-view {
+    @include make-sm-column(11);
+    @include make-md-column(8);
+  }
+
+  .main-header {
+    @mixin headerbg {
+      background-color: $brand-primary;
+    }
+    @include headerbg;
+    color: #fff;
+
+    .logo {
+      width: 200px;
+      display: inline-block;
+      padding: $grid-gutter-width/2;
+      box-sizing: content-box;
+      margin-top: 3px;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    & + .nav-tabs {
+      @include headerbg;
+    }
+  }
+}

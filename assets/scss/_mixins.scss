@@ -1,0 +1,5 @@
+@mixin rev-text($col:$body-bg) {
+  color: $col;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

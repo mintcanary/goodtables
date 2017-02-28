@@ -1,0 +1,95 @@
+.panel {
+  border-width: 0;
+  @include rev-text;
+
+  a {
+    color: inherit;
+  }
+
+  &.active {
+    background-color: $body-bg;
+    color: $text-color;
+    border-left-width: 5px;
+  }
+
+  .github,
+  .aws {
+    position: relative;
+
+    &:after {
+      @include icon-font();
+      position: absolute;
+      top: 13px;
+      right: 10px;
+      font-size: 15px;
+      opacity: 0.8;
+    }
+  }
+  .github {
+    &:after {
+      content: "\eab0";
+    }
+  }
+  .aws {
+    &:after {
+      content: "\ea87";
+    }
+  }
+
+  &.source-item {
+
+    .label {
+      margin-right: 10px;
+    }
+
+    .panel-title {
+      display: inline-block;
+    }
+
+    .source,
+    .job {
+      display: block;
+      text-decoration: none;
+
+      &.active {
+        color: #fff;
+        background-color: $brand-warning;
+        border-color: $brand-warning;
+      }
+    }
+
+    .source {
+      padding: 10px;
+    }
+
+    .job {
+      border-top: solid 1px rgba(#fff,0.1);
+      padding: 3px 10px;
+      font-size: 12px;
+    }
+
+    &.panel-success {
+      .source,
+      .job {
+        display: block;
+
+        &.active {
+          background-color: $brand-success;
+          border-color: $brand-success;
+        }
+      }
+    }
+
+    &.panel-danger {
+      .source,
+      .job {
+        display: block;
+
+        &.active {
+          background-color: $brand-danger;
+          border-color: $brand-danger;
+        }
+      }
+    }
+  }
+}
