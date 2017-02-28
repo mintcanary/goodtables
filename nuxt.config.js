@@ -29,6 +29,10 @@ module.exports = {
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
 
+  router: {
+    base: '/goodtables-ui/'
+  },
+
   /*
   ** Customize the progress-bar color
   */
