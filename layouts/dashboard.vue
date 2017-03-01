@@ -11,11 +11,10 @@
         </ul>
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="sources">
-
             <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
             <source-item title="okfn/some-data" integration="aws" jobnumber="2"  status="valid" time="20 minutes ago"/>
             <source-item title="okfn/test-data" integration="github" jobnumber="8"  status="invalid" time="1 day ago" job="active"/>
-
+            <source-item title="okfn/more-data" integration="aws" jobnumber="1"  status="invalid" time="2 days ago"/>
           </div>
         </div>
 
