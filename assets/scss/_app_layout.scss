@@ -59,7 +59,8 @@
 
   .main-header {
     @mixin headerbg {
-      background-color: $brand-primary;
+      background-color: $brand-info;
+      @include gradient-horizontal($brand-info, $brand-primary, 0%, 100%);
     }
     @include headerbg;
     color: #fff;
@@ -69,7 +70,7 @@
       display: inline-block;
       padding: $grid-gutter-width/2;
       box-sizing: content-box;
-      margin-top: 3px;
+      margin-top: 6px;
 
       svg {
         fill: #fff;

@@ -13,3 +13,16 @@
     margin: 0;
   }
 }
+
+.nav-tabs {
+  & > li {
+    &:only-child {
+      @include text-hide;
+
+      a {
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+}
