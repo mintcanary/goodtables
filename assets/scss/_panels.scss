@@ -66,28 +66,38 @@
       font-size: 12px;
     }
 
-    &.panel-success {
+    @mixin panel_state($colour: $brand-warning) {
       .source,
       .job {
         display: block;
 
         &.active {
-          background-color: $brand-success;
-          border-color: $brand-success;
+          background-color: $colour;
+          border-color: $colour;
+        }
+      }
+      .source.active {
+        .label {
+          background-color: #fff;
+          color: $colour;
+        }
+
+        & + .job.active {
+          border-top-color: rgba(#fff,0.2);
+        }
+
+        & ~ .integration {
+          color: #fff;
         }
       }
     }
 
-    &.panel-danger {
-      .source,
-      .job {
-        display: block;
+    &.panel-success {
+      @include panel_state($brand-success);
+    }
 
-        &.active {
-          background-color: $brand-danger;
-          border-color: $brand-danger;
-        }
-      }
+    &.panel-danger {
+      @include panel_state($brand-danger);
     }
   }
 }
