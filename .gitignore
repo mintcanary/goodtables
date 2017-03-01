@@ -9,3 +9,6 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# Copied from node_modules
+static/fonts/raleway
