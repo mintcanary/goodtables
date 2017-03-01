@@ -18,6 +18,15 @@
           </div>
         </div>
 
+        <ul class="secondary-nav nav nav-stacked">
+          <li>
+            <a><span class="icon-table"></span> Show all sources</a>
+          </li>
+          <li>
+            <a><span class="icon-equalizer"></span> Settings</a>
+          </li>
+        </ul>
+
       </nav>
       <main class="source-view">
         <nuxt/>
