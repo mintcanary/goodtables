@@ -1,3 +1,40 @@
+@font-face {
+  font-family: frictionlessdata;
+  src: url('~static/fonts/raleway/fonts/v4020/Raleway-v4020-Regular.otf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: frictionlessdata;
+  src: url('~static/fonts/raleway/fonts/v4020/Raleway-v4020-RegularItalic.otf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: frictionlessdata;
+  src: url('~static/fonts/raleway/fonts/v4020/Raleway-v4020-Regular.otf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: frictionlessdata;
+  src: url('~static/fonts/raleway/fonts/v4020/Raleway-v4020-SemiBold.otf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: frictionlessdata;
+  src: url('~static/fonts/raleway/fonts/v4020/Raleway-v4020-Bold.otf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+
 body {
   font-feature-settings:"lnum" 1;
+  text-rendering: optimizeLegibility;
 }

@@ -14,8 +14,7 @@ module.exports = {
       { src: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
