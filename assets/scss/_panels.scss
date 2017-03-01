@@ -45,6 +45,10 @@
       display: block;
       text-decoration: none;
 
+      &:hover {
+        background-color: rgba(#fff, 0.05);
+      }
+
       &.active {
         color: #fff;
         background-color: $brand-warning;
