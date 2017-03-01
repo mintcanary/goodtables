@@ -16,23 +16,17 @@
   .aws {
     position: relative;
 
-    &:after {
-      @include icon-font();
+    .integration {
       position: absolute;
       top: 13px;
       right: 10px;
       font-size: 15px;
       opacity: 0.8;
-    }
-  }
-  .github {
-    &:after {
-      content: "\eab0";
-    }
-  }
-  .aws {
-    &:after {
-      content: "\ea87";
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

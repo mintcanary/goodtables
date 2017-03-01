@@ -12,6 +12,8 @@
     <a class="job" v-bind:class="{ active: job }">
       <span class="icon-clock"></span><span class="time"> {{ time }}</span><span class="status"> {{ status }}</span><span class="jobnumber"> #{{ jobnumber }}</span>
     </a>
+    <a v-if="integration === 'github'" class="integration icon-github"></a>
+    <a v-else-if="integration === 'aws'" class="integration icon-amazon"></a>
   </div>
 </template>
 
