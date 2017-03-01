@@ -15,7 +15,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Raleway:400,400i,600,700' }
+      { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700' }
     ]
   },
 
