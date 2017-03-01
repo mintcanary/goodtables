@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ npm install
 
 # copy some files
 $ npm run font
@@ -20,6 +20,10 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# deploy to github
+$ npm run generate
+$ npm run deploy
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
