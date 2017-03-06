@@ -93,6 +93,8 @@
       display: block;
       padding: 22px 20px 20px 20px;
       box-sizing: content-box;
+      position: relative;
+      z-index: 1;
 
       svg {
         width: 150px;
@@ -103,6 +105,18 @@
         .io {
           display: none;
         }
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        z-index: -1;
+        top: 17px;
+        left: 15px;
+        @include gradient-horizontal($brand-info, $brand-primary, 0%, 100%);
       }
     }
 
