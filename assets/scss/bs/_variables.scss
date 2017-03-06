@@ -9,7 +9,7 @@ $bootstrap-sass-asset-helper: false !default;
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #17181a !default;
-$gray-darker:            lighten($gray-base, 5%) !default;
+$gray-darker:            lighten($gray-base, 6%) !default;
 $gray-dark:              lighten($gray-base, 10%) !default;
 $gray:                   lighten($gray-base, 33.5%) !default;
 $gray-light:             lighten($gray-base, 46.7%) !default;

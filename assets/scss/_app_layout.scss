@@ -83,28 +83,36 @@
 
   .main-header {
     @mixin headerbg {
-      background-color: $brand-info;
-      @include gradient-horizontal($brand-info, $brand-primary, 0%, 100%);
+      background-color: $gray-darker;
     }
-    background-color: $gray-darker;
+    @include headerbg;
     color: #fff;
+    height: 70px;
 
     .logo {
       display: block;
-      padding: $grid-gutter-width $grid-gutter-width/2 $grid-gutter-width*0.75 $grid-gutter-width/2;
+      padding: 22px 20px 20px 20px;
       box-sizing: content-box;
-      @include headerbg;
-      margin: 5px 5px 0 5px;
 
       svg {
-        width: 200px;
+        width: 150px;
         fill: #fff;
+
+        .good,
+        .tables,
+        .io {
+          display: none;
+        }
       }
     }
 
     & + .nav-tabs {
-      @include headerbg;
-      border-right: solid 5px $gray-darker;
+      margin-right: 5px;
+      margin-top: -32px;
+
+      & > li {
+        float: right;
+      }
     }
   }
 
@@ -129,8 +137,9 @@
       pointer-events: auto;
 
       &:first-child {
-        border-top-width: 2px;
+        border-top-width: 0;
         @media screen and (min-width: $screen-sm) {
+          border-top-width: 2px;
           box-shadow: 0px 20px 30px 30px rgba($gray-dark,0.75);
         }
       }
@@ -157,9 +166,10 @@
   }
 
   .source-view {
-
-    & > .inner {
-      padding: $grid-gutter-width/2 $grid-gutter-width;
+    & > div {
+      & > .inner {
+        padding: $grid-gutter-width/2 $grid-gutter-width;
+      }
     }
 
     .source-item {
@@ -174,7 +184,7 @@
       .job {
         padding-top: $grid-gutter-width/4;
         padding-bottom: $grid-gutter-width/4;
-        
+
         .jobnumber {
           display: none;
         }
