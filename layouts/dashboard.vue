@@ -9,6 +9,16 @@
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="#sources" aria-controls="sources" role="tab" data-toggle="tab">Sources</a></li>
         </ul>
+
+        <ul class="secondary-nav nav nav-stacked two-items">
+          <li>
+            <a><span class="icon-table"></span> Show all sources</a>
+          </li>
+          <li>
+            <a><span class="icon-equalizer"></span> Settings</a>
+          </li>
+        </ul>
+
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="sources">
             <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
@@ -17,15 +27,6 @@
             <source-item title="okfn/more-data" integration="aws" jobnumber="1"  status="invalid" time="2 days ago"/>
           </div>
         </div>
-
-        <ul class="secondary-nav nav nav-stacked">
-          <li>
-            <a><span class="icon-table"></span> Show all sources</a>
-          </li>
-          <li>
-            <a><span class="icon-equalizer"></span> Settings</a>
-          </li>
-        </ul>
 
       </nav>
       <main class="source-view">
