@@ -21,6 +21,7 @@
 
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="sources">
+            <add-item item="a source"/>
             <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
             <source-item title="okfn/some-data" integration="aws" jobnumber="2"  status="valid" time="20 minutes ago"/>
             <source-item title="okfn/test-data" integration="github" jobnumber="8"  status="invalid" time="1 day ago" job="active"/>
@@ -38,13 +39,14 @@
 
 <script>
 import Logo from '~components/Logo.vue'
-
+import AddItem from '~components/add_item.vue'
 import SourceItem from '~components/source_list_item.vue'
 
 export default {
   components: {
-    SourceItem,
-    Logo
+    Logo,
+    AddItem,
+    SourceItem
   }
 }
 </script>
