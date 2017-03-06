@@ -18,19 +18,23 @@
 
     .integration {
       position: absolute;
-      top: 13px;
-      right: 10px;
+      top: 1px;
+      right: 0;
       font-size: 15px;
-      opacity: 0.8;
       text-decoration: none;
+      padding: 11px 10px;
+      @include gradient-horizontal(rgba($gray-dark,0), $gray-dark, 0%, 25%);
+      color: rgba(#fff,0.8);
 
       &:hover {
-        opacity: 1;
+        color: #fff;
       }
     }
   }
 
   &.source-item {
+    $hover-bg: lighten($gray-dark,4%);
+    white-space: nowrap;
 
     .label {
       margin-right: 10px;
@@ -46,7 +50,7 @@
       text-decoration: none;
 
       &:hover {
-        background-color: rgba(#fff, 0.05);
+        background-color: $hover-bg;
       }
 
       &.active {
@@ -58,6 +62,12 @@
 
     .source {
       padding: 10px;
+
+      &:hover {
+        & ~ .integration {
+          @include gradient-horizontal(rgba($hover-bg,0), $hover-bg, 0%, 25%);
+        }
+      }
     }
 
     .job {
@@ -88,7 +98,12 @@
         }
 
         & ~ .integration {
-          color: #fff;
+          color: rgba(#fff,0.8);
+          @include gradient-horizontal(rgba($colour,0), $colour, 0%, 25%);
+
+          &:hover {
+            color: #fff;
+          }
         }
       }
     }
@@ -99,6 +114,38 @@
 
     &.panel-danger {
       @include panel_state($brand-danger);
+    }
+
+    &.active {
+      .source,
+      .job {
+        &:not(.active) {
+          &:hover {
+            background-color: inherit;
+          }
+        }
+      }
+      .source:hover ~ .integration {
+        @include gradient-horizontal(rgba(#fff,0), #fff, 0%, 25%);
+      }
+      .integration {
+        @include gradient-horizontal(rgba(#fff,0), #fff, 0%, 25%);
+        color: rgba($text-color,0.8);
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+      &.panel-success {
+        .source.active:hover ~ .integration {
+          @include gradient-horizontal(rgba($brand-success,0), $brand-success, 0%, 25%);
+        }
+      }
+      &.panel-danger {
+        .source.active:hover ~ .integration {
+          @include gradient-horizontal(rgba($brand-danger,0), $brand-danger, 0%, 25%);
+        }
+      }
     }
   }
 }
