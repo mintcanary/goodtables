@@ -126,10 +126,10 @@
         }
       }
       .source:hover ~ .integration {
-        @include gradient-horizontal(rgba(#fff,0), #fff, 0%, 25%);
+        @include gradient-horizontal(rgba($body-bg,0), $body-bg, 0%, 25%);
       }
       .integration {
-        @include gradient-horizontal(rgba(#fff,0), #fff, 0%, 25%);
+        @include gradient-horizontal(rgba($body-bg,0), $body-bg, 0%, 25%);
         color: rgba($text-color,0.8);
 
         &:hover {

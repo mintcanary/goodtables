@@ -10,7 +10,7 @@
       <h3 class="panel-title">{{ integration }}/{{ title }}<span class="jobnumber">#{{ jobnumber }}</span></h3>
     </a>
     <a class="job" v-bind:class="{ active: job }">
-      <span class="jobnumber"> #{{ jobnumber }}</span><span class="icon-clock"></span><span class="time"> {{ time }}</span><span class="status"> {{ status }}</span>
+      <span class="jobnumber"> #{{ jobnumber }}</span><span class="status"> {{ status }}</span><span class="icon-clock"></span><span class="time"> {{ time }}</span>
     </a>
     <a v-if="integration === 'github'" class="integration icon-github"></a>
     <a v-else-if="integration === 'aws'" class="integration icon-amazon"></a>

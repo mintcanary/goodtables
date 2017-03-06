@@ -28,7 +28,7 @@
     }
 
     .source-item {
-      
+
       .panel-title {
         .jobnumber {
           display: none;
@@ -57,7 +57,7 @@
 
         &.active {
           .source {
-            border-top-color: #fff;
+            border-top-color: $body-bg;
           }
           &.panel-danger {
             .source.active {
@@ -76,6 +76,9 @@
 
   .source-view {
     @include make-sm-column(8);
+    @media screen and (min-width: $screen-sm) {
+      padding-left: 0;
+    }
   }
 
   .main-header {
@@ -149,6 +152,36 @@
       }
       &.three-items + .tab-content {
         padding-bottom: 96px;
+      }
+    }
+  }
+
+  .source-view {
+
+    & > .inner {
+      padding: $grid-gutter-width/2 $grid-gutter-width;
+    }
+
+    .source-item {
+      margin-top: $grid-gutter-width/2;
+      margin-bottom: $grid-gutter-width/2;
+
+      .source {
+        padding-top: $grid-gutter-width/2;
+        padding-bottom: $grid-gutter-width/2;
+      }
+
+      .job {
+        padding-top: $grid-gutter-width/4;
+        padding-bottom: $grid-gutter-width/4;
+        
+        .jobnumber {
+          display: none;
+        }
+        .status {
+          float: right;
+          text-transform: capitalize;
+        }
       }
     }
   }
