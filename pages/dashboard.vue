@@ -1,8 +1,5 @@
 <template>
   <div>
-    <header class="main-header">
-      
-    </header>
     <section class="inner">
       <h2 class="source-title">
         Test Data

@@ -3,7 +3,7 @@
     <div class="inner">
       <nav class="main-nav">
         <header class="main-header">
-          <logo/>
+          
         </header>
 
         <ul class="nav nav-tabs" role="tablist">
