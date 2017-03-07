@@ -82,17 +82,11 @@
   }
 
   .main-header {
-    @mixin headerbg {
-      background-color: $gray-darker;
-    }
-    @include headerbg;
-    color: #fff;
     height: 70px;
+    background-image: none;
 
     .logo {
-      display: block;
       padding: 22px 20px 20px 20px;
-      box-sizing: content-box;
       position: relative;
       z-index: 1;
 
