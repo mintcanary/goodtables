@@ -1,6 +1,6 @@
 .panel {
   border-width: 0;
-  @include rev-text;
+  @include rev-out;
 
   a {
     color: inherit;

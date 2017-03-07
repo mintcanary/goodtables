@@ -1,5 +1,9 @@
-@mixin rev-text($col:$body-bg) {
+@mixin rev-out($col:$body-bg) {
   color: $col;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  svg {
+    fill: $col;
+  }
 }

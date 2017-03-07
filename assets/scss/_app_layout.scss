@@ -7,7 +7,7 @@
 
   .main-nav {
     background-color: $gray-dark;
-    @include rev-text;
+    @include rev-out;
     overflow: hidden;
     @include make-sm-column(4);
     @media screen and (min-width: $screen-sm) {
@@ -98,7 +98,6 @@
 
       svg {
         width: 150px;
-        fill: #fff;
 
         .good,
         .tables,
