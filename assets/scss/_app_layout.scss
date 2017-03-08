@@ -146,7 +146,8 @@
       left: -5px;
       z-index: 2;
 
-      [class^="icon-"] {
+      [class*=" icon-"],
+      [class^=icon-] {
         display: inline-block;
         border-radius: 50%;
         padding: 0.4em;
