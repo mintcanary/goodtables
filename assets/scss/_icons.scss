@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('~static/fonts/icons/icomoon.eot?kakpl9');
-  src:  url('~static/fonts/icons/icomoon.eot?kakpl9#iefix') format('embedded-opentype'),
-    url('~static/fonts/icons/icomoon.ttf?kakpl9') format('truetype'),
-    url('~static/fonts/icons/icomoon.woff?kakpl9') format('woff'),
-    url('~static/fonts/icons/icomoon.svg?kakpl9#icomoon') format('svg');
+  src:  url('~static/fonts/icons/icomoon.eot?rbgcug');
+  src:  url('~static/fonts/icons/icomoon.eot?rbgcug#iefix') format('embedded-opentype'),
+    url('~static/fonts/icons/icomoon.ttf?rbgcug') format('truetype'),
+    url('~static/fonts/icons/icomoon.woff?rbgcug') format('woff'),
+    url('~static/fonts/icons/icomoon.svg?rbgcug#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -36,6 +36,12 @@
   }
 }
 
+.icon-grid:before {
+  content: "\e900";
+}
+.icon-list:before {
+  content: "\e901";
+}
 .icon-clock:before {
   content: "\e94e";
 }
@@ -50,9 +56,6 @@
 }
 .icon-checkmark:before {
   content: "\ea10";
-}
-.icon-table:before {
-  content: "\ea70";
 }
 .icon-amazon:before {
   content: "\ea87";

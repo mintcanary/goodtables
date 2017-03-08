@@ -3,8 +3,8 @@
     <div class="inner">
       <nav class="main-nav">
         <header class="main-header">
-          <a v-on:click="view = 'default-view'" class="show-default-view">Default view</a>
-          <a v-on:click="view = 'list-view'" class="show-list-view">List view</a>
+          <a v-on:click="view = 'default-view'" class="show-view-default"><span>Default view</span></a>
+          <a v-on:click="view = 'list-view'" class="show-view-list"><span>List view</span></a>
         </header>
 
         <ul class="nav nav-tabs" role="tablist">
@@ -13,7 +13,7 @@
 
         <ul class="secondary-nav nav nav-stacked two-items">
           <li>
-            <a><span class="icon-table"></span> Show all sources</a>
+            <a><span class="icon-plus"></span> Add source</a>
           </li>
           <li>
             <a><span class="icon-equalizer"></span> Settings</a>
@@ -22,7 +22,6 @@
 
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="sources">
-            <!--<add-item item="a source"/>-->
             <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
             <source-item title="okfn/some-data" integration="aws" jobnumber="2"  status="valid" time="20 minutes ago"/>
             <source-item title="okfn/test-data" integration="github" jobnumber="8"  status="invalid" time="1 day ago" job="active"/>
@@ -40,13 +39,11 @@
 
 <script>
 import Logo from '~components/Logo.vue'
-import AddItem from '~components/add_item.vue'
 import SourceItem from '~components/source_list_item.vue'
 
 export default {
   components: {
     Logo,
-    AddItem,
     SourceItem
   },
   data () {

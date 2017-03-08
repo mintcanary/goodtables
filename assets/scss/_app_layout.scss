@@ -193,17 +193,44 @@
     }
   }
 
-  .show-default-view {
+  [class^='show-view-'] {
+    float: right;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 4px;
+
+    span {
+      @include text-hide;
+    }
+
+    &:before {
+      @include icon-font();
+      font-size: 32px;
+      padding: 10px;
+      display: inline-block;
+    }
+  }
+
+  .show-view-default {
     display: none;
+    &:before {
+      content: "\e901";
+    }
+  }
+
+  .show-view-list {
+    &:before {
+      content: "\e900";
+    }
   }
 
   &.list-view {
 
-    .show-list-view {
+    .show-view-list {
       display: none;
     }
 
-    .show-default-view {
+    .show-view-default {
       display: inline-block;
     }
 
