@@ -2,7 +2,7 @@
   $main-nav-bg: $gray-dark;
   overflow-x: hidden;
 
-  & > .inner {
+  .default {
     @include make-row();
   }
 
@@ -74,16 +74,17 @@
         }
       }
     }
-
-    &:after {
-      content: '';
-      height: 50px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      @include gradient-vertical(rgba($main-nav-bg,0), $main-nav-bg, 0%, 100%);
+    @media screen and (min-width: $screen-sm) {
+      &:after {
+        content: '';
+        height: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        @include gradient-vertical(rgba($main-nav-bg,0), $main-nav-bg, 0%, 100%);
+      }
     }
   }
 
@@ -204,6 +205,24 @@
     }
   }
 
+  section.add,
+  section.settings {
+    width: 0;
+    height: 100vh;
+    @include transition(width 0.2s ease);
+    overflow: hidden;
+    float: left;
+    margin-left: -15px;
+  }
+
+  section.add {
+    background-color: $brand-primary;
+  }
+
+  section.settings {
+    background-color: $brand-info;
+  }
+
   [class^='show-view-'] {
     float: right;
     text-decoration: none;
@@ -251,7 +270,7 @@
       }
     }
 
-    & > .inner {
+    .default {
       @media screen and (min-width: $screen-sm) {
         width: 200%;
         margin-right: 0;
@@ -294,6 +313,42 @@
         width: 50%;
         height: 100vh;
         overflow: hidden;
+      }
+    }
+  }
+
+  &.add-view,
+  &.settings-view {
+    .inner {
+      width: 200vw;
+      @include transition(width 0.2s ease);
+
+      .default {
+        width: 100vw;
+        float: left;
+        margin-left: 0;
+
+        .main-nav {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &.add-view {
+    @media screen and (min-width: $screen-sm) {
+      section.add {
+        width: 33vw;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &.settings-view {
+    @media screen and (min-width: $screen-sm) {
+      section.settings {
+        width: 33vw;
+        padding-left: 15px;
       }
     }
   }

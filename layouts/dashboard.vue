@@ -1,39 +1,55 @@
 <template>
   <div class="app" :class="view">
     <div class="inner">
-      <nav class="main-nav">
+      <section class="add">
         <header class="main-header">
-          <a v-on:click="view = 'default-view'" class="show-view-default"><span>Default view</span></a>
-          <a v-on:click="view = 'list-view'" class="show-view-list"><span>List view</span></a>
+          <a v-on:click="view = 'default-view'" class="close"><span>Close</span></a>
+          Add source
         </header>
+      </section>
+      <section class="settings">
+        <header class="main-header">
+          <a v-on:click="view = 'default-view'" class="close"><span>Close</span></a>
+          Settings
+        </header>  
+      </section>
+      <div class="default">
 
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#sources" aria-controls="sources" role="tab" data-toggle="tab">Sources</a></li>
-        </ul>
+        <nav class="main-nav">
+          <header class="main-header">
+            <a v-on:click="view = 'default-view'" class="show-view-default"><span>Default view</span></a>
+            <a v-on:click="view = 'list-view'" class="show-view-list"><span>List view</span></a>
+          </header>
 
-        <ul class="secondary-nav nav nav-stacked">
-          <li>
-            <a><span class="icon-plus label-success"></span> <span class="label label-success">Add source</span></a>
-          </li>
-          <li>
-            <a><span class="icon-equalizer label-info"></span> <span class="label label-info">Settings</span></a>
-          </li>
-        </ul>
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#sources" aria-controls="sources" role="tab" data-toggle="tab">Sources</a></li>
+          </ul>
 
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="sources">
-            <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
-            <source-item title="okfn/some-data" integration="aws" jobnumber="2"  status="valid" time="20 minutes ago"/>
-            <source-item title="okfn/test-data" integration="github" jobnumber="8"  status="invalid" time="1 day ago" job="active"/>
-            <source-item title="okfn/more-data" integration="aws" jobnumber="1"  status="invalid" time="2 days ago"/>
+          <ul class="secondary-nav nav nav-stacked">
+            <li>
+              <a v-on:click="view = 'add-view'"><span class="icon-plus label-success"></span> <span class="label label-success">Add source</span></a>
+            </li>
+            <li>
+              <a v-on:click="view = 'settings-view'"><span class="icon-equalizer label-info"></span> <span class="label label-info">Settings</span></a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="sources">
+              <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
+              <source-item title="okfn/some-data" integration="aws" jobnumber="2"  status="valid" time="20 minutes ago"/>
+              <source-item title="okfn/test-data" integration="github" jobnumber="8"  status="invalid" time="1 day ago" job="active"/>
+              <source-item title="okfn/more-data" integration="aws" jobnumber="1"  status="invalid" time="2 days ago"/>
+            </div>
           </div>
-        </div>
 
-      </nav>
-      <main class="source-view">
-        <nuxt/>
-      </main>
+        </nav>
+        <main class="source-view">
+          <nuxt/>
+        </main>
+      </div>
     </div>
+
   </div>
 </template>
 
