@@ -11,12 +11,12 @@
           <li role="presentation" class="active"><a href="#sources" aria-controls="sources" role="tab" data-toggle="tab">Sources</a></li>
         </ul>
 
-        <ul class="secondary-nav nav nav-stacked two-items">
+        <ul class="secondary-nav nav nav-stacked">
           <li>
-            <a><span class="icon-plus"></span> Add source</a>
+            <a><span class="icon-plus label-success"></span> <span class="label label-success">Add source</span></a>
           </li>
           <li>
-            <a><span class="icon-equalizer"></span> Settings</a>
+            <a><span class="icon-equalizer label-info"></span> <span class="label label-info">Settings</span></a>
           </li>
         </ul>
 

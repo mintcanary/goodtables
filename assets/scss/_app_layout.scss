@@ -1,4 +1,5 @@
 .app {
+  $main-nav-bg: $gray-dark;
   overflow-x: hidden;
 
   & > .inner {
@@ -6,7 +7,7 @@
   }
 
   .main-nav {
-    background-color: $gray-dark;
+    background-color: $main-nav-bg;
     @include rev-out;
     overflow: hidden;
     @include make-sm-column(4);
@@ -73,6 +74,17 @@
         }
       }
     }
+
+    &:after {
+      content: '';
+      height: 50px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      @include gradient-vertical(rgba($main-nav-bg,0), $main-nav-bg, 0%, 100%);
+    }
   }
 
   .source-view {
@@ -114,50 +126,46 @@
   }
 
   .secondary-nav {
-    border-bottom: solid 1px $gray-darker;
+
+    [class^="icon-"] {
+      display: none;
+    }
+
+    a {
+      &:hover {
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
 
     @media screen and (min-width: $screen-sm) {
       overflow: hidden;
       padding-top: 30px;
-      pointer-events: none;
       position: fixed;
-      width: inherit;
-      bottom: -2px;
+      bottom: 10px;
       left: -5px;
-      z-index: 1;
-    }
+      z-index: 2;
 
-    li {
-      border-top: solid 1px $gray-darker;
-      border-bottom: solid 1px $gray-darker;
-      background-color: $gray-dark;
-      pointer-events: auto;
+      [class^="icon-"] {
+        display: inline-block;
+        border-radius: 50%;
+        padding: 0.4em;
+      }
 
-      &:first-child {
-        border-top-width: 0;
-        @media screen and (min-width: $screen-sm) {
-          border-top-width: 2px;
-          box-shadow: 0px 20px 30px 30px rgba($gray-dark,0.75);
-        }
+      .label {
+        font-size: 0;
+        color: transparent;
       }
 
       a {
         &:hover {
-          background-color: rgba(#fff, 0.05);
+          .label {
+            font-size: 13px;
+            color: inherit;
+            position: relative;
+            top: -1px;
+          }
         }
-      }
-    }
-
-    @media screen and (min-width: $screen-sm) {
-      //allow for .secondary-nav
-      &.one-item + .tab-content {
-        padding-bottom: 32px;
-      }
-      &.two-items + .tab-content {
-        padding-bottom: 64px;
-      }
-      &.three-items + .tab-content {
-        padding-bottom: 96px;
       }
     }
   }
@@ -271,6 +279,10 @@
         .job {
           border-bottom-width: 2px;
         }
+      }
+
+      &:after {
+        display: none;
       }
     }
     .source-view {
