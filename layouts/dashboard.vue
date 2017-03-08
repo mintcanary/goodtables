@@ -1,9 +1,10 @@
 <template>
-  <div class="app">
+  <div class="app" :class="view">
     <div class="inner">
       <nav class="main-nav">
         <header class="main-header">
-          
+          <a v-on:click="view = 'default-view'" class="show-default-view">Default view</a>
+          <a v-on:click="view = 'list-view'" class="show-list-view">List view</a>
         </header>
 
         <ul class="nav nav-tabs" role="tablist">
@@ -21,7 +22,7 @@
 
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="sources">
-            <add-item item="a source"/>
+            <!--<add-item item="a source"/>-->
             <source-item title="okfn/my-data" integration="github" jobnumber="77" status="valid" time="7 minutes ago"/>
             <source-item title="okfn/some-data" integration="aws" jobnumber="2"  status="valid" time="20 minutes ago"/>
             <source-item title="okfn/test-data" integration="github" jobnumber="8"  status="invalid" time="1 day ago" job="active"/>
@@ -47,6 +48,11 @@ export default {
     Logo,
     AddItem,
     SourceItem
+  },
+  data () {
+    return {
+      view: 'default-view'
+    }
   }
 }
 </script>

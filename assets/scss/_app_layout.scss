@@ -10,6 +10,7 @@
     @include rev-out;
     overflow: hidden;
     @include make-sm-column(4);
+    @include transition(width 0.2s ease);
     @media screen and (min-width: $screen-sm) {
       min-height: 100vh;
       padding-right: 0;
@@ -76,6 +77,7 @@
 
   .source-view {
     @include make-sm-column(8);
+    @include transition(width 0.2s ease);
     @media screen and (min-width: $screen-sm) {
       padding-left: 0;
     }
@@ -187,6 +189,59 @@
           float: right;
           text-transform: capitalize;
         }
+      }
+    }
+  }
+
+  .show-default-view {
+    display: none;
+  }
+
+  &.list-view {
+
+    .show-list-view {
+      display: none;
+    }
+
+    .show-default-view {
+      display: inline-block;
+    }
+
+    & > .inner {
+      @media screen and (min-width: $screen-sm) {
+        width: 200%;
+        margin-right: 0;
+      }
+    }
+
+    .main-nav {
+      @media screen and (min-width: $screen-sm) {
+        width: 50%;
+      }
+
+      .panel {
+        @include make-sm-column(6);
+        @include make-md-column(4);
+        @include make-lg-column(3);
+        padding-left: 0;
+        padding-right: 0;
+        border-right: solid 2px $gray-darker;
+
+
+        & + .source-item {
+          .source {
+            border-top: none;
+          }
+        }
+
+        .job {
+          border-bottom-width: 2px;
+        }
+      }
+    }
+    .source-view {
+      @media screen and (min-width: $screen-sm) {
+        width: 50%;
       }
     }
   }
