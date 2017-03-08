@@ -76,6 +76,10 @@
       padding: 3px 10px;
       font-size: 12px;
       font-weight: 500;
+
+      .jobcount {
+        float: right;
+      }
     }
 
     @mixin panel_state($colour: $brand-warning) {

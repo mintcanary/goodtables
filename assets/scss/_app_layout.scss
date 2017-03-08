@@ -31,6 +31,10 @@
 
     .source-item {
 
+      .status {
+        display: none;
+      }
+
       .panel-title {
         .jobnumber {
           display: none;
@@ -40,11 +44,8 @@
       .job {
         border-bottom: solid 1px $gray-darker;
 
-        .status {
-          display: none;
-        }
-        .jobnumber {
-          float: right;
+        .jobtotal {
+          @include text-hide;
         }
       }
 
@@ -181,9 +182,28 @@
       }
     }
 
+    .integration {
+      float: right;
+      font-size: 22px;
+      color: $gray-light;
+      text-decoration: none;
+      margin-top: 24px;
+      padding: 4px;
+    }
+
     .source-item {
       margin-top: $grid-gutter-width/2;
       margin-bottom: $grid-gutter-width/2;
+
+      .status {
+        float: right;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+
+      .integration {
+        display: none;
+      }
 
       .source {
         padding-top: $grid-gutter-width/2;
@@ -193,14 +213,25 @@
       .job {
         padding-top: $grid-gutter-width/4;
         padding-bottom: $grid-gutter-width/4;
+      }
+    }
 
-        .jobnumber {
-          display: none;
-        }
-        .status {
-          float: right;
-          text-transform: capitalize;
-        }
+    .tab-pane {
+      padding: 15px;
+    }
+
+    .report {
+      background-color: $gray-dark;
+      @include rev-out;
+    }
+
+    .meta {
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        padding: 10px;
       }
     }
   }
