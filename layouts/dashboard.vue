@@ -1,20 +1,22 @@
 <template>
   <div class="app" :class="view">
     <div class="inner">
-      <section class="add">
+
+      <section class="add-source">
         <header class="main-header">
           <a v-on:click="view = 'default-view'" class="close"><span>Close</span></a>
           Add source
         </header>
       </section>
+
       <section class="settings">
         <header class="main-header">
           <a v-on:click="view = 'default-view'" class="close"><span>Close</span></a>
           Settings
-        </header>  
+        </header>
       </section>
-      <div class="default">
 
+      <div class="default">
         <nav class="main-nav">
           <header class="main-header">
             <a v-on:click="view = 'default-view'" class="show-view-default"><span>Default view</span></a>
