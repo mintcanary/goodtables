@@ -126,6 +126,7 @@
   }
 
   .secondary-nav {
+    display: none;
 
     [class^="icon-"] {
       display: none;
@@ -139,6 +140,7 @@
     }
 
     @media screen and (min-width: $screen-sm) {
+      display: block;
       overflow: hidden;
       padding-top: 30px;
       position: fixed;
