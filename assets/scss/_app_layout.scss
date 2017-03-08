@@ -198,6 +198,7 @@
     text-decoration: none;
     cursor: pointer;
     margin-top: 4px;
+    display: none;
 
     span {
       @include text-hide;
@@ -212,7 +213,6 @@
   }
 
   .show-view-default {
-    display: none;
     &:before {
       content: "\e901";
     }
@@ -221,6 +221,9 @@
   .show-view-list {
     &:before {
       content: "\e900";
+    }
+    @media screen and (min-width: $screen-sm) {
+      display: inline-block;
     }
   }
 
@@ -231,7 +234,9 @@
     }
 
     .show-view-default {
-      display: inline-block;
+      @media screen and (min-width: $screen-sm) {
+        display: inline-block;
+      }
     }
 
     & > .inner {
