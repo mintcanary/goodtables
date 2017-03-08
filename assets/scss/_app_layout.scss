@@ -12,7 +12,7 @@
     @include make-sm-column(4);
     @include transition(width 0.2s ease);
     @media screen and (min-width: $screen-sm) {
-      min-height: 100vh;
+      height: 100vh;
       padding-right: 0;
     }
 
@@ -249,6 +249,8 @@
     .main-nav {
       @media screen and (min-width: $screen-sm) {
         width: 50%;
+        height: auto;
+        min-height: 100vh;
       }
 
       .panel {
@@ -274,6 +276,8 @@
     .source-view {
       @media screen and (min-width: $screen-sm) {
         width: 50%;
+        height: 100vh;
+        overflow: hidden;
       }
     }
   }
