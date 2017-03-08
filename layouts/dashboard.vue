@@ -4,14 +4,12 @@
 
       <section class="add-source">
         <header class="main-header">
-          <a v-on:click="view = 'default-view'" class="close"><span>Close</span></a>
           Add source
         </header>
       </section>
 
       <section class="settings">
         <header class="main-header">
-          <a v-on:click="view = 'default-view'" class="close"><span>Close</span></a>
           Settings
         </header>
       </section>

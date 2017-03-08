@@ -247,11 +247,16 @@
   }
 
   section.add-source {
-    background-color: $brand-primary;
+    background-color: $gray-darker;
   }
 
   section.settings {
-    background-color: $brand-info;
+    background-color: $gray-darker;
+
+    .avatar {
+      width: 50%;
+      max-width: 128px;
+    }
   }
 
   [class^='show-view-'] {
