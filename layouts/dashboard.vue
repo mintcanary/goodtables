@@ -28,11 +28,17 @@
           </ul>
 
           <ul class="secondary-nav nav nav-stacked">
-            <li>
+            <li v-if="view != 'add-view'">
               <a v-on:click="view = 'add-view'"><span class="icon-plus label-success"></span> <span class="label label-success">Add source</span></a>
             </li>
-            <li>
+            <li v-else>
+              <a v-on:click="view = 'default-view'"><span class="icon-keyboard_arrow_right label-success"></span> <span class="label label-success">Close</span></a>
+            </li>
+            <li v-if="view != 'settings-view'">
               <a v-on:click="view = 'settings-view'"><span class="icon-equalizer label-info"></span> <span class="label label-info">Settings</span></a>
+            </li>
+            <li v-else>
+              <a v-on:click="view = 'default-view'"><span class="icon-keyboard_arrow_right label-info"></span> <span class="label label-info">Close</span></a>
             </li>
           </ul>
 
