@@ -1,31 +1,31 @@
-$main-nav-bg: $gray-dark;
-$main-nav-cl: #fff;
-$main-nav-bd: $gray-darker;
-$main-nav-pn: $main-nav-bg;
-$main-nav-hd: $gray-darker;
+$mn-background: $gray-dark;
+$mn-colour: #fff;
+$mn-border: $gray-darker;
+$mn-panel: $mn-background;
+$mn-header: $gray-darker;
 
 .panel {
-  background-color: $main-nav-pn;
-  color: $main-nav-cl;
+  background-color: $mn-panel;
+  color: $mn-colour;
 
   .github,
   .aws {
     .integration {
-      @include gradient-horizontal(rgba($main-nav-pn,0), $main-nav-pn, 0%, 25%);
-      color: rgba($main-nav-cl,0.8);
+      @include gradient-horizontal(rgba($mn-panel,0), $mn-panel, 0%, 25%);
+      color: rgba($mn-colour,0.8);
 
       &:hover {
-        color: $main-nav-cl;
+        color: $mn-colour;
       }
     }
   }
 
   &.source-item {
-    $hover-bg: darken($main-nav-bg,2%);
+    $hover-bg: darken($mn-background,2%);
 
     .source,
     .job {
-      border-right-color: $main-nav-bg;
+      border-right-color: $mn-background;
 
       &:hover {
         background-color: $hover-bg;
@@ -41,7 +41,7 @@ $main-nav-hd: $gray-darker;
     }
 
     .job {
-      border-top: solid 1px $main-nav-bd;
+      border-top: solid 1px $mn-border;
     }
 
   }
@@ -51,40 +51,40 @@ $main-nav-hd: $gray-darker;
 .app {
 
   .main-nav {
-    background-color: $main-nav-bg;
-    @include rev-out($main-nav-cl, $main-nav-bg);
+    background-color: $mn-background;
+    @include rev-out($mn-colour, $mn-background);
 
     .main-header {
-      background-color: $main-nav-hd;
+      background-color: $mn-header;
     }
 
     .nav-tabs {
-      border-bottom-color: $main-nav-bg;
+      border-bottom-color: $mn-background;
 
       & > li.active > a,
       & >  li.active > a:hover,
       & >  li.active > a:focus {
-        color: $main-nav-cl;
-        background-color: $main-nav-bg;
-        border-color: $main-nav-bg;
+        color: $mn-colour;
+        background-color: $mn-background;
+        border-color: $mn-background;
       }
     }
 
     .source-item {
 
       .job {
-        border-bottom-color: $main-nav-bd;
+        border-bottom-color: $mn-border;
       }
 
       & + .source-item {
         .source {
-          border-top-color: $main-nav-bd;
+          border-top-color: $mn-border;
         }
       }
     }
     @media screen and (min-width: $screen-sm) {
       &:after {
-        @include gradient-vertical(rgba($main-nav-bg,0), $main-nav-bg, 0%, 100%);
+        @include gradient-vertical(rgba($mn-background,0), $mn-background, 0%, 100%);
       }
     }
   }
@@ -101,7 +101,7 @@ $main-nav-hd: $gray-darker;
     .main-nav {
       .source,
       .job {
-        border-right-color: $main-nav-bd;
+        border-right-color: $mn-border;
       }
     }
   }
