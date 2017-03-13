@@ -1,11 +1,71 @@
+$main-nav-bg: $gray-dark;
+$main-nav-cl: #fff;
+$main-nav-bd: $gray-darker;
+$main-nav-pn: $main-nav-bg;
+$main-nav-hd: $gray-darker;
+
+.panel {
+  background-color: $main-nav-pn;
+  color: $main-nav-cl;
+}
+
+
+.panel {
+  .github,
+  .aws {
+    .integration {
+      @include gradient-horizontal(rgba($main-nav-bg,0), $main-nav-bg, 0%, 25%);
+      color: rgba($main-nav-cl,0.8);
+
+      &:hover {
+        color: $main-nav-cl;
+      }
+    }
+  }
+
+  &.source-item {
+    $hover-bg: lighten($main-nav-bg,4%);
+
+    .source,
+    .job {
+      &:hover {
+        background-color: $hover-bg;
+      }
+    }
+
+    .source {
+      &:hover {
+        & ~ .integration {
+          @include gradient-horizontal(rgba($hover-bg,0), $hover-bg, 0%, 25%);
+        }
+      }
+    }
+
+    .job {
+      border-top: solid 1px $main-nav-bd;
+    }
+
+  }
+}
+
+
 .app {
-  $main-nav-bg: $gray-dark;
-  $main-nav-cl: #fff;
-  $main-nav-bd: $gray-darker;
 
   .main-nav {
     background-color: $main-nav-bg;
     @include rev-out($main-nav-cl, $main-nav-bg);
+
+    .main-header {
+      background-color: $main-nav-hd;
+    }
+
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+      color: $main-nav-cl;
+      background-color: $main-nav-bg;
+      border-color: $main-nav-bg;
+    }
 
     .source-item {
 
