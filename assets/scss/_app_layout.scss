@@ -22,8 +22,6 @@
 
     .panel {
       margin-bottom: 0;
-      border-right-style: solid;
-      border-right-width: 2px;
 
       &.add-item {
         border-bottom: solid 2px $gray-darker;
@@ -40,6 +38,12 @@
         .jobnumber {
           display: none;
         }
+      }
+
+      .source,
+      .job {
+        border-right-style: solid;
+        border-right-width: 2px;
       }
 
       .job {
@@ -77,7 +81,20 @@
           }
         }
       }
+
+      &.active {
+        @media screen and (min-width: $screen-sm) {
+          .source {
+            border-right-color: $body-bg;
+          }
+        }
+      }
     }
+
+    .integration {
+      right: 2px;
+    }
+
     @media screen and (min-width: $screen-sm) {
       &:after {
         content: '';
@@ -291,12 +308,6 @@
     }
     @media screen and (min-width: $screen-sm) {
       display: inline-block;
-    }
-  }
-
-  &.default-view {
-    .source-item.active {
-      border-right: none;
     }
   }
 

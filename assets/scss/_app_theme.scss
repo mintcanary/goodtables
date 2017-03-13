@@ -7,7 +7,6 @@ $main-nav-hd: $gray-darker;
 .panel {
   background-color: $main-nav-pn;
   color: $main-nav-cl;
-  border-right-color: $main-nav-bg;
 
   .github,
   .aws {
@@ -22,10 +21,12 @@ $main-nav-hd: $gray-darker;
   }
 
   &.source-item {
-    $hover-bg: lighten($main-nav-bg,4%);
+    $hover-bg: darken($main-nav-bg,2%);
 
     .source,
     .job {
+      border-right-color: $main-nav-bg;
+
       &:hover {
         background-color: $hover-bg;
       }
@@ -57,12 +58,16 @@ $main-nav-hd: $gray-darker;
       background-color: $main-nav-hd;
     }
 
-    .nav-tabs > li.active > a,
-    .nav-tabs > li.active > a:hover,
-    .nav-tabs > li.active > a:focus {
-      color: $main-nav-cl;
-      background-color: $main-nav-bg;
-      border-color: $main-nav-bg;
+    .nav-tabs {
+      border-bottom-color: $main-nav-bg;
+
+      & > li.active > a,
+      & >  li.active > a:hover,
+      & >  li.active > a:focus {
+        color: $main-nav-cl;
+        background-color: $main-nav-bg;
+        border-color: $main-nav-bg;
+      }
     }
 
     .source-item {
@@ -94,7 +99,8 @@ $main-nav-hd: $gray-darker;
 
   &.list-view {
     .main-nav {
-      .panel {
+      .source,
+      .job {
         border-right-color: $main-nav-bd;
       }
     }
