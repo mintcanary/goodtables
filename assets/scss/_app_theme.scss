@@ -4,6 +4,7 @@ $mn-border: $gray-darker;
 $mn-panel: $mn-background;
 $mn-header: $gray-darker;
 $mn-tabs: $mn-background;
+$mn-divider: $mn-background;
 
 .panel {
   background-color: $mn-panel;
@@ -26,7 +27,7 @@ $mn-tabs: $mn-background;
 
     .source,
     .job {
-      border-right-color: $mn-background;
+      border-right-color: $mn-divider;
 
       &:hover {
         background-color: $hover-bg;
@@ -84,6 +85,8 @@ $mn-tabs: $mn-background;
       }
     }
     @media screen and (min-width: $screen-sm) {
+      box-shadow: inset -2px 0px 0px 0px $mn-divider;
+
       &:after {
         @include gradient-vertical(rgba($mn-background,0), $mn-background, 0%, 100%);
       }
