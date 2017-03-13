@@ -1,0 +1,44 @@
+.app {
+  $main-nav-bg: $gray-dark;
+  $main-nav-cl: #fff;
+  $main-nav-bd: $gray-darker;
+
+  .main-nav {
+    background-color: $main-nav-bg;
+    @include rev-out($main-nav-cl, $main-nav-bg);
+
+    .source-item {
+
+      .job {
+        border-bottom-color: $main-nav-bd;
+      }
+
+      & + .source-item {
+        .source {
+          border-top-color: $main-nav-bd;
+        }
+      }
+    }
+    @media screen and (min-width: $screen-sm) {
+      &:after {
+        @include gradient-vertical(rgba($main-nav-bg,0), $main-nav-bg, 0%, 100%);
+      }
+    }
+  }
+
+  section.add-source {
+    background-color: $gray-darker;
+  }
+
+  section.settings {
+    background-color: $gray-darker;
+  }
+
+  &.list-view {
+    .main-nav {
+      .panel {
+        border-right-color: $main-nav-bd;
+      }
+    }
+  }
+}

@@ -7,8 +7,6 @@
   }
 
   .main-nav {
-    background-color: $main-nav-bg;
-    @include rev-out;
     overflow: hidden;
     @include make-sm-column(4);
     @include transition(width 0.2s ease);
@@ -84,7 +82,6 @@
         right: 0;
         bottom: 0;
         pointer-events: none;
-        @include gradient-vertical(rgba($main-nav-bg,0), $main-nav-bg, 0%, 100%);
       }
     }
   }
@@ -246,13 +243,7 @@
     margin-left: -15px;
   }
 
-  section.add-source {
-    background-color: $gray-darker;
-  }
-
   section.settings {
-    background-color: $gray-darker;
-
     .avatar {
       width: 50%;
       max-width: 128px;
