@@ -7,8 +7,6 @@ $mn-tabs: $mn-background;
 $mn-divider: $mn-background;
 
 .panel {
-  background-color: $mn-panel;
-  color: $mn-colour;
 
   .github,
   .aws {
@@ -24,6 +22,8 @@ $mn-divider: $mn-background;
 
   &.source-item {
     $hover-bg: darken($mn-background,2%);
+    background-color: $mn-panel;
+    color: $mn-colour;
 
     .source,
     .job {

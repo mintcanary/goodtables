@@ -4,6 +4,10 @@
 
   .default {
     @include make-row();
+    @media screen and (min-width: $screen-sm) {
+      height: 100vh;
+      overflow: hidden;
+    }
   }
 
   .main-nav {
@@ -22,6 +26,7 @@
 
     .panel {
       margin-bottom: 0;
+      border-radius: 0;
 
       &.add-item {
         border-bottom: solid 2px $gray-darker;
@@ -115,6 +120,12 @@
     @media screen and (min-width: $screen-sm) {
       display: block;
       padding-left: 0;
+
+      & > div {
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
     }
 
     .main-header {
@@ -244,7 +255,7 @@
     }
 
     .report {
-      background-color: $gray-dark;
+      background-color: $nav-tabs-active-link-hover-bg;
       @include rev-out;
     }
 
