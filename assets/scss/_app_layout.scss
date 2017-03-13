@@ -10,6 +10,7 @@
     overflow: hidden;
     @include make-sm-column(4);
     @include transition(width 0.2s ease);
+    min-height: 100vh;
     @media screen and (min-width: $screen-sm) {
       height: 100vh;
       padding-right: 0;
@@ -89,9 +90,11 @@
   }
 
   .source-view {
+    display: none;
     @include make-sm-column(8);
     @include transition(width 0.2s ease);
     @media screen and (min-width: $screen-sm) {
+      display: block;
       padding-left: 0;
     }
 
