@@ -3,6 +3,7 @@ $mn-colour: #fff;
 $mn-border: $gray-darker;
 $mn-panel: $mn-background;
 $mn-header: $gray-darker;
+$mn-tabs: $mn-background;
 
 .panel {
   background-color: $mn-panel;
@@ -62,11 +63,11 @@ $mn-header: $gray-darker;
       border-bottom-color: $mn-background;
 
       & > li.active > a,
-      & >  li.active > a:hover,
-      & >  li.active > a:focus {
+      & > li.active > a:hover,
+      & > li.active > a:focus {
         color: $mn-colour;
-        background-color: $mn-background;
-        border-color: $mn-background;
+        background-color: $mn-tabs;
+        border-color: $mn-tabs;
       }
     }
 
