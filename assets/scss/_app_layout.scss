@@ -56,18 +56,20 @@
           border-top: solid 1px $gray-darker;
         }
 
-        &.active {
-          .source {
-            border-top-color: $body-bg;
-          }
-          &.panel-danger {
-            .source.active {
-              border-top-color: $brand-danger;
+        @media screen and (min-width: $screen-sm) {
+          &.active {
+            .source {
+              border-top-color: $body-bg;
             }
-          }
-          &.panel-success {
-            .source.active {
-              border-top-color: $brand-success;
+            &.panel-danger {
+              .source.active {
+                border-top-color: $brand-danger;
+              }
+            }
+            &.panel-success {
+              .source.active {
+                border-top-color: $brand-success;
+              }
             }
           }
         }
@@ -133,7 +135,7 @@
 
     a {
       color: #fff;
-      
+
       &:hover {
         background-color: transparent;
         cursor: pointer;

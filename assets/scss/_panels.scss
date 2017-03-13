@@ -7,10 +7,16 @@
     color: inherit;
   }
 
-  &.active {
+  @mixin active-panel {
     background-color: $body-bg;
     color: $text-color;
     border-left-width: 5px;
+  }
+
+  &.active {
+    @media screen and (min-width: $screen-sm) {
+      @include active-panel;
+    }
   }
 
   .github,
@@ -45,9 +51,11 @@
       text-decoration: none;
 
       &.active {
-        color: #fff;
-        background-color: $brand-warning;
-        border-color: $brand-warning;
+        @media screen and (min-width: $screen-sm) {
+          color: #fff;
+          background-color: $brand-warning;
+          border-color: $brand-warning;
+        }
       }
     }
 
@@ -83,7 +91,9 @@
         }
 
         & + .job.active {
-          border-top-color: rgba(#fff,0.2);
+          @media screen and (min-width: $screen-sm) {
+            border-top-color: rgba(#fff,0.2);
+          }
         }
 
         & ~ .integration {
@@ -98,41 +108,53 @@
     }
 
     &.panel-success {
-      @include panel_state($brand-success);
+      @media screen and (min-width: $screen-sm) {
+        @include panel_state($brand-success);
+      }
+      .source-view & {
+        @include panel_state($brand-success);
+      }
     }
 
     &.panel-danger {
-      @include panel_state($brand-danger);
+      @media screen and (min-width: $screen-sm) {
+        @include panel_state($brand-danger);
+      }
+      .source-view & {
+        @include panel_state($brand-danger);
+      }
     }
 
     &.active {
-      .source,
-      .job {
-        &:not(.active) {
-          &:hover {
-            background-color: inherit;
+      @media screen and (min-width: $screen-sm) {
+        .source,
+        .job {
+          &:not(.active) {
+            &:hover {
+              background-color: inherit;
+            }
           }
         }
-      }
-      .source:hover ~ .integration {
-        @include gradient-horizontal(rgba($body-bg,0), $body-bg, 0%, 25%);
-      }
-      .integration {
-        @include gradient-horizontal(rgba($body-bg,0), $body-bg, 0%, 25%);
-        color: rgba($text-color,0.8);
+        .source:hover ~ .integration {
+          @include gradient-horizontal(rgba($body-bg,0), $body-bg, 0%, 25%);
+        }
+        .integration {
+          @include gradient-horizontal(rgba($body-bg,0), $body-bg, 0%, 25%);
+          color: rgba($text-color,0.8);
 
-        &:hover {
-          color: $text-color;
+          &:hover {
+            color: $text-color;
+          }
         }
-      }
-      &.panel-success {
-        .source.active:hover ~ .integration {
-          @include gradient-horizontal(rgba($brand-success,0), $brand-success, 0%, 25%);
+        &.panel-success {
+          .source.active:hover ~ .integration {
+            @include gradient-horizontal(rgba($brand-success,0), $brand-success, 0%, 25%);
+          }
         }
-      }
-      &.panel-danger {
-        .source.active:hover ~ .integration {
-          @include gradient-horizontal(rgba($brand-danger,0), $brand-danger, 0%, 25%);
+        &.panel-danger {
+          .source.active:hover ~ .integration {
+            @include gradient-horizontal(rgba($brand-danger,0), $brand-danger, 0%, 25%);
+          }
         }
       }
     }
