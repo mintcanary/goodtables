@@ -7,14 +7,12 @@ $main-nav-hd: $gray-darker;
 .panel {
   background-color: $main-nav-pn;
   color: $main-nav-cl;
-}
+  border-right-color: $main-nav-bg;
 
-
-.panel {
   .github,
   .aws {
     .integration {
-      @include gradient-horizontal(rgba($main-nav-bg,0), $main-nav-bg, 0%, 25%);
+      @include gradient-horizontal(rgba($main-nav-pn,0), $main-nav-pn, 0%, 25%);
       color: rgba($main-nav-cl,0.8);
 
       &:hover {

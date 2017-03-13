@@ -22,6 +22,8 @@
 
     .panel {
       margin-bottom: 0;
+      border-right-style: solid;
+      border-right-width: 2px;
 
       &.add-item {
         border-bottom: solid 2px $gray-darker;
@@ -292,6 +294,12 @@
     }
   }
 
+  &.default-view {
+    .source-item.active {
+      border-right: none;
+    }
+  }
+
   &.list-view {
 
     .show-view-list {
@@ -324,7 +332,6 @@
         @include make-lg-column(3);
         padding-left: 0;
         padding-right: 0;
-        border-right: solid 2px $gray-darker;
 
 
         & + .source-item {
