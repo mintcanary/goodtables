@@ -1,12 +1,15 @@
 <template>
-  <div>
-    <section class="inner">
+  <div class="invalid">
+    <div class="inner banner">
       <a class="icon-github integration"><i>GitHub</i></a>
       <h2 class="source-title">
         Test Data
         <small>github/okfn/test-data</small>
       </h2>
       <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago" source="active" job="active"/>
+    </div>
+    <section class="inner">
+
       <div>
         <ul class="nav nav-tabs" role="tablist">
          <li role="presentation" class="active"><a href="#report" aria-controls="home" role="tab" data-toggle="tab">Report</a></li>

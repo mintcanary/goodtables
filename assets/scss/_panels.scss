@@ -1,5 +1,4 @@
 .panel {
-  border-width: 0;
   @include rev-out;
   overflow: hidden;
   box-shadow: none;
@@ -30,6 +29,7 @@
 
   &.source-item {
     white-space: nowrap;
+    border-width: 0;
 
     .label {
       margin-right: 10px;
@@ -185,6 +185,7 @@
 
     .table {
       font-size: 11px;
+      background-color: $body-bg;
 
       &:last-child {
         margin-bottom: 0;

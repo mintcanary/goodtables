@@ -20,11 +20,10 @@
             <a v-on:click="view = 'default-view'" class="show-view-default"><span>Default view</span></a>
             <a v-on:click="view = 'list-view'" class="show-view-list"><span>List view</span></a>
             <logo/>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#sources" aria-controls="sources" role="tab" data-toggle="tab">Sources</a></li>
+            </ul>
           </header>
-
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#sources" aria-controls="sources" role="tab" data-toggle="tab">Sources</a></li>
-          </ul>
 
           <ul class="secondary-nav nav nav-stacked">
             <li v-if="view != 'add-view'">

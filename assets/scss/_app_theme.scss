@@ -2,9 +2,9 @@ $mn-background: lighten($gray-lighter,6%);
 $mn-colour: $text-color;
 $mn-border: $gray-lighter;
 $mn-panel: #fff;
-$mn-header: $brand-primary;
+$mn-header: $brand-success;
 $mn-tabs: $mn-panel;
-$mn-divider: $mn-border;
+$mn-divider: $mn-background;
 
 .panel {
 
@@ -21,7 +21,7 @@ $mn-divider: $mn-border;
   }
 
   &.source-item {
-    $hover-bg: darken($mn-background,2%);
+    $hover-bg: $mn-panel;
     background-color: $mn-panel;
     color: $mn-colour;
 
