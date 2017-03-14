@@ -96,6 +96,27 @@ $mn-divider: $mn-border;
     }
   }
 
+  .secondary-nav {
+    @media screen and (min-width: $screen-sm) {
+      [class*=" icon-"],
+      [class^=icon-] {
+        box-shadow: 0px 0px 0px 4px $mn-background;
+      }
+
+      a {
+        &:hover {
+          .label {
+            box-shadow: 0px 0px 0px 3px $mn-background;
+          }
+        }
+      }
+
+      &:before {
+        background-color: $mn-background;
+      }
+    }
+  }
+
   section.add-source {
     background-color: $gray-darker;
   }
