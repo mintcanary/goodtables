@@ -2,6 +2,7 @@
   border-width: 0;
   @include rev-out;
   overflow: hidden;
+  box-shadow: none;
 
   a {
     color: inherit;
@@ -11,10 +12,6 @@
     background-color: $body-bg;
     color: $text-color;
     border-left-width: 5px;
-  }
-
-  &.active {
-
   }
 
   .github,
@@ -201,10 +198,6 @@
         font-weight: normal;
         width: 1em;
       }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 }

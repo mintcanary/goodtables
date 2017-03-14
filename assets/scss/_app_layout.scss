@@ -1,5 +1,5 @@
 .app {
-  $main-nav-bg: $gray-dark;
+  $source-item-border: 0;
   overflow-x: hidden;
 
   .default {
@@ -33,7 +33,12 @@
       }
     }
 
+    .tab-pane {
+      @include clearfix;
+    }
+
     .source-item {
+      margin-bottom: 4px;
 
       .status {
         display: none;
@@ -52,7 +57,7 @@
       }
 
       .job {
-        border-bottom: solid 1px $gray-darker;
+        border-bottom: solid $source-item-border/2 $gray-darker;
 
         .jobtotal {
           @include text-hide;
@@ -66,7 +71,7 @@
 
       & + .source-item {
         .source {
-          border-top: solid 1px $gray-darker;
+          border-top: solid $source-item-border/2 $gray-darker;
         }
 
         @media screen and (min-width: $screen-sm) {
@@ -99,6 +104,7 @@
 
     .integration {
       right: 2px;
+      top: $source-item-border/2;
     }
 
     @media screen and (min-width: $screen-sm) {
@@ -110,6 +116,12 @@
         right: 0;
         bottom: 0;
         pointer-events: none;
+      }
+    }
+
+    &.invalid {
+      .main-header {
+        background-color: $brand-danger;
       }
     }
   }
@@ -252,12 +264,20 @@
     }
 
     .tab-pane {
-      padding: 15px;
+      padding: 10px;
     }
 
     .report {
       background-color: $nav-tabs-active-link-hover-bg;
       @include rev-out;
+
+      .panel {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     .meta {
@@ -371,7 +391,7 @@
         }
 
         .job {
-          border-bottom-width: 2px;
+          border-bottom-width: $source-item-border;
         }
       }
 

@@ -72,6 +72,10 @@ $mn-divider: $mn-background;
       }
     }
 
+    .tab-pane {
+      background-color: $mn-border;
+    }
+
     .source-item {
 
       .job {
