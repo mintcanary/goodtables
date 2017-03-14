@@ -1,10 +1,10 @@
-$mn-background: $gray-dark;
-$mn-colour: #fff;
-$mn-border: $gray-darker;
-$mn-panel: $mn-background;
-$mn-header: $gray-darker;
-$mn-tabs: $mn-background;
-$mn-divider: $mn-background;
+$mn-background: lighten($gray-lighter,6%);
+$mn-colour: $text-color;
+$mn-border: $gray-lighter;
+$mn-panel: #fff;
+$mn-header: $brand-primary;
+$mn-tabs: $mn-panel;
+$mn-divider: $mn-border;
 
 .panel {
 
