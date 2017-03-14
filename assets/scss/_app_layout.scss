@@ -277,6 +277,37 @@
       background-color: $nav-tabs-active-link-hover-bg;
       @include rev-out;
 
+      .file-heading {
+        font-size: 13px;
+        font-weight: 500;
+        display: table;
+        width: 100%;
+        border-top: solid 1px rgba(#fff,0.3);
+        padding-top: 10px;
+        margin-top: 20px;
+
+        .file-count,
+        .file-name {
+          display: table-cell;
+        }
+
+        .file-name {
+          text-align: right;
+          color: rgba(#fff,0.8);
+          text-decoration: none;
+
+          &:hover {
+            color: inherit;
+          }
+        }
+
+        &:first-child {
+          padding-top: 0;
+          margin-top: 0;
+          border: none;
+        }
+      }
+
       .panel {
         margin-bottom: 10px;
 
