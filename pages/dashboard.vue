@@ -158,7 +158,7 @@
     },
     head () {
       return {
-        title: `Dashboard`
+        title: `GoodTables`
       }
     }
   }

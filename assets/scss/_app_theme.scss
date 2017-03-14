@@ -54,7 +54,6 @@ $mn-divider: $mn-border;
 
   .main-nav {
     background-color: $mn-background;
-    @include rev-out($mn-colour, $mn-background);
 
     .main-header {
       background-color: $mn-header;

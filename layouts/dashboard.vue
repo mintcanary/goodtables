@@ -19,6 +19,7 @@
           <header class="main-header">
             <a v-on:click="view = 'default-view'" class="show-view-default"><span>Default view</span></a>
             <a v-on:click="view = 'list-view'" class="show-view-list"><span>List view</span></a>
+            <logo/>
           </header>
 
           <ul class="nav nav-tabs" role="tablist">
