@@ -1,13 +1,12 @@
 .main-header {
-  $header_colour: $gray-darker;
-  background-color: $header_colour;
-  @include rev-out;
-  background-image: url("../img/pattern.png");
-  background-size: 135px 135px;
-  background-position: top center;
+  $header_colour1: $brand-info;
+  $header_colour2: $brand-primary;
+  background-color: $header_colour1;
+  @include rev-out(#fff, $header_colour1);
+  @include gradient-horizontal($header_colour1, $header_colour2, 0%, 100%);
 
   .inner {
-    @include gradient-horizontal($header_colour, rgba($header_colour,0), 0%, 100%);
+    @include gradient-horizontal($header_colour1, rgba($header_colour2,0), 0%, 100%);
   }
 
   .logo {
@@ -17,4 +16,10 @@
     padding-bottom: $grid-gutter-width;
     box-sizing: content-box;
   }
+}
+
+.pattern {
+  background-image: url("../img/pattern.png");
+  background-size: 135px 135px;
+  background-position: top center;
 }

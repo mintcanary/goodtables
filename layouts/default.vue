@@ -1,9 +1,11 @@
 <template>
   <div>
     <header class="main-header">
-      <div class="inner">
-        <div class="container">
-          <logo/>
+      <div class="pattern">
+        <div class="inner">
+          <div class="container">
+            <logo/>
+          </div>
         </div>
       </div>
     </header>
