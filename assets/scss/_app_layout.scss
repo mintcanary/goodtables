@@ -140,6 +140,7 @@
         height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
+        position: relative;
       }
 
       &:before {
@@ -367,48 +368,6 @@
 
     .tab-pane {
       padding: 20px 0;
-    }
-
-    .report {
-
-      .file-heading {
-        font-size: 13px;
-        font-weight: 500;
-        display: table;
-        width: 100%;
-        border-top: solid 1px currentColor;
-        padding-top: 10px;
-        margin-top: 20px;
-
-        .file-count,
-        .file-name {
-          display: table-cell;
-        }
-
-        .file-name {
-          text-align: right;
-          color: rgba($text-color,0.8);
-          text-decoration: none;
-
-          &:hover {
-            color: inherit;
-          }
-        }
-
-        &:first-child {
-          padding-top: 0;
-          margin-top: 0;
-          border: none;
-        }
-      }
-
-      .panel {
-        margin-bottom: 10px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
     }
 
     .meta {
