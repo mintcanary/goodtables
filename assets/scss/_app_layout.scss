@@ -27,10 +27,6 @@
     .panel {
       margin-bottom: 0;
       border-radius: 0;
-
-      &.add-item {
-        border-bottom: solid 2px $gray-darker;
-      }
     }
 
     .tab-pane {
@@ -52,8 +48,10 @@
 
       .source,
       .job {
-        border-right-style: solid;
-        border-right-width: 2px;
+        @media screen and (min-width: $screen-sm) {
+          border-right-style: solid;
+          border-right-width: 4px;
+        }
       }
 
       .job {
@@ -100,12 +98,28 @@
           .source {
             border-right-color: $body-bg;
           }
+
+          position: relative;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 4px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+            background-color: rgba(#000,0.1);
+            z-index: 3;
+          }
         }
       }
     }
 
     .integration {
-      right: 2px;
+      right: 4px;
+      padding-right: 8px;
       top: $source-item-border/2;
     }
 
@@ -142,17 +156,6 @@
         overflow-y: auto;
         position: relative;
       }
-
-      &:before {
-        content: '';
-        display: block;
-        width: 4px;
-        position: absolute;
-        left: -4px;
-        height: 100vh;
-        pointer-events: none;
-        background-color: rgba(#000,0.1);
-      }
     }
 
     .main-header {
@@ -167,6 +170,7 @@
 
     @media screen and (min-width: $screen-sm) {
       height: 64px;
+      box-shadow: inset -4px 0px 0px 0px rgba(#000,0.1);
     }
 
     .logo {
@@ -207,10 +211,6 @@
   .secondary-nav {
     display: none;
 
-    [class^="icon-"] {
-      display: none;
-    }
-
     a {
       color: #fff;
 
@@ -221,13 +221,15 @@
     }
 
     @media screen and (min-width: $screen-sm) {
-      display: block;
+      display: table;
       overflow: hidden;
-      padding-bottom: 10px;
-      position: fixed;
+      padding: 15px 0 0 0;
+      margin: 0;
+      position: absolute;
       bottom: 0;
-      left: -5px;
+      right: 4px;
       z-index: 2;
+      width: 100%;
 
       [class*=" icon-"],
       [class^=icon-] {
@@ -236,30 +238,27 @@
         padding: 0.4em;
       }
 
-      .label {
-        font-size: 0;
-        color: transparent;
-      }
+      li {
+        display: table-cell;
+        padding-top: 8px;
+        padding-bottom: 11px;
+        border-top: solid 4px $text-color;
 
-      a {
-        &:hover {
-          .label {
-            font-size: 13px;
-            color: inherit;
-            position: relative;
-            top: -1px;
-          }
+        &:first-of-type {
+          padding-left: 30px;
+        }
+
+        a {
+          text-decoration: none;
         }
       }
 
-      &:before {
-        content: '';
-        display: block;
-        width: 33px;
-        top: 20px;
-        bottom: 29px;
-        left: 12px;
-        position: absolute;
+      .label {
+        font-size: 13px;
+        background-color: transparent;
+        position: relative;
+        top: -1px;
+        color: $text-color;
       }
     }
   }

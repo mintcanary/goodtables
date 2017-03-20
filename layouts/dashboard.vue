@@ -25,7 +25,7 @@
             </ul>
           </header>
 
-          <ul class="secondary-nav nav nav-stacked">
+          <ul class="secondary-nav">
             <li v-if="view != 'add-view'">
               <a v-on:click="view = 'add-view'"><span class="icon-plus label-success"></span> <span class="label label-success">Add source</span></a>
             </li>

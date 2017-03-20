@@ -4,7 +4,7 @@ $mn-border: $gray-lighter;
 $mn-panel: #fff;
 $mn-header: $brand-success;
 $mn-tabs: $mn-panel;
-$mn-divider: $mn-background;
+$mn-divider: $mn-border;
 
 .panel {
 
@@ -54,6 +54,7 @@ $mn-divider: $mn-background;
 
   .main-nav {
     background-color: $mn-background;
+    @include gradient-vertical($mn-background, $mn-panel, 0%, 100%);
 
     .main-header {
       background-color: $mn-header;
@@ -88,7 +89,7 @@ $mn-divider: $mn-background;
       }
     }
     @media screen and (min-width: $screen-sm) {
-      box-shadow: inset -2px 0px 0px 0px $mn-divider;
+      box-shadow: inset -4px 0px 0px 0px $mn-divider;
 
       &:after {
         @include gradient-vertical(rgba($mn-background,0), $mn-background, 0%, 100%);
@@ -98,21 +99,10 @@ $mn-divider: $mn-background;
 
   .secondary-nav {
     @media screen and (min-width: $screen-sm) {
-      [class*=" icon-"],
-      [class^=icon-] {
-        box-shadow: 0px 0px 0px 4px $mn-background;
-      }
+      @include gradient-vertical(rgba($mn-panel,0), $mn-panel, 0%, 20px);
 
-      a {
-        &:hover {
-          .label {
-            box-shadow: 0px 0px 0px 3px $mn-background;
-          }
-        }
-      }
-
-      &:before {
-        background-color: $mn-background;
+      li {
+        border-top-color: $mn-border;
       }
     }
   }
