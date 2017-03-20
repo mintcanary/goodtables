@@ -19,8 +19,8 @@
           <div role="tabpanel" class="report tab-pane active" id="report">
 
             <h4 class="file-heading">
-              <span class="file-count">File 1 of 2</span>
               <a class="file-name">github/okfn/test-data/master/some-file.csv</a>
+              <span class="file-count">File 1 of 2</span>
             </h4>
 
             <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
@@ -104,8 +104,8 @@
 
 
             <h4 class="file-heading">
-              <span class="file-count">File 2 of 2</span>
               <a class="file-name">github/okfn/test-data/master/another-file.csv</a>
+              <span class="file-count">File 2 of 2</span>
             </h4>
 
             <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
