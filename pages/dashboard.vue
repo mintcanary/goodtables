@@ -18,6 +18,20 @@
         <div class="tab-content">
           <div role="tabpanel" class="report tab-pane active" id="report">
 
+            <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
+              <table class="table table-bordered table-condensed">
+                <tbody>
+                  <tr class="result-header-row">
+                    <td class="result-row-index">1</td>
+                    <td>id</td>
+                    <td>name</td>
+                    <td class="danger"></td>
+                    <td>name</td>
+                  </tr>
+                </tbody>
+              </table>
+            </report-error>
+
             <h4 class="file-heading">
               <a class="file-name">github/okfn/test-data/master/some-file.csv</a>
               <span class="file-count">File 1 of 2</span>
