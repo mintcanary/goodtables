@@ -33,8 +33,10 @@
             </report-error>
 
             <h4 class="file-heading">
-              <a class="file-name">github/okfn/test-data/master/some-file.csv</a>
-              <span class="file-count">File 1 of 2</span>
+              <span>
+                <a class="file-name">github/okfn/test-data/master/some-file.csv</a>
+                <a class="file-count">File 1 of 2</a>
+              </span>
             </h4>
 
             <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
@@ -118,8 +120,10 @@
 
 
             <h4 class="file-heading">
-              <a class="file-name">github/okfn/test-data/master/another-file.csv</a>
-              <span class="file-count">File 2 of 2</span>
+              <span>
+                <a class="file-name">github/okfn/test-data/master/another-file.csv</a>
+                <a class="file-count">File 2 of 2</a>
+              </span>
             </h4>
 
             <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
@@ -157,6 +161,7 @@
 <script>
   import SourceItem from '~components/source_list_item.vue'
   import ReportError from '~components/report_error.vue'
+  import $ from 'jquery'
 
   export default {
     layout: 'dashboard',
@@ -168,6 +173,28 @@
       return {
         title: `GoodTables`
       }
+    },
+    mounted: () => {
+      function stickyHeading () {
+        // TODO: Needs offset for subsequent headings, once a sticky heading is active
+        $('.file-heading').each(function () {
+          var windowTop = $(window).scrollTop()
+          var divTop = $(this).offset().top
+          if (windowTop > divTop) {
+            $('.file-heading span').removeClass('stick')
+            $('.file-heading span').width('100%')
+            $(this).children('span').addClass('stick')
+            $(this).children('span').width($(this).parents('.report').outerWidth())
+          } else {
+            $(this).children('span').removeClass('stick')
+            $(this).children('span').width('100%')
+          }
+        })
+      }
+      $(function () {
+        $('.source-view > div').scroll(stickyHeading)
+        stickyHeading()
+      })
     }
   }
 </script>
