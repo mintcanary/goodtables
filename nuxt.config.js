@@ -26,8 +26,6 @@ module.exports = {
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
 
-  plugins: ['~plugins/bootstrap.js'],
-
   router: {
     base: '/goodtables-ui/'
   },
