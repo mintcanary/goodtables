@@ -395,6 +395,126 @@
     overflow: hidden;
     float: left;
     margin-left: -15px;
+    position: relative;
+
+    .main-header {
+      .heading {
+        margin: 0;
+        font-size: 18px;
+        padding: 20px;
+      }
+
+      .nav-tabs > li {
+        & > a {
+          color: $gray-lighter;
+        }
+
+        &.active {
+          & > a {
+            background-color: $gray-lighter;
+            color: $gray-dark;
+          }
+        }
+      }
+
+      .close {
+        padding: 20px 10px;
+        text-shadow: none;
+      }
+    }
+  }
+
+  section.add-source {
+
+    .tool-bar {
+      padding: 15px;
+      display: table;
+      width: 100%;
+      background-color: $gray-lighter;
+      border-bottom: solid 5px $gray-dark;
+
+      & > span {
+        display: table-cell;
+        vertical-align: middle;
+
+        &.sync {
+          width: 40px;
+          text-align: right;
+
+          button {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: none;
+            line-height: 1;
+            background-color: $gray-light;
+
+            &:hover {
+              background-color: $brand-info;
+            }
+          }
+        }
+      }
+    }
+
+    .repos {
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        border-bottom: solid 5px $gray-dark;
+        overflow: hidden;
+
+        .repo-title {
+          font-size: 16px;
+          font-weight: 600;
+          margin: 0;
+          padding: 12px 0 0 15px;
+        }
+
+        .repo-body {
+          display: block;
+          font-size: 13px;
+          padding: 1px 0 12px 15px;
+
+          a {
+            color: inherit;
+          }
+        }
+
+        .activate {
+          position: absolute;
+          top: 50%;
+          right: 14px;
+          width: 26px;
+          height: 26px;
+          border: none;
+          margin-top: -13px;
+          border-radius: 50%;
+          background-color: #fff;
+          color: $gray;
+          line-height: 1;
+          box-shadow: 10px 0px 10px 20px $gray;
+
+          &:hover {
+            background-color: $brand-success;
+            color: #fff;
+            box-shadow: 10px 0px 10px 20px lighten($gray,20%);
+
+            & + .repo-title {
+              background-color: lighten($gray,20%);
+              border-left: solid 4px $brand-success;
+
+              & + .repo-body {
+                background-color: lighten($gray,20%);
+                border-left: solid 4px $brand-success;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   section.settings {

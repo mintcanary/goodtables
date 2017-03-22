@@ -107,8 +107,33 @@ $mn-divider: $mn-border;
     }
   }
 
+  section.add-source,
+  section.settings {
+    .main-header {
+      box-shadow: none;
+    }
+    &:after {
+      content: '';
+      width: 4px;
+      height: 100%;
+      background-color: rgba(#000,0.15);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
   section.add-source {
-    background-color: $gray-darker;
+    background-color: $gray;
+    @include rev-out(#fff, $gray);
+
+    .main-header {
+      background-color: $gray-dark;
+    }
+
+    .close {
+      color: #fff;
+    }
   }
 
   section.settings {

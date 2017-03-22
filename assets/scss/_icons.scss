@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('~static/fonts/icons/icomoon.eot?17j7w5');
-  src:  url('~static/fonts/icons/icomoon.eot?17j7w5#iefix') format('embedded-opentype'),
-    url('~static/fonts/icons/icomoon.ttf?17j7w5') format('truetype'),
-    url('~static/fonts/icons/icomoon.woff?17j7w5') format('woff'),
-    url('~static/fonts/icons/icomoon.svg?17j7w5#icomoon') format('svg');
+  src:  url('~static/fonts/icons/icomoon.eot?7pz8ez');
+  src:  url('~static/fonts/icons/icomoon.eot?7pz8ez#iefix') format('embedded-opentype'),
+    url('~static/fonts/icons/icomoon.ttf?7pz8ez') format('truetype'),
+    url('~static/fonts/icons/icomoon.woff?7pz8ez') format('woff'),
+    url('~static/fonts/icons/icomoon.svg?7pz8ez#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -50,6 +50,9 @@
 }
 .icon-clock:before {
   content: "\e94e";
+}
+.icon-spinner11:before {
+  content: "\e984";
 }
 .icon-equalizer:before {
   content: "\e992";
