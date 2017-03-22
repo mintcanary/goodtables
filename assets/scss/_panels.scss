@@ -222,4 +222,7 @@
   .panel-danger & {
     background-color: lighten($state-danger-bg,3%);
   }
+  .panel-warning & {
+    background-color: lighten($state-warning-bg,3%);
+  }
 }

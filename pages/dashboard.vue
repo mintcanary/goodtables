@@ -18,18 +18,12 @@
         <div class="tab-content">
           <div role="tabpanel" class="report tab-pane active" id="report">
 
-            <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
-              <table class="table table-bordered table-condensed">
-                <tbody>
-                  <tr class="result-header-row">
-                    <td class="result-row-index">1</td>
-                    <td>id</td>
-                    <td>name</td>
-                    <td class="danger"></td>
-                    <td>name</td>
-                  </tr>
-                </tbody>
-              </table>
+            <report-error title="Datapackage validatation" helptitle="<span class='label label-info'>Structure</span> Datapackage validatation error" count="1" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis interdum aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a>Read more</a>">
+              Attribute resource should be a list
+            </report-error>
+
+            <report-error title="Datapackage validatation" helptitle="<span class='label label-info'>Structure</span> Datapackage validatation error" count="1" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis interdum aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a>Read more</a>" type="warning">
+              Validation is limited by error limit setting
             </report-error>
 
             <h4 class="file-heading">
