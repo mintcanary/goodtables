@@ -4,20 +4,104 @@
       <div class="pattern">
         <div class="inner">
           <div class="container">
-            <logo/>
-            <div class="text">
-              <h1>Valid Data. Always.</h1>
-              <p>
-                Welcome to continuous validation for tabular data.
-              </p>
-              <a class="btn btn-default" href="#">Learn more</a>
-              <a class="btn btn-primary" href="#">Sign in with GitHub</a>
+            <div class="main-nav">
+              <div class="container">
+                <logo/>
+                <nav>
+                  <a class="btn btn-primary" href="#">Sign in with GitHub</a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="source-item panel panel-success">
+                <div>
+                  <span class="source">
+                    <span class="label label-success">
+                      <span class="icon-checkmark">
+                        <i>Valid</i>
+                      </span>
+                    </span>
+                    <p class="panel-title">
+                      repository/my-data
+                    </p>
+                  </span>
+                  <span class="job">
+                    <span class="icon-clock"></span>
+                    <span class="time"> a minute ago</span>
+                  </span>
+                </div>
+              </div>
+
+              <a class="next" href="#features">
+                <h1>meet <strong>goodTables</strong><small>.io</small></h1>
+                <span class="icon-keyboard_arrow_down">
+                  <i>Learn more</i>
+                </span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <nuxt/>
+    <section class="features" id="features">
+      <div class="container">
+        <h2>the web service for the continuous validation of data quality</h2>
+        <div class="content">
+          <div class="inner">
+            <ul class="feature-list">
+              <li class="check">
+                <span class="wrapper">
+                  <span class="icon-goodtables"></span>
+                </span>
+                <p>Automatically check data is good on every update.</p>
+              </li>
+              <li class="validate">
+                <span class="wrapper">
+                  <span class="icon-mouse-pointer"></span>
+                </span>
+                <p>Validate data with a minimum of clicks.</p>
+              </li>
+              <li class="trust">
+                <span class="wrapper">
+                  <span class="icon-shield"></span>
+                </span>
+                <p>Trust in the validity and usefulness of your data.</p>
+              </li>
+              <li class="connect">
+                <span class="icon-github"></span>
+                <p>Connect directly to your data repository.</p>
+              </li>
+              <li class="quality">
+                <span class="wrapper">
+                  <span class="icon-checkmark"></span>
+                  <span class="icon-checkmark"></span>
+                </span>
+                <p>Prove that your data is of consistent good quality.</p>
+              </li>
+              <li class="errors">
+                <span class="icon-clock"></span>
+                <p>Catch and identify errors early.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text" id="about">
+      <div class="container">
+        <div class="content">
+          <nuxt/>
+        </div>
+        <div class="cta">
+          <div class="inner">
+            <a class="btn btn-primary" href="#">Sign in with GitHub</a>
+            <h2>Try it yourself. It's Free!*</h2>
+            <small>* While the basic service of goodtables.io will always remain free, there will be additional features for paid plans in the future. Watch this space!</small>
+          </div>
+        </div>
+      </div>
+    </section>
     <my-footer/>
   </div>
 </template>
