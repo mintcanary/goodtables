@@ -33,7 +33,7 @@
                 </div>
               </div>
 
-              <a class="next" href="#features">
+              <a class="next" href="#features" v-scroll-to="'#features'">
                 <h1>meet <strong>goodTables</strong><small>.io</small></h1>
                 <span class="icon-keyboard_arrow_down">
                   <i>Learn more</i>
@@ -110,6 +110,11 @@
 import Logo from '~components/Logo.vue'
 
 import MyFooter from '~components/Footer.vue'
+
+var Vue = require('vue')
+var VueScrollTo = require('vue-scrollto')
+
+Vue.use(VueScrollTo)
 
 export default {
   components: {
