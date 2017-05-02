@@ -87,6 +87,11 @@
           </div>
         </div>
       </div>
+      <a class="next" href="#about" v-scroll-to="'#about'">
+        <span class="icon-keyboard_arrow_down">
+          <i>More</i>
+        </span>
+      </a>
     </section>
     <section class="text" id="about">
       <div class="container">

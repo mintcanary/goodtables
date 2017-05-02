@@ -1,6 +1,42 @@
 .landing {
   overflow-x: hidden;
 
+  .next {
+    position: absolute;
+    bottom: 4vh;
+    display: block;
+    width: 100%;
+    left: 0;
+    color: inherit;
+    text-decoration: none;
+
+    h1 {
+      font-weight: 600;
+      font-size: 2em;
+      margin-bottom: 5vh;
+      opacity: 0.9;
+
+      strong {
+        font-weight: 700;
+      }
+      small {
+        color: inherit;
+        font-weight: 600;
+      }
+    }
+
+    & > span {
+      font-size: 2em;
+      opacity: 0.9;
+    }
+
+    &:hover {
+      & > span {
+        opacity: 1;
+      }
+    }
+  }
+
   .main-header {
     text-align: center;
 
@@ -106,40 +142,7 @@
       }
     }
 
-    .next {
-      position: absolute;
-      bottom: 4vh;
-      display: block;
-      width: 100%;
-      left: 0;
-      color: inherit;
 
-      h1 {
-        font-weight: 600;
-        font-size: 2em;
-        margin-bottom: 5vh;
-        opacity: 0.9;
-
-        strong {
-          font-weight: 700;
-        }
-        small {
-          color: inherit;
-          font-weight: 600;
-        }
-      }
-
-      & > span {
-        font-size: 2em;
-        opacity: 0.9;
-      }
-
-      &:hover {
-        & > span {
-          opacity: 1;
-        }
-      }
-    }
   }
 
   .feature-list {
@@ -224,16 +227,22 @@
 
   .features {
     text-align: center;
+    position: relative;
 
     h2 {
       font-weight: 600;
-      margin: 8vh 0;
+      margin: 6vh 0;
+      font-size: 2em;
+    }
+
+    .next {
+      display: none;
     }
 
     @media screen and (min-width: $screen-md) {
       .container {
         position: relative;
-        padding-top: 18vh;
+        padding-top: 14vh;
       }
       h2 {
         position: absolute;
@@ -242,12 +251,15 @@
       }
       .content {
         display: table;
-        height: 82vh;
+        height: 86vh;
 
         .inner {
           display: table-cell;
           vertical-align: middle;
         }
+      }
+      .next {
+        display: block;
       }
     }
     @media screen and (min-height: 820px) {
