@@ -226,8 +226,8 @@
 
       &.check {
         .wrapper {
-          background-color: $brand-primary;
-          @include gradient-vertical($brand-primary, rgba($brand-info,0.3), 0%, 100%);
+          background-color: $brand-success;
+          @include gradient-vertical($brand-success, rgba($brand-info,0.3), 0%, 100%);
         }
       }
 
@@ -240,8 +240,8 @@
       }
       &.trust {
         .wrapper {
-          background-color: $brand-primary;
-          @include gradient-vertical($brand-primary, rgba($brand-info,0.3), 0%, 100%);
+          background-color: $brand-success;
+          @include gradient-vertical($brand-success, rgba($brand-info,0.3), 0%, 100%);
         }
         [class^="icon-"] {
           top: 28px;
@@ -249,8 +249,8 @@
       }
       &.quality {
         .wrapper {
-          background-color: $brand-primary;
-          @include gradient-vertical($brand-primary, rgba($brand-info,0.3), 0%, 100%);
+          background-color: $brand-success;
+          @include gradient-vertical($brand-success, rgba($brand-info,0.3), 0%, 100%);
         }
         [class^="icon-"] {
           font-size: 80px;
@@ -321,7 +321,7 @@
 
   .text {
     background-color: $brand-info;
-    @include rev-out(#fff, $brand-primary);
+    @include rev-out(#fff, $brand-success);
     line-height: 1.6;
 
     h2 {
@@ -360,7 +360,7 @@
 
     .cta {
       height: 1%;
-      background-color: $brand-primary;
+      background-color: $brand-success;
 
       h2 {
         margin-bottom: 0;
@@ -393,7 +393,7 @@
           bottom: 0;
           left: -100vw;
           width: 300vw;
-          background-color: $brand-primary;
+          background-color: $brand-success;
           z-index: -1;
         }
       }
