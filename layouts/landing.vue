@@ -34,7 +34,7 @@
               </div>
 
               <a class="next" href="#features" v-scroll-to="'#features'">
-                <h1>meet <strong>goodTables</strong><small>.io</small></h1>
+                <h1>meet <strong>goodtables</strong><small>.io</small></h1>
                 <span class="icon-keyboard_arrow_down">
                   <i>Learn more</i>
                 </span>
