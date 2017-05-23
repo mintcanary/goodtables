@@ -1,0 +1,154 @@
+.dashboard {
+  &.actions,
+  &.jobs {
+    @include make-md-column(6);
+  }
+
+  &.actions {
+
+    .panel-group {
+      margin-left: -$grid-gutter-width/2;
+      margin-right: -$grid-gutter-width/2;
+
+      .panel {
+        border-bottom: solid 1px $gray-light;
+        padding-bottom: 10px;
+
+        @media screen and (min-width: $screen-md) {
+          padding-left: $grid-gutter-width/2;
+          padding-right: $grid-gutter-width/2;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+      }
+
+      .panel-heading {
+        position: relative;
+
+        .label {
+
+          height: 26px;
+          min-width: 26px;
+          line-height: 20px;
+          padding-left: 7px;
+          padding-right: 7px;
+          position: absolute;
+          top: 50%;
+          left: $grid-gutter-width/2;
+          margin-top: -10px;
+
+          &.count {
+            right: 54px;
+            left: auto;
+            display: none;
+          }
+        }
+
+        .panel-title {
+          margin-left: 40px;
+
+          small {
+            display: block;
+            color: $gray;
+          }
+
+          @media screen and (min-width: $screen-md) {
+            font-size: 20px;
+          }
+        }
+
+        a[data-toggle] {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          text-decoration: none;
+          font-size: 34px;
+          display: block;
+          width: 26px;
+          height: 26px;
+          line-height: 26px;
+          margin-top: -10px;
+          color: $gray;
+          border-radius: $border-radius-base;
+
+          span {
+            left: -0.1em;
+            top: -0.06em;
+          }
+
+          &.collapsed {
+            @include rotate(-90deg);
+
+            & + .count {
+              display: block;
+            }
+          }
+
+          &:hover {
+            background-color: $gray-lighter;
+          }
+        }
+      }
+
+    }
+
+    @media screen and (min-width: $screen-md) {
+      padding-left: $grid-gutter-width;
+    }
+
+    .dash-files {
+      margin: 0 0 0 (-$grid-gutter-width);
+      padding: 0;
+
+      li {
+        display: inline-block;
+        width: 50%;
+        margin: $grid-gutter-width/2 0 0 0;
+        padding: 0 0 $grid-gutter-width $grid-gutter-width;
+        position: relative;
+
+        @media screen and (min-width: 1600px) {
+          width: 33.3333%;
+        }
+
+        .label {
+          font-size: 14px;
+          position: absolute;
+          top: -$grid-gutter-width/2;
+          right: 0;
+          height: 26px;
+          line-height: 18px;
+        }
+
+        img {
+          margin-right: $grid-gutter-width/2;
+        }
+      }
+    }
+  }
+
+  &.jobs {
+    background-color: $gray-lighter;
+    position: static;
+    padding-bottom: $grid-gutter-width/2;
+
+    @media screen and (min-width: $screen-md) {
+      padding-right: $grid-gutter-width;
+
+      // give impression of full height
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        background-color: $gray-lighter;
+        z-index: -1;
+      }
+    }
+  }
+}

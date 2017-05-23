@@ -1,171 +1,83 @@
 <template>
-  <div class="invalid">
-    <div class="inner banner">
-      <a class="icon-github integration"><i>GitHub</i></a>
-      <h2 class="source-title">
-        Test Data
-        <small>github/okfn/test-data</small>
-      </h2>
-      <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago" source="active" job="active"/>
-    </div>
-    <section class="inner">
+  <div>
+    <section class="dashboard actions">
+      <h1>Action required</h1>
 
-      <div>
-        <ul class="nav nav-tabs" role="tablist">
-         <li role="presentation" class="active"><a href="#report" aria-controls="home" role="tab" data-toggle="tab">Report</a></li>
-         <li role="presentation"><a href="#history" aria-controls="profile" role="tab" data-toggle="tab">Job history</a></li>
-        </ul>
-        <div class="tab-content">
-          <div role="tabpanel" class="report tab-pane active" id="report">
-
-            <report-error title="Datapackage validatation" helptitle="<span class='label label-info'>Structure</span> Datapackage validatation error" count="1" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis interdum aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a>Read more</a>">
-              Attribute resource should be a list
-            </report-error>
-
-            <report-error title="Datapackage validatation" helptitle="<span class='label label-info'>Structure</span> Datapackage validatation error" count="1" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis interdum aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <a>Read more</a>" type="warning">
-              Validation is limited by error limit setting
-            </report-error>
-
-            <h4 class="file-heading">
-              <span>
-                <a class="file-name">github/okfn/test-data/master/some-file.csv</a>
-                <a class="file-count">File 1 of 2</a>
-              </span>
-            </h4>
-
-            <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
-              <table class="table table-bordered table-condensed">
-                <tbody>
-                  <tr class="result-header-row">
-                    <td class="result-row-index">1</td>
-                    <td>id</td>
-                    <td>name</td>
-                    <td class="danger"></td>
-                    <td>name</td>
-                  </tr>
-                </tbody>
-              </table>
-            </report-error>
-
-            <report-error title="Duplicate Header" helptitle="<span class='label label-info'>Structure</span> Duplicate Header" count="1" description="The headers highlighted below are duplicates. <a>Read more</a>">
-              <table class="table table-bordered table-condensed">
-                <tbody>
-                  <tr class="result-header-row">
-                    <td class="result-row-index">1</td>
-                    <td>id</td>
-                    <td class="danger">name</td>
-                    <td></td>
-                    <td class="danger">name</td>
-                  </tr>
-                </tbody>
-              </table>
-            </report-error>
-
-            <report-error title="Defective Row" helptitle="<span class='label label-info'>Structure</span> Defective Row" count="3" description="The row dimensions are incorrect compared to headers. <a>Read more</a>">
-              <table class="table table-bordered table-condensed">
-                <tbody>
-                  <tr class="result-header-row">
-                    <td class="result-row-index">1</td>
-                    <td>id</td>
-                    <td>name</td>
-                    <td></td>
-                    <td>name</td>
-                  </tr>
-                  <tr class="result-row danger">
-                    <td class="result-row-index">2</td>
-                    <td>1</td>
-                    <td>english</td>
-                  </tr>
-                  <tr class="result-row danger">
-                    <td class="result-row-index">3</td>
-                    <td>1</td>
-                    <td>english</td>
-                  </tr>
-                  <tr class="result-row danger">
-                    <td class="result-row-index">4</td>
-                    <td>2</td>
-                    <td>german</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                  </tr>
-                </tbody>
-              </table>
-            </report-error>
-
-            <report-error title="Duplicate Row" helptitle="<span class='label label-info'>Structure</span> Duplicate Row" count="1" description="The exact same row has been seen before (a duplicate). <a>Read more</a>">
-              <table class="table table-bordered table-condensed">
-                <tbody>
-                  <tr class="result-header-row">
-                    <td class="result-row-index">1</td>
-                    <td>id</td>
-                    <td>name</td>
-                    <td></td>
-                    <td>name</td>
-                  </tr>
-                  <tr class="result-row danger">
-                    <td class="result-row-index">3</td>
-                    <td>1</td>
-                    <td>english</td>
-                  </tr>
-                </tbody>
-              </table>
-            </report-error>
-
-
-            <h4 class="file-heading">
-              <span>
-                <a class="file-name">github/okfn/test-data/master/another-file.csv</a>
-                <a class="file-count">File 2 of 2</a>
-              </span>
-            </h4>
-
-            <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
-              <table class="table table-bordered table-condensed">
-                <tbody>
-                  <tr class="result-header-row">
-                    <td class="result-row-index">1</td>
-                    <td>id</td>
-                    <td>name</td>
-                    <td class="danger"></td>
-                    <td>name</td>
-                  </tr>
-                </tbody>
-              </table>
-            </report-error>
-
-         </div>
-         <div role="tabpanel" class="tab-pane" id="history">
-           History here
-         </div>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+            <h3 class="panel-title">
+              okfn/test-data
+              <small>1 day ago (#2928dd)</small>
+            </h3>
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <span class="icon-keyboard_arrow_down"><i>Toggle details</i></span>
+            </a>
+            <span class="count label label-danger">74</span>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <ul class="dash-files">
+                <dash-file name="some-file.csv" count="73"/>
+                <dash-file name="another-file.csv" count="1"/>
+              </ul>
+              <a type="button" class="btn btn-default">See full report</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+            <h3 class="panel-title">
+              okfn/more-data
+              <small>2 days ago (#2928dd)</small>
+            </h3>
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span class="icon-keyboard_arrow_down"><i>Toggle details</i></span>
+            </a>
+            <span class="count label label-danger">14</span>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <ul class="dash-files">
+                <dash-file name="some-file.csv" count="3"/>
+                <dash-file name="another-file.csv" count="4"/>
+                <dash-file name="some-file.csv" count="5"/>
+                <dash-file name="another-file.csv" count="3"/>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <ul class="meta">
-        <li>
-          Report calculated on Mon Mar 13 at 01:29 PM
-        </li>
-        <li>
-          Source added: 21 Feb 2017
-        </li>
-      </ul>
+
+    </section>
+    <section class="dashboard jobs">
+      <h1>Latest jobs</h1>
+
+      <source-item title="okfn/my-data" integration="github" jobnumber="77" jobtotal="77" status="valid" time="7 minutes ago"/>
+      <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobtotal="2"  status="valid" time="20 minutes ago"/>
+      <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago"/>
+      <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobtotal="1"  status="invalid" time="2 days ago"/>
+
     </section>
   </div>
 </template>
 
 <script>
   import SourceItem from '~components/source_list_item.vue'
-  import ReportError from '~components/report_error.vue'
+  import DashFile from '~components/dash_file.vue'
   import $ from 'jquery'
 
   export default {
-    layout: 'dashboard',
+    layout: 'app',
     components: {
       SourceItem,
-      ReportError
+      DashFile
     },
     head () {
       return {
-        title: `GoodTables`
+        title: `goodtables`
       }
     },
     mounted: () => {

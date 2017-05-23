@@ -89,7 +89,7 @@
               display: inline-block;
               font-size: 1.2em;
               font-weight: 600;
-              border: solid 4px #fff;
+              border: solid 2px #fff;
               padding: 0.2em 1em;
               margin-left: 0.5em;
             }
@@ -167,7 +167,6 @@
         .icon-clock {
           font-size: 0.7em;
           top: 0em;
-          opacity: 0.7;
         }
 
         .time {
@@ -175,7 +174,6 @@
           font-weight: 600;
           position: relative;
           top: -0.2em;
-          opacity: 0.7;
           margin-left: 0.2em;
         }
       }
@@ -374,6 +372,7 @@
       .btn {
         font-size: 20px;
         margin-top: $grid-gutter-width;
+        font-weight: bold;
       }
 
       small {

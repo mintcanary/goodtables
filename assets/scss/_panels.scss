@@ -3,29 +3,30 @@
   box-shadow: none;
   border-width: 0;
 
-  @mixin active-panel {
-    background-color: $body-bg;
-    color: $text-color;
-    border-left-width: 5px;
-  }
-
   .github,
   .aws {
     position: relative;
 
     .integration {
       position: absolute;
-      top: 1px;
+      top: 5px;
       right: 0;
       font-size: 15px;
       text-decoration: none;
       padding: 11px 10px;
+      @include gradient-horizontal(rgba(#fff,0), #fff, 0%, 25%);
     }
   }
 
   &.source-item {
     white-space: nowrap;
-    border-width: 0;
+    border-width: 0 4px 0 0;
+    color: $text-color;
+    margin-bottom: $grid-gutter-width/2;
+
+    a {
+      color: inherit;
+    }
 
     .label {
       margin-right: 10px;
@@ -34,6 +35,11 @@
     .panel-title {
       display: inline-block;
       font-weight: 600;
+      font-size: 14px;
+
+      .jobnumber {
+        @include text-hide;
+      }
     }
 
     .source,
@@ -52,16 +58,29 @@
 
     .source {
       padding: 10px;
+
+      .status {
+        @include text-hide;
+      }
+
+      @media screen and (min-width: $screen-sm) {
+        padding: 14px 12px;
+      }
     }
 
     .job {
-      border-top: solid 1px $gray-darker;
+      border-top: solid 1px $gray-light;
       padding: 3px 10px;
       font-size: 12px;
       font-weight: 500;
+      opacity: 0.7;
 
       .jobcount {
         float: right;
+      }
+
+      @media screen and (min-width: $screen-sm) {
+        padding: 6px 12px;
       }
     }
 
@@ -118,8 +137,6 @@
 
     &.active {
       @media screen and (min-width: $screen-sm) {
-
-        @include active-panel;
 
         .source,
         .job {
