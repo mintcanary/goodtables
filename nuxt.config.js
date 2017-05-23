@@ -27,7 +27,7 @@ module.exports = {
   ],
 
   router: {
-    base: '/goodtables-ui/'
+    base: '/goodtables/'
   },
 
   /*
