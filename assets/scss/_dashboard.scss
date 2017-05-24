@@ -52,7 +52,7 @@
 
           small {
             display: block;
-            color: $gray;
+            color: $gray-dark;
           }
 
           @media screen and (min-width: $screen-md) {
@@ -71,7 +71,7 @@
           height: 26px;
           line-height: 26px;
           margin-top: -10px;
-          color: $gray;
+          color: $gray-dark;
           border-radius: $border-radius-base;
 
           span {
