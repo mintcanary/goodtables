@@ -1,18 +1,170 @@
-.report {
+.source-view {
+
+  @media screen and (min-width: $screen-sm) {
+    padding-left: $grid-gutter-width/2;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
+
+    @media screen and (min-width: $screen-sm) {
+      margin-left: -$grid-gutter-width/2;
+    }
+  }
+
+  & > div {
+    @media screen and (min-width: $screen-md) {
+      display: table;
+      width: 100%;
+    }
+  }
+
+  .report {
+    background-color: $body-bg;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+
+    @media screen and (min-width: $screen-md) {
+      display: table-cell;
+      width: 75%;
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+      vertical-align: top;
+    }
+  }
+
+  .history {
+    background-color: $gray-lighter;
+
+    @media screen and (min-width: $screen-md) {
+      display: table-cell;
+      width: 25%;
+      vertical-align: top;
+    }
+  }
+
+  .latest-job {
+    display: table;
+    width: 100%;
+    margin-top: $grid-gutter-width;
+
+    @media screen and (min-width: $screen-sm) {
+      margin-top: $grid-gutter-width+10px;
+      margin-bottom: $grid-gutter-width;
+    }
+
+    .icon {
+      width: 55px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .label {
+      float: left;
+      height: 40px;
+      width: 40px;
+      line-height: 39px;
+
+      span {
+        font-size: 19px;
+      }
+    }
+
+    .status {
+      display: table-cell;
+      vertical-align: middle;
+
+      & > * {
+        margin: 0;
+        line-height: 1.3;
+      }
+      small {
+        display: block;
+        color: $gray-dark;
+      }
+
+      &.invalid {
+        & > * {
+          color: $brand-danger;
+        }
+      }
+    }
+
+    .meta {
+      display: table-caption;
+      caption-side: bottom;
+
+      ul {
+        margin: 0 0 0 45px;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          padding: 10px;
+        }
+      }
+
+      @media screen and (min-width: $screen-sm) {
+        display: table-cell;
+        text-align: right;
+
+        ul {
+          margin: 0;
+
+          li {
+            display: block;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
 
   .file-heading {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 12px;
+    padding-top: 20px;
     padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 400;
+
+    strong {
+      font-weight: 600;
+    }
 
     span {
       display: table;
       width: 100%;
+      position: relative;
+      z-index: 1;
+
+      &.stick {
+        position: fixed;
+        top: 0;
+        background-color: $body-bg;
+        z-index: 99;
+      }
 
       :last-child {
         text-align: right;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        bottom: 1px;
+        left: -30px;
+        right: -30px;
+        background-color: $body-bg;
+        z-index: -1;
+        border-bottom: solid 1px $gray-light;
+        border-top: solid 1px $gray-light;
       }
     }
 
@@ -30,42 +182,122 @@
     }
 
     .file-name {
-      font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 
-  .panel {
+  .file {
+    margin-bottom: $grid-gutter-width;
 
-    & + .file-heading {
-      margin-top: 30px;
-      border-top: solid 1px rgba($gray-dark,0.3);
+    &.invalid {
+      .file-heading {
+        span:before {
+          border-bottom-color: $brand-danger;
+        }
+        strong {
+          color: $brand-danger;
+        }
+      }
+    }
+  }
+
+  .result {
+    margin: $grid-gutter-width 0;
+    font-size: 12px;
+    position: relative;
+    padding-bottom: 20px;
+
+    .count {
+      font-size: 14px;
+      font-weight: 600;
+      margin-right: $padding-small-horizontal;
+    }
+
+    .label {
+      font-size: 14px;
+      margin-right: $padding-small-horizontal;
+    }
+
+    .help {
+      float: right;
+      display: none; // not currently using
+    }
+
+    .table-view {
+      border: solid 1px $gray;
+      border-radius: $border-radius-large;
+      margin-top: 15px;
+      position: relative;
+
+      table {
+        margin: 0;
+        color: $gray-darker;
+        border-radius: $border-radius-base;
+        overflow: hidden;
+
+        tr :first-child {
+          border-left-color: transparent;
+        }
+
+        td {
+          border-style: solid;
+          border-color: $gray;
+          border-width: 0 0 1px 1px;
+        }
+      }
+
+      .result-row-index {
+        font-weight: normal;
+        width: 2em;
+        text-align: center;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        height: 30px;
+        @include gradient-vertical(rgba($body-bg,0), $body-bg, 0%, 50%);
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -$grid-gutter-width;
+      right: -$grid-gutter-width;
+      bottom: 0;
+      height: 10px;
+      background-image: url('~assets/img/zigzag.svg');
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: auto 10px;
     }
   }
 }
 
-.default-view {
-
-  .file-heading {
-    span {
-      &.stick {
-        position: fixed;
-        top: 0;
-        background-color: $body-bg;
-        z-index: 99;
-
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 1px;
-          left: -30px;
-          right: -30px;
-          background-color: $body-bg;
-          z-index: -1;
-          border-bottom: solid 1px $brand-danger;
-        }
+.app .content {
+  .source-view {
+    h1 {
+      @media screen and (min-width: $screen-md) {
+        margin-left: 0;
       }
     }
+  }
+}
+
+.aside {
+  @media screen and (min-width: $screen-sm) {
+    margin-left: -$grid-gutter-width/2;
+  }
+
+  & > div {
+    padding: $grid-gutter-width/2;
+  }
+
+  h3 {
+    margin: 0 0 $padding-large-vertical 0;
   }
 }

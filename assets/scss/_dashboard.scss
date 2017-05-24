@@ -1,20 +1,28 @@
 .dashboard {
-  &.actions,
-  &.jobs {
-    @include make-md-column(6);
+
+  @media screen and (min-width: $screen-md) {
+    display: table;
+    width: 100%;
   }
 
-  &.actions {
+  .actions,
+  .jobs {
+
+    @media screen and (min-width: $screen-md) {
+      display: table-cell;
+      width: 50%;
+    }
+  }
+
+  .actions {
 
     .panel-group {
-      margin-left: -$grid-gutter-width/2;
-      margin-right: -$grid-gutter-width/2;
 
       .panel {
         border-bottom: solid 1px $gray-light;
         padding-bottom: 10px;
 
-        @media screen and (min-width: $screen-md) {
+        @media screen and (min-width: $screen-sm) {
           padding-left: $grid-gutter-width/2;
           padding-right: $grid-gutter-width/2;
         }
@@ -95,10 +103,6 @@
 
     }
 
-    @media screen and (min-width: $screen-md) {
-      padding-left: $grid-gutter-width;
-    }
-
     .dash-files {
       margin: 0 0 0 (-$grid-gutter-width);
       padding: 0;
@@ -130,25 +134,13 @@
     }
   }
 
-  &.jobs {
+  .jobs {
     background-color: $gray-lighter;
     position: static;
     padding-bottom: $grid-gutter-width/2;
 
-    @media screen and (min-width: $screen-md) {
-      padding-right: $grid-gutter-width;
-
-      // give impression of full height
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        background-color: $gray-lighter;
-        z-index: -1;
-      }
+    .source-item {
+      margin: $grid-gutter-width/2 $grid-gutter-width/2 0 $grid-gutter-width/2;
     }
   }
 }

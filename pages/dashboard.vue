@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <section class="dashboard actions">
+  <div class="dashboard">
+    <section class="actions">
       <h1>Action required</h1>
 
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -52,7 +52,7 @@
       </div>
 
     </section>
-    <section class="dashboard jobs">
+    <section class="jobs">
       <h1>Latest jobs</h1>
 
       <source-item title="okfn/my-data" integration="github" jobnumber="77" jobtotal="77" status="valid" time="7 minutes ago"/>
