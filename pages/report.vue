@@ -188,8 +188,9 @@
                   <h3 class="panel-title">Pushed on master</h3>
                 </span>
                 <a class="job">
+                  <span class="jobcount"><span class="jobnumber"> #77</span></span>
                   <span class="label label-danger"><span class="icon-cross"><i>Valid</i></span></span>
-                  <span class="jobcount"><span class="jobnumber"> #77</span></span><span class="time"> 7 minutes ago</span>
+                  <span class="time"> 7 minutes ago</span>
                 </a>
               </div>
             </div>
