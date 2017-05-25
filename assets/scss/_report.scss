@@ -4,9 +4,16 @@
     padding-left: $grid-gutter-width/2;
   }
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-lg) {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  & > .integration {
+    float: right;
+    margin: 20px 20px 0 20px;
+    font-size: 28px;
+    color: inherit;
   }
 
   h1 {
@@ -18,7 +25,7 @@
   }
 
   & > div {
-    @media screen and (min-width: $screen-md) {
+    @media screen and (min-width: $screen-lg) {
       display: table;
       width: 100%;
     }
@@ -29,7 +36,7 @@
     padding-left: $grid-gutter-width/2;
     padding-right: $grid-gutter-width/2;
 
-    @media screen and (min-width: $screen-md) {
+    @media screen and (min-width: $screen-lg) {
       display: table-cell;
       width: 75%;
       padding-left: $grid-gutter-width;
@@ -41,7 +48,7 @@
   .history {
     background-color: $gray-lighter;
 
-    @media screen and (min-width: $screen-md) {
+    @media screen and (min-width: $screen-lg) {
       display: table-cell;
       width: 25%;
       vertical-align: top;
@@ -281,8 +288,8 @@
 .app .content {
   .source-view {
     h1 {
-      @media screen and (min-width: $screen-md) {
-        margin-left: 0;
+      @media screen and (min-width: $screen-lg) {
+        padding-left: $grid-gutter-width*1.5;
       }
     }
   }
@@ -297,7 +304,7 @@
     padding: $grid-gutter-width/2;
   }
 
-  h3 {
+  .aside-title {
     margin: 0 0 $padding-large-vertical 0;
   }
 }

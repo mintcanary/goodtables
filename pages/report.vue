@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="source-view">
+      <a class="integration icon-github"></a>
       <h1>okfn/test-data</h1>
       <div>
         <section class="report">
@@ -177,8 +178,21 @@
         </section>
         <section class="history aside">
           <div>
-            <h3>Job history</h3>
-            <div class="source-item panel panel-success"><div class="github"><a class="source"><span class="status">valid </span><span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span><h3 class="panel-title">github/okfn/my-data<span class="jobnumber">#77</span></h3></a><a class="job"><span class="jobcount"><span class="jobnumber"> #77</span><span class="jobtotal"> of 77</span></span><span class="icon-clock"></span><span class="time"> 7 minutes ago</span></a><a class="integration icon-github"></a></div></div>
+            <h3 class="aside-title">Job history</h3>
+            <div class="source-item panel panel-danger">
+              <div class="github">
+                <span class="source">
+                  <a class="avatar">
+                    <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                  </a>
+                  <h3 class="panel-title">Pushed on master</h3>
+                </span>
+                <a class="job">
+                  <span class="label label-danger"><span class="icon-cross"><i>Valid</i></span></span>
+                  <span class="jobcount"><span class="jobnumber"> #77</span></span><span class="time"> 7 minutes ago</span>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </div>
