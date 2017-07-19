@@ -116,10 +116,10 @@ import Logo from '~components/Logo.vue'
 
 import MyFooter from '~components/Footer.vue'
 
-var Vue = require('vue')
-var VueScrollTo = require('vue-scrollto')
+// var Vue = require('vue')
+// var VueScrollTo = require('vue-scrollto')
 
-Vue.use(VueScrollTo)
+// Vue.use(VueScrollTo)
 
 export default {
   components: {
