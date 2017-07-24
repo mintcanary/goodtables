@@ -4,7 +4,7 @@
       <nav class="main-nav">
         <logo/>
         <PrimaryNav/>
-        <SecondaryNav usertext="Log out"/>
+        <SecondaryNav loggedin="true"/>
       </nav>
       <div class="content">
         <nuxt/>

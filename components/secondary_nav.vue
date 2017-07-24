@@ -1,7 +1,7 @@
 <template>
   <ul class="nav secondary">
     <li>
-      <a class="expand collapsed" data-toggle="collapse" href="#feedback" aria-expanded="false" aria-controls="feedback">Feedback</a>
+      <a class="expand collapsed" data-toggle="collapse" href="#feedback" aria-expanded="false" aria-controls="feedback"><img src="~assets/img/feedback.svg" alt=""> Feedback</a>
       <div class="collapse" id="feedback">
         <div class="well">
           <p>To provide feedback or report an issue:</p>
@@ -13,14 +13,17 @@
         </div>
       </div>
     </li>
-    <li>
-      <a href="#">{{ usertext }}</a>
+    <li v-if="loggedin" class="log-out">
+      <a href="#"><img src="https://github.com/smth.png?size=52" alt="" /> Log out</a>
+    </li>
+    <li v-else class="log-in">
+      <a href="#"><img src="~assets/img/login.svg" alt=""> Log in</a>
     </li>
   </ul>
 </template>
 
 <script>
   export default {
-    props: ['usertext']
+    props: ['loggedin']
   }
 </script>

@@ -43,6 +43,11 @@
           background-color: $brand-info;
           border-bottom-left-radius: 0;
         }
+
+        img {
+          width: 26px;
+          margin-right: 0.5em;
+        }
       }
 
       li {
@@ -50,6 +55,13 @@
         &.active {
           a {
             background-color: $brand-info;
+          }
+        }
+
+        &.log-in,
+        &.log-out {
+          img {
+            border-radius: 50%;
           }
         }
       }
