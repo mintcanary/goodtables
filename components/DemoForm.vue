@@ -1,8 +1,9 @@
 <template>
   <div id="form">
     <form>
-      <fieldset>
-        <div>
+      <fieldset class="source">
+        <legend>Data source <small>(required)</small></legend>
+        <div class="inline-items">
           <label for="source">Source</label>
 
           <div class="radio-inline">
@@ -11,48 +12,54 @@
               URL
             </label>
           </div>
-          <div class="radio-inline">
+
+          <span>
             or
-          </div>
+          </span>
+
           <div class="radio-inline">
             <input type="radio" name="data-field" id="data-field-2" class="data-field-file" value="option2">
             <label for="data-field-2">
               File
             </label>
           </div>
-
-          <strong>(Required)</strong>
-
-          <input name="source" class="form-control input-lg" type="text" placeholder="http://data.source/url">
-          <input name="source" class="form-control input-lg hidden" type="file" placeholder="http://data.source/url">
-
-          <small>Add a data table to validate.</small>
-
         </div>
+
+        <input name="source" class="form-control input-lg" type="text" placeholder="http://data.source/url">
+        <input name="source" class="form-control input-lg hidden" type="file">
+
+        <small>Add a data table to validate.</small>
       </fieldset>
-      <fieldset>
-        <div class="row-schema">
+
+      <fieldset class="optional">
+        <legend>Additional fields <small>(optional)</small></legend>
+        <div class="schema">
           <div class="row">
             <div class="form-group col-md-8">
-              <label for="schema">Schema</label>
+              <div class="inline-items">
+                <label for="schema">Schema</label>
 
-              <div class="radio-inline">
-                <input type="radio" name="schema-field" id="schema-field-1" class="schema-field-url" value="option1" checked="">
-                <label for="schema-field-1">
-                  URL
-                </label>
-              </div>
-              <div class="radio-inline">
-                <input type="radio" name="schema-field" id="schema-field-2" class="schema-field-file" value="option2">
-                <label for="schema-field-2">
-                  File
-                </label>
-              </div>
+                <div class="radio-inline">
+                  <input type="radio" name="schema-field" id="schema-field-1" class="schema-field-url" value="option1" checked="">
+                  <label for="schema-field-1">
+                    URL
+                  </label>
+                </div>
 
-               (Optional)
+                <span>
+                  or
+                </span>
+
+                <div class="radio-inline">
+                  <input type="radio" name="schema-field" id="schema-field-2" class="schema-field-file" value="option2">
+                  <label for="schema-field-2">
+                    File
+                  </label>
+                </div>
+             </div>
 
               <input type="text" class="form-control" name="schema" placeholder="http://table.schema/url">
-              <input type="file" class="form-control hidden" name="schema" placeholder="http://table.schema/url">
+              <input type="file" class="form-control hidden" name="schema">
 
               <small>
                 Select to validate this data against a Table Schema (<a href="http://specs.frictionlessdata.io/table-schema/" target="_blank" rel="noopener noreferrer">What is it?</a>).
@@ -119,9 +126,7 @@
 
       </fieldset>
 
-      <div class="input-group-btn" style="width: 1%;">
-        <button class="btn btn-success">Validate</button>
-      </div>
+      <button class="btn btn-success btn-lg">Validate</button>
 
     </form>
   </div>

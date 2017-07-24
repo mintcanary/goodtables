@@ -1,3 +1,11 @@
 fieldset {
   padding-bottom: $grid-gutter-width;
 }
+
+.inline-items {
+  display: flex;
+
+  & > * {
+    margin-right: $grid-gutter-width/2;
+  }
+}
