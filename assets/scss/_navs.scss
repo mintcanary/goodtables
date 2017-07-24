@@ -1,8 +1,20 @@
 .nav {
-  & > li > a {
-    [class^="icon-"], [class*=" icon-"] {
-      &:first-child {
-        margin-right: 8px;
+  & > li {
+      & > a {
+      [class^="icon-"], [class*=" icon-"] {
+        &:first-child {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    & > span {
+      display: block;
+      padding: 6px 16px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
       }
     }
   }

@@ -1,59 +1,10 @@
 .source-view {
 
-  @media screen and (min-width: $screen-sm) {
-    padding-left: $grid-gutter-width/2;
-  }
-
-  @media screen and (min-width: $screen-lg) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   & > .integration {
     float: right;
     margin: 20px 20px 0 20px;
     font-size: 28px;
     color: inherit;
-  }
-
-  h1 {
-    margin-bottom: 0;
-
-    @media screen and (min-width: $screen-sm) {
-      margin-left: -$grid-gutter-width/2;
-    }
-  }
-
-  & > div {
-    @media screen and (min-width: $screen-lg) {
-      display: table;
-      width: 100%;
-      height: 100vh;
-    }
-  }
-
-  .report {
-    background-color: $body-bg;
-    padding-left: $grid-gutter-width/2;
-    padding-right: $grid-gutter-width/2;
-
-    @media screen and (min-width: $screen-lg) {
-      display: table-cell;
-      width: 75%;
-      padding-left: $grid-gutter-width;
-      padding-right: $grid-gutter-width;
-      vertical-align: top;
-    }
-  }
-
-  .history {
-    background-color: $gray-lighter;
-
-    @media screen and (min-width: $screen-lg) {
-      display: table-cell;
-      width: 25%;
-      vertical-align: top;
-    }
   }
 
   .latest-job {
@@ -283,29 +234,5 @@
       background-repeat: repeat-x;
       background-size: auto 10px;
     }
-  }
-}
-
-.app .content {
-  .source-view {
-    h1 {
-      @media screen and (min-width: $screen-lg) {
-        padding-left: $grid-gutter-width*1.5;
-      }
-    }
-  }
-}
-
-.aside {
-  @media screen and (min-width: $screen-sm) {
-    margin-left: -$grid-gutter-width/2;
-  }
-
-  & > div {
-    padding: $grid-gutter-width/2;
-  }
-
-  .aside-title {
-    margin: 0 0 $padding-large-vertical 0;
   }
 }
