@@ -30,6 +30,7 @@
     "jquery": "^3.1.1",
     "node-sass": "^4.5.0",
     "push-dir": "^0.4.1",
+    "raleway-webfont": "^3.0.1",
     "sass-loader": "^6.0.2"
   }
 }

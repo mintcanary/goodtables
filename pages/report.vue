@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="source-view">
+    <div class="primary-secondary source-view">
       <a class="integration icon-github"></a>
       <h1>okfn/test-data</h1>
       <div>
-        <section class="report">
+        <section class="main report">
 
           <div class="latest-job">
             <div class="icon">

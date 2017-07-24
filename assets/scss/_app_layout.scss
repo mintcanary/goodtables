@@ -6,6 +6,12 @@
     @include rev-out;
     padding-bottom: $grid-gutter-width/2;
 
+    @media screen and (min-width: $screen-sm) {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+    }
+
     .logo {
       $logoHeight: 35px;
       display: block;
@@ -32,9 +38,15 @@
 
       a {
         color: #fff;
+
+        &.expand:not(.collapsed) {
+          background-color: $brand-info;
+          border-bottom-left-radius: 0;
+        }
       }
 
       li {
+
         &.active {
           a {
             background-color: $brand-info;
@@ -42,9 +54,45 @@
         }
       }
 
+      .collapse {
+        background-color: $brand-primary;
+      }
+
+      .well {
+        :first-child {
+          margin-top: 0;
+        }
+        :last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        ul {
+          margin: 10px 0 0 0;
+          padding: 0;
+
+          li {
+            display: block;
+            border-bottom: solid 1px rgba(#000,0.1);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+            &:last-child {
+              border: none;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
       &.primary {
         @media screen and (min-width: $screen-sm) {
           font-size: 16px;
+          flex-grow: 1;
 
           a {
             padding-top: 10px;
@@ -54,19 +102,33 @@
       }
 
       &.secondary {
-        @media screen and (min-width: $screen-sm) {
-          position: absolute;
-          bottom: $grid-gutter-width/2;
-          width: 100%;
-        }
+
       }
 
       @media screen and (min-width: $screen-sm) {
-        margin-left: $grid-gutter-width/2;
+        padding-left: $grid-gutter-width/2;
 
-        a {
+        a,
+        span {
           border-radius: $border-radius-large 0 0 $border-radius-large;
         }
+      }
+    }
+
+    .text {
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      @media screen and (min-width: $screen-sm) {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
@@ -91,6 +153,74 @@
       & > div {
         min-height: 100vh;
       }
+    }
+
+    .primary-secondary {
+
+      @media screen and (min-width: $screen-sm) {
+        padding-left: $grid-gutter-width/2;
+      }
+
+      @media screen and (min-width: $screen-lg) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      h1 {
+        margin-bottom: 0;
+
+        @media screen and (min-width: $screen-sm) {
+          margin-left: -$grid-gutter-width/2;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          padding-left: $grid-gutter-width*1.5;
+        }
+      }
+
+      & > div {
+        @media screen and (min-width: $screen-lg) {
+          display: table;
+          width: 100%;
+          height: 100vh;
+        }
+      }
+    }
+  }
+
+  .main {
+    background-color: $body-bg;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+
+    @media screen and (min-width: $screen-lg) {
+      display: table-cell;
+      width: 75%;
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+      vertical-align: top;
+    }
+  }
+
+  .aside {
+    background-color: $gray-lighter;
+
+    @media screen and (min-width: $screen-sm) {
+      margin-left: -$grid-gutter-width/2;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      display: table-cell;
+      width: 25%;
+      vertical-align: top;
+    }
+
+    & > div {
+      padding: $grid-gutter-width/2;
+    }
+
+    .aside-title {
+      margin: 0 0 $padding-large-vertical 0;
     }
   }
 }
