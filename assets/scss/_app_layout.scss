@@ -39,9 +39,13 @@
       a {
         color: #fff;
 
-        &.expand:not(.collapsed) {
-          background-color: $brand-info;
-          border-bottom-left-radius: 0;
+        &.expand {
+          box-shadow: -5px -5px 5px 0px $brand-primary;
+
+          &:not(.collapsed) {
+            background-color: $brand-info;
+            border-bottom-left-radius: 0;
+          }
         }
 
         img {
@@ -130,6 +134,7 @@
     .text {
       padding-left: $grid-gutter-width/2;
       padding-right: $grid-gutter-width/2;
+      overflow: hidden;
 
       a {
         color: inherit;
