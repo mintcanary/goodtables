@@ -17,6 +17,49 @@
 
   .actions {
 
+    .nothing {
+      display: table;
+      width: 100%;
+
+      @media screen and (min-width: $screen-md) {
+        min-height: 100vh;
+      }
+
+      & > div {
+        display: table-row;
+        width: 100%;
+
+        h1 {
+          margin: 0;
+        }
+      }
+    }
+
+    .message {
+      height: 100%;
+
+      p {
+        padding: $grid-gutter-width;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        span {
+          display: block;
+
+          &[class^="icon-"] {
+            font-size: 26vmin;
+            color: $brand-success;
+            top: -0.05em;
+          }
+
+          &.text {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
     .panel-group {
 
       .panel {
