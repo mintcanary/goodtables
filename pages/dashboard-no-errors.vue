@@ -3,7 +3,7 @@
     <section class="actions">
       <div class="nothing">
         <div>
-          <h1>Action required</h1>
+          <h1>No action required</h1>
         </div>
 
         <div class="message">
