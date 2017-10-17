@@ -50,16 +50,14 @@
           </div>
         </div>
       </div>
-
     </section>
+
     <section class="jobs">
       <h1>Latest jobs</h1>
-
       <source-item title="okfn/my-data" integration="github" jobnumber="77" jobtotal="77" status="valid" time="7 minutes ago"/>
       <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobtotal="2"  status="valid" time="20 minutes ago"/>
       <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago"/>
       <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobtotal="1"  status="invalid" time="2 days ago"/>
-
     </section>
   </div>
 </template>
@@ -67,7 +65,6 @@
 <script>
   import SourceItem from '~components/source_list_item.vue'
   import DashFile from '~components/dash_file.vue'
-  import $ from 'jquery'
 
   export default {
     layout: 'app',
@@ -79,28 +76,6 @@
       return {
         title: `goodtables`
       }
-    },
-    mounted: () => {
-      function stickyHeading () {
-        // TODO: Needs offset for subsequent headings, once a sticky heading is active
-        $('.file-heading').each(function () {
-          var windowTop = $(window).scrollTop()
-          var divTop = $(this).offset().top
-          if (windowTop > divTop) {
-            $('.file-heading span').removeClass('stick')
-            $('.file-heading span').width('100%')
-            $(this).children('span').addClass('stick')
-            $(this).children('span').width($(this).parents('.report').outerWidth())
-          } else {
-            $(this).children('span').removeClass('stick')
-            $(this).children('span').width('100%')
-          }
-        })
-      }
-      $(function () {
-        $('.source-view > div').scroll(stickyHeading)
-        stickyHeading()
-      })
     }
   }
 </script>
