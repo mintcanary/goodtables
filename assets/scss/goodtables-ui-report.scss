@@ -1,0 +1,171 @@
+.goodtables-ui-report {
+
+  $container-gutter-width:      $grid-gutter-width;
+  $spacer:                      $grid-gutter-width;
+  $report-bg-colour:            $body-bg;
+  $report-text-colour:          $text-color;
+  $file-heading-border-colour:  $gray-light;
+  $label-margin:                $padding-small-horizontal;
+  $table-border-radius:         $border-radius-large;
+  $table-text-colour:           $gray-darker;
+  $table-border-colour:         $gray;
+  $fail-colour:                 $brand-danger;
+  $truncate-image-path:         "~assets/img/zigzag.svg";
+
+
+  background-color: $report-bg-colour;
+
+  .file-heading {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+
+    strong {
+      font-weight: 600;
+    }
+
+    span {
+      display: table;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+
+      &.stick {
+        position: fixed;
+        top: 0;
+        background-color: $report-bg-colour;
+        z-index: 99;
+      }
+
+      :last-child {
+        text-align: right;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        bottom: 1px;
+        left: -30px;
+        right: -30px;
+        background-color: $report-bg-colour;
+        z-index: -1;
+        border-bottom: solid 1px $file-heading-border-colour;
+        border-top: solid 1px $file-heading-border-colour;
+      }
+    }
+
+    .file-count,
+    .file-name {
+      display: table-cell;
+      color: $report-text-colour;
+      text-decoration: none;
+      height: 64px;
+      vertical-align: middle;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    .file-name {
+      font-size: 14px;
+    }
+  }
+
+
+  .file {
+    margin-bottom: $spacer;
+
+    &.invalid {
+      .file-heading {
+        span:before {
+          border-bottom-color: $fail-colour;
+        }
+        strong {
+          color: $fail-colour;
+        }
+      }
+    }
+  }
+
+  .result {
+    margin: $spacer 0;
+    font-size: 12px;
+    position: relative;
+    padding-bottom: 20px;
+
+    .count {
+      font-size: 14px;
+      font-weight: 600;
+      margin-right: $label-margin;
+    }
+
+    .label {
+      font-size: 14px;
+      margin-right: $label-margin;
+    }
+
+    .help {
+      float: right;
+      display: none; // not currently using
+    }
+
+    .table-view {
+      border: solid 1px $table-border-colour;
+      border-radius: $table-border-radius;
+      margin-top: 15px;
+      position: relative;
+
+      table {
+        margin: 0;
+        color: $table-text-colour;
+        border-radius: ($table-border-radius - 1);
+        overflow: hidden;
+
+        tr :first-child {
+          border-left-color: transparent;
+        }
+
+        td {
+          border-style: solid;
+          border-color: $table-border-colour;
+          border-width: 0 0 1px 1px;
+        }
+      }
+
+      .result-row-index {
+        font-weight: normal;
+        width: 2em;
+        text-align: center;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        height: 30px;
+        @include gradient-vertical(rgba($report-bg-colour,0), $report-bg-colour, 0%, 50%);
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -$container-gutter-width;
+      right: -$container-gutter-width;
+      bottom: 0;
+      height: 10px;
+      background-image: url('#{$truncate-image-path}');
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: auto 10px;
+    }
+  }
+
+}
