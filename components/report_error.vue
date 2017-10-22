@@ -7,7 +7,9 @@
       <span class="help" data-toggle="popover" :title="helptitle" :data-content="description" data-placement="left" rel="popover"><span class="icon-info"><i>What is this?</i></span></span>
     </div>
     <div class="table-view">
-      <slot></slot>
+      <div class="inner">
+        <slot></slot>
+      </div>
     </div>
     <a v-if="count > '10'" class="show-more">Show more <span class="icon-keyboard_arrow_down"></span></a>
   </div>

@@ -10,6 +10,7 @@
   $table-text-colour:           $gray-darker;
   $table-border-colour:         $gray;
   $fail-colour:                 $brand-danger;
+  $pass-colour:                 $brand-success;
   $divider-image-path:          "~assets/img/zigzag.svg";
   $divider-image-height:        10px;
 
@@ -28,11 +29,12 @@
       font-weight: 600;
     }
 
-    span {
+    .inner {
       display: table;
       width: 100%;
       position: relative;
       z-index: 1;
+      text-align: right;
 
       &.stick {
         position: fixed;
@@ -41,8 +43,8 @@
         z-index: 99;
       }
 
-      :last-child {
-        text-align: right;
+      :first-child {
+        text-align: left;
       }
 
       &:before {
@@ -60,7 +62,8 @@
     }
 
     .file-count,
-    .file-name {
+    .file-name,
+    .test-counts {
       display: table-cell;
       color: $report-text-colour;
       text-decoration: none;
@@ -75,13 +78,50 @@
     .file-name {
       font-size: 14px;
     }
+
+    .test-counts {
+      width: 1%;
+
+      .label {
+        margin-left: $label-margin/2;
+        position: relative;
+        top: -0.2em;
+        border: solid 1px $report-bg-colour;
+
+        &.passed {
+          border-color: $pass-colour;
+          color: $pass-colour;
+          
+          &.collapsed {
+            background-color: $pass-colour;
+            color: $report-bg-colour;
+          }
+        }
+
+        &.failed {
+          border-color: $fail-colour;
+          color: $fail-colour;
+        }
+      }
+    }
   }
 
 
   .file {
+    &.valid {
+      .file-heading {
+        .inner:before {
+          border-bottom-color: $pass-colour;
+        }
+        strong {
+          color: $pass-colour;
+        }
+      }
+    }
+
     &.invalid {
       .file-heading {
-        span:before {
+        .inner:before {
           border-bottom-color: $fail-colour;
         }
         strong {
@@ -117,6 +157,10 @@
       border-radius: $table-border-radius;
       margin-top: 15px;
       position: relative;
+
+      .inner {
+        overflow-x: auto;
+      }
 
       table {
         margin: 0;
@@ -182,6 +226,20 @@
         font-size: 1.5em;
         top: 0.2em;
         left: -0.1em
+      }
+    }
+  }
+
+  .passed-tests {
+    padding: 0;
+    margin: $spacer/2 0;
+
+    li {
+      display: inline-block;
+
+      .label {
+        display: inline-block;
+        margin-bottom: $label-margin;
       }
     }
   }

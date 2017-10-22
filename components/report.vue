@@ -3,11 +3,24 @@
 
     <div class="invalid file">
       <h4 class="file-heading">
-        <span>
+        <div class="inner">
           <a class="file-name">github/okfn/test-data/master/<strong>some-file.csv</strong></a>
-          <a class="file-count">Table 1 of 2</a>
-        </span>
+          <a class="file-count">Table 1 of 3</a>
+          <div class="test-counts">
+            <a class="label passed collapsed" data-toggle="collapse" href="#file_1_passed" aria-expanded="false" aria-controls="file_1_passed">2</a>
+            <span class="label failed">4</span>
+          </div>
+        </div>
       </h4>
+
+      <ul class="passed-tests result collapse" id="file_1_passed">
+        <li>
+          <span class="label label-success">No blank headers</span>
+        </li>
+        <li>
+          <span class="label label-success">No missing values</span>
+        </li>
+      </ul>
 
       <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
         <table class="table">
@@ -119,11 +132,33 @@
     <div class="invalid file">
 
       <h4 class="file-heading">
-        <span>
-          <a class="file-name">github/okfn/test-data/master/another-file.csv</a>
-          <a class="file-count">Table 2 of 2</a>
-        </span>
+        <div class="inner">
+          <a class="file-name">github/okfn/test-data/master/<strong>another-file.csv</strong></a>
+          <a class="file-count">Table 2 of 3</a>
+          <div class="test-counts">
+            <a class="label passed collapsed" data-toggle="collapse" href="#file_2_passed" aria-expanded="false" aria-controls="file_2_passed">5</a>
+            <span class="label failed">1</span>
+          </div>
+        </div>
       </h4>
+
+      <ul class="passed-tests result collapse" id="file_2_passed">
+        <li>
+          <span class="label label-success">No blank headers</span>
+        </li>
+        <li>
+          <span class="label label-success">No duplicate headers</span>
+        </li>
+        <li>
+          <span class="label label-success">No missing values</span>
+        </li>
+        <li>
+          <span class="label label-success">No duplicate rows</span>
+        </li>
+        <li>
+          <span class="label label-success">No defective rows</span>
+        </li>
+      </ul>
 
       <report-error title="Missing Header" helptitle="<span class='label label-info'>Structure</span> Missing Header" count="1" description="Header column is empty. <a>Read more</a>">
         <table class="table">
@@ -145,6 +180,40 @@
           </tbody>
         </table>
       </report-error>
+    </div>
+
+    <div class="valid file">
+      <h4 class="file-heading">
+        <div class="inner">
+          <a class="file-name">github/okfn/test-data/master/<strong>a-third-file.csv</strong></a>
+          <a class="file-count">Table 3 of 3</a>
+          <div class="test-counts">
+            <a class="label passed collapsed" data-toggle="collapse" href="#file_3_passed" aria-expanded="false" aria-controls="file_3_passed">6</a>
+            <span class="label failed">0</span>
+          </div>
+        </div>
+      </h4>
+
+      <ul class="passed-tests result collapse" id="file_3_passed">
+        <li>
+          <span class="label label-success">No blank headers</span>
+        </li>
+        <li>
+          <span class="label label-success">No duplicate headers</span>
+        </li>
+        <li>
+          <span class="label label-success">No missing headers</span>
+        </li>
+        <li>
+          <span class="label label-success">No missing values</span>
+        </li>
+        <li>
+          <span class="label label-success">No duplicate rows</span>
+        </li>
+        <li>
+          <span class="label label-success">No defective rows</span>
+        </li>
+      </ul>
     </div>
 
   </div>
