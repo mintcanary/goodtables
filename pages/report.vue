@@ -35,6 +35,38 @@
         <section class="history aside">
           <div>
             <h3 class="aside-title">Job history</h3>
+            <div class="source-item panel panel-info">
+              <div class="github">
+                <span class="source">
+                  <a class="avatar">
+                    <img src="~static/avatar/48.png" alt="" />
+                  </a>
+                  <h3 class="panel-title">Job restarted</h3>
+                </span>
+                <a class="job">
+                  <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                  <span class="label label-info"><span class="icon-dots-three-horizontal"><i>Info/i></span></span>
+                  <span class="time"> A minute ago</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="source-item panel panel-success">
+              <div class="github">
+                <span class="source">
+                  <a class="avatar">
+                    <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                  </a>
+                  <h3 class="panel-title">Pushed on master</h3>
+                </span>
+                <a class="job">
+                  <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                  <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                  <span class="time"> 7 minutes ago</span>
+                </a>
+              </div>
+            </div>
+
             <div class="source-item panel panel-danger">
               <div class="github">
                 <span class="source">
@@ -44,9 +76,9 @@
                   <h3 class="panel-title">Pushed on master</h3>
                 </span>
                 <a class="job">
-                  <span class="jobcount"><span class="jobnumber"> #77</span></span>
-                  <span class="label label-danger"><span class="icon-cross"><i>Valid</i></span></span>
-                  <span class="time"> 7 minutes ago</span>
+                  <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                  <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                  <span class="time"> 8 days ago</span>
                 </a>
               </div>
             </div>
