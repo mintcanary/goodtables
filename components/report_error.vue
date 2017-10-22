@@ -9,6 +9,7 @@
     <div class="table-view">
       <slot></slot>
     </div>
+    <a v-if="count > '10'" class="show-more">Show more <span class="icon-keyboard_arrow_down"></span></a>
   </div>
 </template>
 

@@ -10,7 +10,8 @@
   $table-text-colour:           $gray-darker;
   $table-border-colour:         $gray;
   $fail-colour:                 $brand-danger;
-  $truncate-image-path:         "~assets/img/zigzag.svg";
+  $divider-image-path:          "~assets/img/zigzag.svg";
+  $divider-image-height:        10px;
 
 
   background-color: $report-bg-colour;
@@ -78,8 +79,6 @@
 
 
   .file {
-    margin-bottom: $spacer;
-
     &.invalid {
       .file-heading {
         span:before {
@@ -96,7 +95,6 @@
     margin: $spacer 0;
     font-size: 12px;
     position: relative;
-    padding-bottom: 20px;
 
     .count {
       font-size: 14px;
@@ -154,17 +152,37 @@
       }
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: -$container-gutter-width;
-      right: -$container-gutter-width;
-      bottom: 0;
-      height: 10px;
-      background-image: url('#{$truncate-image-path}');
-      background-position: center;
-      background-repeat: repeat-x;
-      background-size: auto 10px;
+    &:not(:last-child) {
+      padding-bottom: $divider-image-height + ($spacer/3);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -$container-gutter-width;
+        right: -$container-gutter-width;
+        bottom: 0;
+        height: $divider-image-height;
+        background-image: url('#{$divider-image-path}');
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: auto $divider-image-height;
+      }
+    }
+
+    .show-more {
+      color: $table-text-colour;
+      font-weight: 600;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      top: -0.5em;
+
+      [class^="icon-"] {
+        font-size: 1.5em;
+        top: 0.2em;
+        left: -0.1em
+      }
     }
   }
 

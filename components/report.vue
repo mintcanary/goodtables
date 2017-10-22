@@ -51,7 +51,7 @@
         </table>
       </report-error>
 
-      <report-error title="Defective Row" helptitle="<span class='label label-info'>Structure</span> Defective Row" count="3" description="The row dimensions are incorrect compared to headers. <a>Read more</a>">
+      <report-error title="Defective Row" helptitle="<span class='label label-info'>Structure</span> Defective Row" count="72" description="The row dimensions are incorrect compared to headers. <a>Read more</a>">
         <table class="table">
           <tbody>
             <tr class="result-header-row">
