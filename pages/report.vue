@@ -45,7 +45,7 @@
                 </span>
                 <a class="job">
                   <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
-                  <span class="label label-info"><span class="icon-dots-three-horizontal"><i>Info/i></span></span>
+                  <span class="label label-info"><span class="icon-dots-three-horizontal"><i>Info</i></span></span>
                   <span class="time"> A minute ago</span>
                 </a>
               </div>
