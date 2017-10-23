@@ -26,6 +26,7 @@ module.exports = {
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
 
+  plugins: ['~/plugins/scrollto'],
 
   /*
   ** Customize the progress-bar color
