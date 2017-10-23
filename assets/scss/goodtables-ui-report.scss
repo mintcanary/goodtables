@@ -13,6 +13,7 @@
   $pass-colour:                 $brand-success;
   $divider-image-path:          "~assets/img/zigzag.svg";
   $divider-image-height:        10px;
+  $divider-mask-path:           "~assets/img/zigzagmask.svg";
 
 
   background-color: $report-bg-colour;
@@ -231,8 +232,22 @@
   }
 
   .passed-tests {
-    padding: 0;
-    margin: $spacer/2 0;
+    padding: 0 $container-gutter-width;
+    margin: ($spacer/2) (-$container-gutter-width);
+
+    &:not(:last-child):after {
+      left: 0;
+      right: 0;
+      bottom: -1px;
+
+      @if variable-exists(divider-mask-path) {
+        background-color: $report-bg-colour;
+        mask: url($divider-mask-path);
+        mask-size: auto $divider-image-height;
+        mask-position: center;
+        mask-repeat: repeat-x;
+      }
+    }
 
     li {
       display: inline-block;
