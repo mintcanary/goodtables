@@ -26,6 +26,10 @@ module.exports = {
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
 
+  router: {
+    base: '/goodtables/'
+  },
+
   plugins: ['~/plugins/scrollto'],
 
   /*
@@ -36,10 +40,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-
-    router: {
-      base: '/goodtables/'
-    },
 
     vendor: ['jquery', 'bootstrap-sass'],
     plugins: [
