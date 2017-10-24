@@ -40,7 +40,9 @@
         color: #fff;
 
         &.expand {
-          box-shadow: -5px -5px 5px 0px $brand-primary;
+          @media screen and (min-width: $screen-sm) {
+            box-shadow: -5px -5px 5px 0px $brand-primary;
+          }
 
           &:not(.collapsed) {
             background-color: $brand-info;
