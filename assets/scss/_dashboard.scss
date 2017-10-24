@@ -179,12 +179,7 @@
   }
 
   .jobs {
-    background-color: $gray-lighter;
     position: static;
     padding-bottom: $grid-gutter-width/2;
-
-    .source-item {
-      margin: $grid-gutter-width/2 $grid-gutter-width/2 0 $grid-gutter-width/2;
-    }
   }
 }

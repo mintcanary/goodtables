@@ -14,22 +14,24 @@
             </div>
 
             <div class="content">
-              <div class="source-item panel panel-success">
-                <div>
-                  <span class="source">
-                    <span class="label label-success">
-                      <span class="icon-checkmark">
-                        <i>Valid</i>
+              <div class="source-item">
+                <div class="panel panel-success">
+                  <div>
+                    <span class="source">
+                      <span class="label label-success">
+                        <span class="icon-checkmark">
+                          <i>Valid</i>
+                        </span>
                       </span>
+                      <p class="panel-title">
+                        repository/my-data
+                      </p>
                     </span>
-                    <p class="panel-title">
-                      repository/my-data
-                    </p>
-                  </span>
-                  <span class="job">
-                    <span class="icon-clock"></span>
-                    <span class="time"> a minute ago</span>
-                  </span>
+                    <span class="job">
+                      <span class="icon-clock"></span>
+                      <span class="time"> a minute ago</span>
+                    </span>
+                  </div>
                 </div>
               </div>
 

@@ -9,3 +9,49 @@ fieldset {
     margin-right: $grid-gutter-width/2;
   }
 }
+
+.form-control,
+.form-control:focus {
+  @include box-shadow(inset 0 0 0 rgba(0,0,0,.0));
+}
+
+.input-lg,
+.input-lg + .input-group-addon {
+  border-width: 2px;
+}
+
+.input-group-addon {
+  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  //padding-top: 0;
+  //padding-bottom: 0;
+
+  button {
+    height: 1.8em;
+    padding: 0;
+    background: none;
+    border: none;
+
+    [class^="icon-"] {
+      font-size: 1.4em;
+    }
+  }
+}
+
+.input-group {
+  background-color: $input-bg;
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+
+  .form-control {
+    background-color: rgba($input-bg,0);
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    &:focus {
+      & + .input-group-addon {
+        border-color: $input-border-focus;
+      }
+    }
+  }
+}
