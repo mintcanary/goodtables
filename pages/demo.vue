@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import DemoForm from '~components/DemoForm.vue'
+  import DemoForm from '~/components/DemoForm.vue'
 
   export default {
     layout: 'app-not-logged-in',

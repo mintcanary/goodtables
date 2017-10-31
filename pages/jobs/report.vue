@@ -98,8 +98,8 @@
 </template>
 
 <script>
-  import SourceItem from '~components/source_list_item.vue'
-  import Report from '~components/report.vue'
+  import SourceItem from '~/components/source_list_item.vue'
+  import Report from '~/components/report.vue'
   // import $ from 'jquery'
 
   export default {

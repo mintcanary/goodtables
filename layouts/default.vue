@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import Logo from '~components/Logo.vue'
+import Logo from '~/components/Logo.vue'
 
-import MyFooter from '~components/Footer.vue'
+import MyFooter from '~/components/Footer.vue'
 
 export default {
   components: {

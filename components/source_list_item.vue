@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import SourceItemContent from '~components/source_list_item_contents.vue'
+  import SourceItemContent from '~/components/source_list_item_contents.vue'
 
   export default {
     props: ['title', 'integration', 'jobnumber', 'jobtotal', 'status', 'time', 'source', 'job'],

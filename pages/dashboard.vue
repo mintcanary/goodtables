@@ -65,8 +65,8 @@
 </template>
 
 <script>
-  import SourceItem from '~components/source_list_item.vue'
-  import DashFile from '~components/dash_file.vue'
+  import SourceItem from '~/components/source_list_item.vue'
+  import DashFile from '~/components/dash_file.vue'
 
   export default {
     layout: 'app',

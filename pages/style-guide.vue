@@ -40,7 +40,7 @@
 </template>
 
 <script>
-  import Report from '~components/report.vue'
+  import Report from '~/components/report.vue'
 
   export default {
     components: {

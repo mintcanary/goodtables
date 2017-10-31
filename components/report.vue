@@ -220,7 +220,7 @@
 </template>
 
 <script>
-  import ReportError from '~components/report_error.vue'
+  import ReportError from '~/components/report_error.vue'
 
   export default {
     layout: 'app',

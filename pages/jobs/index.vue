@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import SourceItem from '~components/source_list_item.vue'
+  import SourceItem from '~/components/source_list_item.vue'
 
   export default {
     layout: 'app',

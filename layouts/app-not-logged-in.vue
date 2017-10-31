@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import Logo from '~components/Logo.vue'
-import SecondaryNav from '~components/secondary_nav.vue'
+import Logo from '~/components/Logo.vue'
+import SecondaryNav from '~/components/secondary_nav.vue'
 import $ from 'jquery'
 
 export default {
