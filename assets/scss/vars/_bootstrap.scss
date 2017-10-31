@@ -431,9 +431,9 @@ $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
 
 //== Tabs
-$nav-tabs-border-color:                     #fff !default;
+$nav-tabs-border-color:                     $gray-light !default;
 
-$nav-tabs-link-hover-border-color:          rgba(#fff,0) !default;
+$nav-tabs-link-hover-border-color:          $nav-tabs-border-color !default;
 
 $nav-tabs-active-link-hover-bg:             #fff !default;
 $nav-tabs-active-link-hover-color:          $text-color !default;

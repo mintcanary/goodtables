@@ -27,8 +27,26 @@
 }
 
 .nav-tabs {
-  & > li > a {
-    padding: 10px 15px;
-    color: $text-color;
+  background-color: $gray-light;
+
+  & > li {
+
+    & > a {
+      padding: 10px 15px;
+      color: $gray-dark;
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $gray-lighter;
+        color: $text-color;
+      }
+    }
   }
+}
+
+.tab-content {
+  background-color: $gray-lighter;
 }

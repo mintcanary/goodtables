@@ -30,7 +30,11 @@ module.exports = {
     base: '/goodtables/'
   },
 
-  plugins: ['~/plugins/scrollto'],
+  plugins: [
+    { src: '~/plugins/scrollto' },
+    { src: '~/plugins/jquery.finderSelect.js', ssr: false },
+    { src: '~/plugins/parts-selector', ssr: false }
+  ],
 
   /*
   ** Customize the progress-bar color

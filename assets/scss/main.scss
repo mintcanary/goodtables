@@ -1,4 +1,4 @@
-@import "bs/bootstrap";
+@import "bootstrap";
 @import "goodtables-ui-report";
 @import "icons";
 @import "mixins";
@@ -11,7 +11,10 @@
 @import "header";
 @import "landing";
 @import "app_layout";
+@import "forms";
 @import "jobs";
 @import "report";
 @import "dashboard";
-@import "forms";
+@import "vars/parts-selector";
+@import "parts-selector";
+@import "sources";

@@ -1,18 +1,78 @@
 <template>
-  <div>
+  <div class="sources only">
 
-    sources
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#github" aria-controls="github" role="tab" data-toggle="tab">GitHub</a></li>
+      <li role="presentation"><a href="#amazon" aria-controls="amazon" role="tab" data-toggle="tab">Amazon</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="github">
+        <div class="filter form-group">
+          <label class="sr-only" for="keyword">Filter by keyword</label>
+          <div class="input-group">
+            <input type="text" class="form-control input-lg" id="keyword" placeholder="Filter by keyword">
+            <div class="input-group-addon"><button><span class="icon-search"><i>Search</i></span></button></div>
+          </div>
+        </div>
+
+
+        <div class="parts-selector" id="github-sources">
+          <div class="parts list">
+            <h3 class="list-heading">Available sources</h3>
+            <ul>
+              <li>
+                Bolt
+              </li>
+              <li>
+                Nut
+              </li>
+              <li>
+                Screw
+              </li>
+              <li>
+                Washer
+              </li>
+            </ul>
+          </div>
+          <div class="controls">
+            <a class="moveto selected"><span class="icon"></span><span class="text">Add</span></a>
+            <a class="moveto parts"><span class="icon"></span><span class="text">Remove</span></a>
+          </div>
+          <div class="selected list">
+            <h3 class="list-heading">Active sources</h3>
+            <ul>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="amazon">
+        Amazon here
+      </div>
+    </div>
 
   </div>
 </template>
 
 <script>
+  import $ from 'jquery'
   export default {
     layout: 'app',
     head () {
       return {
         title: `goodtables`
       }
+    },
+    mounted: () => {
+      $(function () {
+        $('#github-sources').partsSelector({
+          itemButtons: true
+        })
+      })
     },
     data () {
       return {
