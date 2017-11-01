@@ -5,7 +5,7 @@
   "author": "Sam Smith",
   "private": true,
   "dependencies": {
-    "nuxt": "latest",
+    "nuxt": "v0.10.7",
     "vue-scrollto": "^2.6.7"
   },
   "scripts": {
