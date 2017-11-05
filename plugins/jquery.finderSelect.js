@@ -449,7 +449,7 @@
             var hooked = hooks[hookName]
 
             if(hooked){
-                    for(i=0; i<hooked.length; i++){
+                    for(var i=0; i<hooked.length; i++){
                         hooked[i].apply(undefined, data);
                     }
             }
