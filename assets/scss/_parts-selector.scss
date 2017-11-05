@@ -1,0 +1,14 @@
+@import "vars/parts-selector";
+@import "node_modules/parts-selector/src/parts-selector.scss";
+
+.parts-selector {
+  .list {
+    .list-heading {
+      font-weight: 600;
+    }
+    .alert {
+      border-radius: 0;
+      margin: 0;
+    }
+  }
+}
