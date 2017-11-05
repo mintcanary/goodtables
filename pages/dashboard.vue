@@ -22,7 +22,7 @@
                 <dash-file name="some-file.csv" count="73"/>
                 <dash-file name="another-file.csv" count="1"/>
               </ul>
-              <a type="button" class="btn btn-default">See full report</a>
+              <router-link to="/jobs/report" class="btn btn-default">See full report</router-link>
             </div>
           </div>
         </div>
@@ -46,6 +46,7 @@
                 <dash-file name="some-file.csv" count="5"/>
                 <dash-file name="another-file.csv" count="3"/>
               </ul>
+              <router-link to="/jobs/report" class="btn btn-default">See full report</router-link>
             </div>
           </div>
         </div>
@@ -59,7 +60,7 @@
         <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobtotal="2"  status="valid" time="20 minutes ago"/>
         <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago"/>
         <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobtotal="1"  status="invalid" time="2 days ago"/>
-      </div>  
+      </div>
     </section>
   </div>
 </template>
