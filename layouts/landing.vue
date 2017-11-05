@@ -8,7 +8,9 @@
               <div class="container">
                 <logo/>
                 <nav>
-                  <a href="#"><span class="link-icon icon-login"></span> <span class="link-text">Sign in with GitHub</span></a>
+                  <router-link to="/dashboard">
+                    <span class="link-icon icon-login"></span> <span class="link-text">Sign in with GitHub</span>
+                  </router-link>
                 </nav>
               </div>
             </div>
