@@ -29,6 +29,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "jquery": "^3.1.1",
     "node-sass": "^4.5.0",
+    "parts-selector": "github:smth/parts-selector",
     "push-dir": "^0.4.1",
     "raleway-webfont": "^3.0.1",
     "sass-loader": "^6.0.2"
