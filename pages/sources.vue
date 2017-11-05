@@ -23,17 +23,11 @@
           <div class="parts list">
             <h3 class="list-heading">Available sources</h3>
             <ul>
-              <li>
-                Bolt
-              </li>
-              <li>
-                Nut
-              </li>
-              <li>
-                Screw
-              </li>
-              <li>
-                Washer
+              <li v-for="repo of repos" v-if="!repo.active">
+                {{ repo.name }}
+                <span>
+                  <a :href="`https://github.com/${repo.name}`">View repository</a>
+                </span>
               </li>
             </ul>
           </div>
@@ -44,6 +38,12 @@
           <div class="selected list">
             <h3 class="list-heading">Active sources</h3>
             <ul>
+              <li v-for="repo of repos" v-if="repo.active">
+                {{ repo.name }}
+                <span>
+                  <a :href="`https://github.com/${repo.name}`">View repository</a>
+                </span>
+              </li>
             </ul>
           </div>
         </div>
@@ -70,7 +70,9 @@
     mounted: () => {
       $(function () {
         $('#github-sources').partsSelector({
-          itemButtons: true
+          itemButtons: true,
+          added: 'Source added',
+          removed: 'Source removed'
         })
       })
     },
@@ -91,16 +93,6 @@
             'active': true,
             'id': '2639b85d-a17f-43b7-afce-ada7ea20db39',
             'name': 'frictionlessdata/example-goodtables.io'
-          },
-          {
-            'active': false,
-            'id': '3d53c8ac-0750-4320-b3db-5ec90a8e9a16',
-            'name': 'adamamyl/ckanpages'
-          },
-          {
-            'active': false,
-            'id': '70f7b61a-f411-4c90-b4e9-d93a432f259c',
-            'name': 'ckan/ckanext-pages'
           },
           {
             'active': false,
