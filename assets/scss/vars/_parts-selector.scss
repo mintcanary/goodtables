@@ -18,5 +18,5 @@ $parts-selector-info-text-colour: $body-bg;
 $parts-selector-error-bg-colour: $brand-danger;
 $parts-selector-error-text-colour: $body-bg;
 $parts-selector-control-icon-colour: $input-border;
-$parts-selector-control-icon-ready-colour: darken($parts-selector-control-icon-colour, 10%) !default;
+$parts-selector-control-icon-ready-colour: $gray-dark;
 $parts-selector-inline-icon-colour: $gray-dark;
