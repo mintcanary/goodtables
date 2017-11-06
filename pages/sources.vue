@@ -28,7 +28,7 @@
                 <a :href="`https://github.com/${repo.name}`" class="repo link">View repository</a>
               </li>
             </ul>
-            <div class="empty">
+            <div class="empty action">
               <p>
                 No sources found.
               </p>
@@ -55,7 +55,48 @@
 
       </div>
       <div role="tabpanel" class="tab-pane" id="amazon">
-        Amazon here
+        <div class="filter form-group">
+          <label class="sr-only" for="keyword">Filter by keyword</label>
+          <div class="input-group">
+            <input type="text" class="form-control input-lg" id="keyword" placeholder="Filter by keyword">
+            <div class="input-group-addon"><button><span class="icon-search"><i>Search</i></span></button></div>
+          </div>
+        </div>
+
+        <div class="parts-selector">
+          <div class="parts list">
+            <h3 class="list-heading">Add a source</h3>
+            <form class="add form">
+              <div class="form-group">
+                <label for="access-key-id">Access Key Id</label>
+                <input id="access-key-id" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="secret-access-key">Secret Access Key</label>
+                <input id="secret-access-key" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="bucket-name">Bucket Name</label>
+                <input id="bucket-name" class="form-control" type="text">
+              </div>
+              <button type="submit" class="btn btn-default add">Add</button>
+            </form>
+          </div>
+          <div class="controls">
+            <a class="moveto selected"><span class="icon"></span><span class="text">Add</span></a>
+            <a class="moveto parts"><span class="icon"></span><span class="text">Remove</span></a>
+          </div>
+          <div class="selected list">
+            <h3 class="list-heading">Active sources</h3>
+            <ul>
+            </ul>
+            <div class="empty">
+              No buckets configured
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
 

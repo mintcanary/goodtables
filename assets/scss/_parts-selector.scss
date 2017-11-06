@@ -41,14 +41,20 @@
         text-align: center;
         position: relative;
 
-        &:before {
-          @include icon-font();
-          content: "\ea3b";
-          position: absolute;
-          top: $grid-gutter-width;
-          right: $grid-gutter-width*2;
+        &.action {
+          &:before {
+            @include icon-font();
+            content: "\ea3b";
+            position: absolute;
+            top: $grid-gutter-width;
+            right: $grid-gutter-width*2;
+          }
         }
       }
+    }
+
+    .form {
+      padding: $grid-gutter-width/2;
     }
   }
 }
