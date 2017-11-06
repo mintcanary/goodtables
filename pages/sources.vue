@@ -21,13 +21,21 @@
 
         <div class="parts-selector" id="github-sources">
           <div class="parts list">
-            <h3 class="list-heading">Available sources</h3>
+            <h3 class="list-heading"><a class="refresh"><span class="icon-refresh"><i>Refresh</i></span></a> Available sources</h3>
             <ul>
               <li v-for="repo of repos" v-if="!repo.active">
                 <span class="source name">{{ repo.name }}</span>
                 <a :href="`https://github.com/${repo.name}`" class="repo link">View repository</a>
               </li>
             </ul>
+            <div class="empty">
+              <p>
+                No sources found.
+              </p>
+              <p>
+                Use the <span class="icon-refresh"><i>Refresh</i></span> button to refresh your list of repositories and organisations.
+              </p>
+            </div>
           </div>
           <div class="controls">
             <a class="moveto selected"><span class="icon"></span><span class="text">Add</span></a>
