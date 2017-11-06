@@ -49,6 +49,11 @@
                 <a :href="`https://github.com/${repo.name}`" class="repo link">View repository</a>
               </li>
             </ul>
+            <div class="empty">
+              <p>
+                No active sources.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -84,14 +89,19 @@
           </div>
           <div class="controls">
             <a class="moveto selected"><span class="icon"></span><span class="text">Add</span></a>
-            <a class="moveto parts"><span class="icon"></span><span class="text">Remove</span></a>
           </div>
           <div class="selected list">
             <h3 class="list-heading">Active sources</h3>
             <ul>
+              <li v-for="bucket of buckets" v-if="bucket.active">
+                <span class="source name">{{ bucket.name }}</span>
+                <a class="remove item-button"><span class="icon"></span><span class="text">Remove</span></a>
+              </li>
             </ul>
             <div class="empty">
-              No buckets configured
+              <p>
+                No active sources.
+              </p>
             </div>
           </div>
         </div>
@@ -423,6 +433,12 @@
             'active': false,
             'id': '496794ec-9be9-4281-80db-5e9b5906ad18',
             'name': 'frictionlessdata/toolfund'
+          }
+        ],
+        buckets: [
+          {
+            'active': true,
+            'name': 'okfn/some-data'
           }
         ]
       }

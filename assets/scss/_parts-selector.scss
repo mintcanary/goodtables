@@ -40,6 +40,7 @@
         padding: $grid-gutter-width*2;
         text-align: center;
         position: relative;
+        opacity: 0.75;
 
         &.action {
           &:before {
