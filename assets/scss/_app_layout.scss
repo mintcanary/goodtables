@@ -30,6 +30,10 @@
     @media screen and (min-width: $screen-sm) {
       height: 100vh;
       position: fixed;
+      width: 270px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
       width: 300px;
     }
 
@@ -190,7 +194,7 @@
     }
 
     @media screen and (min-width: $screen-sm) {
-      margin-left: 300px;
+      margin-left: 270px;
 
       h1 {
         padding-left: $grid-gutter-width;
@@ -202,6 +206,10 @@
       & > div {
         min-height: 100vh;
       }
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      margin-left: 300px;
     }
 
     .primary-secondary {
