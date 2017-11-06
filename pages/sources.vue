@@ -24,10 +24,8 @@
             <h3 class="list-heading">Available sources</h3>
             <ul>
               <li v-for="repo of repos" v-if="!repo.active">
-                {{ repo.name }}
-                <span>
-                  <a :href="`https://github.com/${repo.name}`">View repository</a>
-                </span>
+                <span class="source name">{{ repo.name }}</span>
+                <a :href="`https://github.com/${repo.name}`" class="repo link">View repository</a>
               </li>
             </ul>
           </div>
@@ -39,10 +37,8 @@
             <h3 class="list-heading">Active sources</h3>
             <ul>
               <li v-for="repo of repos" v-if="repo.active">
-                {{ repo.name }}
-                <span>
-                  <a :href="`https://github.com/${repo.name}`">View repository</a>
-                </span>
+                <span class="source name">{{ repo.name }}</span>
+                <a :href="`https://github.com/${repo.name}`" class="repo link">View repository</a>
               </li>
             </ul>
           </div>

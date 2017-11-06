@@ -6,9 +6,21 @@
     .list-heading {
       font-weight: 600;
     }
+    
     .alert {
       border-radius: 0;
       margin: 0;
+    }
+
+    .name {
+      display: block;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .link {
+      color: inherit;
+      font-size: 0.9em;
     }
   }
 }
