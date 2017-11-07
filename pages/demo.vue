@@ -39,7 +39,7 @@
     },
     head () {
       return {
-        title: `goodtables`
+        title: `Goodtables One-time`
       }
     }
   }

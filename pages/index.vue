@@ -12,11 +12,6 @@
 
 <script>
   export default {
-    layout: 'landing',
-    head () {
-      return {
-        title: `goodtables.io`
-      }
-    }
+    layout: 'landing'
   }
 </script>

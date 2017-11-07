@@ -110,7 +110,7 @@
     },
     head () {
       return {
-        title: `goodtables`
+        title: `Goodtables Report`
       }
     },
     mounted: () => {

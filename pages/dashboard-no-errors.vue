@@ -35,7 +35,7 @@
     },
     head () {
       return {
-        title: `goodtables`
+        title: `Goodtables Dashboard`
       }
     }
   }

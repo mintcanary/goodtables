@@ -30,7 +30,7 @@
     },
     head () {
       return {
-        title: `goodtables`
+        title: `Goodtables Jobs`
       }
     }
   }

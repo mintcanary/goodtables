@@ -119,7 +119,7 @@
     layout: 'app',
     head () {
       return {
-        title: `goodtables`
+        title: `Goodtables Sources`
       }
     },
     mounted: () => {
