@@ -19,13 +19,15 @@
   }
 
   .maze {
-    width: 100%;
+    width: 70vmin;
+    height: 70vmin*1.1356;
   }
 
   .logo {
     width: 28vmin;
+    height: 28vmin*0.1667;
     position: absolute;
     right: 0;
-    bottom: -4.5vmin;
+    bottom: -4vmin;
   }
 }
