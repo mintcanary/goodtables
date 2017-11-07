@@ -19,6 +19,11 @@ export default {
     Maze,
     Logo
   },
-  layout: 'minimal'
+  layout: 'minimal',
+  head () {
+    return {
+      title: `Goodtables 404`
+    }
+  }
 }
 </script>
