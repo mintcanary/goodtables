@@ -1,36 +1,24 @@
 <template>
-  <section class="container">
-    <h1 class="title">
-      {{ error.statusCode }}
-    </h1>
-    <h2 class="info">
-      {{ error.message }}
-    </h2>
-    <nuxt-link class="button" to="/" v-if="error.statusCode === 404">
-      Homepage
-    </nuxt-link>
-  </section>
+  <div class="error-page">
+    <section class="inner">
+      <h1>
+        {{ error.message }} ({{ error.statusCode }})
+      </h1>
+      <maze/>
+      <logo/>
+    </section>
+  </div>
 </template>
 <script>
+import Maze from '~/components/maze.vue'
+import Logo from '~/components/Logo.vue'
+
 export default {
-  props: ['error']
+  props: ['error'],
+  components: {
+    Maze,
+    Logo
+  },
+  layout: 'minimal'
 }
 </script>
-
-<style scoped>
-.title
-{
-  margin-top: 15px;
-  font-size: 5em;
-}
-.info
-{
-  font-weight: 300;
-  color: #9aabb1;
-  margin: 0;
-}
-.button
-{
-  margin-top: 50px;
-}
-</style>
