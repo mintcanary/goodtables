@@ -1,13 +1,5 @@
 .nav {
   & > li {
-      & > a {
-      [class^="icon-"], [class*=" icon-"] {
-        &:first-child {
-          margin-right: 8px;
-        }
-      }
-    }
-
     & > span {
       display: block;
       padding: 6px 16px;

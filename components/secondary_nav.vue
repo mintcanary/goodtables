@@ -1,7 +1,7 @@
 <template>
   <ul class="nav secondary">
     <li class="feedback">
-      <a class="expand collapsed" data-toggle="collapse" href="#feedback" aria-expanded="false" aria-controls="feedback"><img src="~assets/img/feedback.svg" alt=""> Feedback</a>
+      <a class="expand collapsed" data-toggle="collapse" href="#feedback" aria-expanded="false" aria-controls="feedback"><img src="~assets/img/feedback.svg" alt=""> <span class="text">Feedback</span></a>
       <div class="collapse" id="feedback">
         <div class="well">
           <p>To provide feedback or report an issue:</p>
@@ -14,10 +14,10 @@
       </div>
     </li>
     <li v-if="loggedin" class="log-out">
-      <a href="#"><img src="https://github.com/smth.png?size=52" alt="" /> Log out</a>
+      <a href="#"><img src="https://github.com/smth.png?size=52" alt="" /> <span class="text">Log out</span></a>
     </li>
     <li v-else class="log-in">
-      <a href="#"><img src="~assets/img/login.svg" alt=""> Log in</a>
+      <a href="#"><img src="~assets/img/login.svg" alt=""> <span class="text">Log in</span></a>
     </li>
   </ul>
 </template>

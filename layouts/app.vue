@@ -1,13 +1,15 @@
 <template>
-  <div class="app" :class="view">
+  <div class="app" :class="[menuView, sideView]">
     <div class="inner">
       <nav class="main-nav">
         <logo/>
         <PrimaryNav/>
         <SecondaryNav loggedin="true"/>
+        <a v-on:click="menuView = 'collapsed-menu-view'" class="collapse-view left">Collapse sidebar</a>
       </nav>
       <div class="content">
         <nuxt/>
+        <a v-on:click="menuView = 'default-menu-view'" class="expand-view right">Collapse sidebar</a>
       </div>
     </div>
   </div>
@@ -32,7 +34,8 @@ export default {
   },
   data () {
     return {
-      view: 'default-view'
+      menuView: 'default-menu-view',
+      sideView: 'default-side-view'
     }
   }
 }

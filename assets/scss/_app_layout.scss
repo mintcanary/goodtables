@@ -1,6 +1,39 @@
 .app {
   overflow-x: hidden;
 
+  .collapse-view,
+  .expand-view {
+    $btn-size: 10px;
+    display: none;
+
+    @media screen and (min-width: $screen-sm) {
+      display: block;
+      position: absolute;
+      top: $grid-gutter-width;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0.7;
+
+      &.left {
+        right: $grid-gutter-width*0.25;
+        border-width: $btn-size $btn-size $btn-size 0;
+        border-color: transparent $gray-base transparent transparent;
+      }
+
+      &.right {
+        left: $grid-gutter-width*0.25;
+        border-width: $btn-size 0 $btn-size $btn-size;
+        border-color: transparent transparent transparent $gray-base;
+      }
+    }
+  }
+  .expand-view {
+    display: none;
+  }
+
   .main-nav {
     background-color: $brand-primary;
     @include rev-out;
@@ -14,16 +47,14 @@
 
     .logo {
       $logoHeight: 35px;
-      display: block;
-      padding: $grid-gutter-width/2;
+      display: inline-block;
+      padding: 26px;
+      width: $logoHeight*6;
+      box-sizing: content-box;
 
       svg {
         width: $logoHeight*6;
         height: $logoHeight;
-      }
-
-      @media screen and (min-width: $screen-sm) {
-        padding: $grid-gutter-width;
       }
     }
 
@@ -31,6 +62,7 @@
       height: 100vh;
       position: fixed;
       width: 270px;
+      @include transition(width 0.4s);
     }
 
     @media screen and (min-width: $screen-lg) {
@@ -42,6 +74,11 @@
 
       a {
         color: #fff;
+        @media screen and (min-width: $screen-sm) {
+          padding-left: 14px;
+          padding-right: 14px;
+          white-space: nowrap;
+        }
 
         &.expand {
           @media screen and (min-width: $screen-sm) {
@@ -68,7 +105,14 @@
           @media screen and (min-width: $screen-sm) {
             display: inline-block;
             width: 26px;
-            margin-right: 0.5em;
+          }
+        }
+
+        img,
+        [class^="icon-"] {
+          & + .text {
+            display: inline-block;
+            margin-left: 12px;
           }
         }
       }
@@ -149,15 +193,13 @@
           font-weight: 600;
 
           a {
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 10px 16px;
 
             [class^="icon-"] {
               font-size: 1.5em;
               float: left;
               position: relative;
               top: 0;
-              margin-right: 12px;
             }
           }
         }
@@ -179,7 +221,7 @@
       }
     }
 
-    .text {
+    div.text {
       padding-left: $grid-gutter-width/2;
       padding-right: $grid-gutter-width/2;
       overflow: hidden;
@@ -198,6 +240,8 @@
   }
 
   .content {
+    position: relative;
+
     h1 {
       border-bottom: solid 1px $gray-light;
       margin-top: 0;
@@ -206,6 +250,7 @@
 
     @media screen and (min-width: $screen-sm) {
       margin-left: 270px;
+      @include transition(margin-left 0.4s);
 
       h1 {
         padding-left: $grid-gutter-width;
@@ -237,12 +282,8 @@
       h1 {
         margin-bottom: 0;
 
-        @media screen and (min-width: $screen-sm) {
-          margin-left: -$grid-gutter-width/2;
-        }
-
         @media screen and (min-width: $screen-lg) {
-          padding-left: $grid-gutter-width*1.5;
+          padding-left: $grid-gutter-width;
         }
       }
 
@@ -288,6 +329,57 @@
 
     .aside-title {
       margin: 0 0 $padding-large-vertical 0;
+    }
+  }
+
+  &.collapsed-menu-view {
+    $collapsed-menu-width: 86px;
+
+    .main-nav {
+      @media screen and (min-width: $screen-sm) {
+        width: $collapsed-menu-width;
+
+
+        .logo {
+          .good,
+          .tables,
+          .io {
+            display: none;
+          }
+        }
+
+        .nav {
+          padding-right: $grid-gutter-width/2;
+
+          a {
+            border-radius: $border-radius-large;
+
+            .text {
+              width: 0;
+              overflow: hidden;
+              margin-left: 0;
+              margin-top: -1em;
+            }
+          }
+
+          .feedback {
+            // TODO: incorporate feedback into collapsed view
+            display: none;
+          }
+        }
+
+        .collapse-view {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      margin-left: $collapsed-menu-width;
+
+      .expand-view.right {
+        display: block;
+      }
     }
   }
 }

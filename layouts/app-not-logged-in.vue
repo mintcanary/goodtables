@@ -1,5 +1,5 @@
 <template>
-  <div class="app" :class="view">
+  <div class="app">
     <div class="inner">
       <nav class="main-nav">
         <logo/>
@@ -32,11 +32,6 @@ export default {
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
-  },
-  data () {
-    return {
-      view: 'default-view'
-    }
   }
 }
 </script>
