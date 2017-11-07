@@ -12,6 +12,7 @@
   .logo {
     display: block;
     width: 200px;
+    height: 200px*0.1667; // for IE
     padding-top: $grid-gutter-width;
     padding-bottom: $grid-gutter-width;
     box-sizing: content-box;
