@@ -161,6 +161,12 @@
             }
           }
         }
+        @media screen and (min-width: $screen-lg) {
+          a {
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+        }
       }
 
       @media screen and (min-width: $screen-sm) {
