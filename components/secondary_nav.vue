@@ -1,6 +1,6 @@
 <template>
   <ul class="nav secondary">
-    <li>
+    <li class="feedback">
       <a class="expand collapsed" data-toggle="collapse" href="#feedback" aria-expanded="false" aria-controls="feedback"><img src="~assets/img/feedback.svg" alt=""> Feedback</a>
       <div class="collapse" id="feedback">
         <div class="well">

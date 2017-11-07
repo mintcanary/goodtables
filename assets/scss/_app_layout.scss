@@ -100,6 +100,11 @@
             border-radius: 50%;
           }
         }
+        &.feedback {
+          img {
+            height: 30px; // for IE
+          }
+        }
       }
 
       .collapse {
