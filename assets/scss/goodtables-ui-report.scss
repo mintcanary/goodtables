@@ -12,6 +12,7 @@
   $fail-colour:                 $brand-danger;
   $pass-colour:                 $brand-success;
   $divider-image-path:          "~assets/img/zigzag.svg";
+  $divider-image-width:         29px;
   $divider-image-height:        10px;
   $divider-mask-path:           "~assets/img/zigzagmask.svg";
 
@@ -92,7 +93,7 @@
         &.passed {
           border-color: $pass-colour;
           color: $pass-colour;
-          
+
           &.collapsed {
             background-color: $pass-colour;
             color: $report-bg-colour;
@@ -210,7 +211,7 @@
         background-image: url('#{$divider-image-path}');
         background-position: center;
         background-repeat: repeat-x;
-        background-size: auto $divider-image-height;
+        background-size: $divider-image-width $divider-image-height;
       }
     }
 
@@ -243,7 +244,7 @@
       @if variable-exists(divider-mask-path) {
         background-color: $report-bg-colour;
         mask: url($divider-mask-path);
-        mask-size: auto $divider-image-height;
+        mask-size: $divider-image-width $divider-image-height;
         mask-position: center;
         mask-repeat: repeat-x;
       }
