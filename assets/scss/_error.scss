@@ -20,12 +20,12 @@
 
   .maze {
     width: 70vmin;
-    height: 70vmin*1.1356;
+    height: 70vmin*1.1356; // for IE
   }
 
   .logo {
     width: 28vmin;
-    height: 28vmin*0.1667;
+    height: 28vmin*0.1667; // for IE
     position: absolute;
     right: 0;
     bottom: -4vmin;
