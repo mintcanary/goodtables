@@ -1,11 +1,11 @@
 <template>
+<no-ssr>
   <div class="landing">
     <header class="main-header">
       <div class="pattern">
         <div class="inner">
           <div class="container">
             <div class="main-nav">
-            <no-ssr>
               <div class="container">
                 <logo/>
                 <nav>
@@ -14,7 +14,6 @@
                   </router-link>
                 </nav>
               </div>
-            </no-ssr>
             </div>
 
             <div class="content">
@@ -115,6 +114,7 @@
     </section>
     <my-footer/>
   </div>
+</no-ssr>
 </template>
 
 <script>
