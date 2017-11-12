@@ -38,6 +38,8 @@
     background-color: $brand-primary;
     @include rev-out;
     padding-bottom: $grid-gutter-width/2;
+    position: relative;
+    z-index: 1;
 
     @media screen and (min-width: $screen-sm) {
       display: flex;
@@ -51,6 +53,7 @@
       padding: 26px;
       width: $logoHeight*6;
       box-sizing: content-box;
+      overflow: hidden;
 
       svg {
         width: $logoHeight*6;
@@ -74,11 +77,6 @@
 
       a {
         color: #fff;
-        @media screen and (min-width: $screen-sm) {
-          padding-left: 14px;
-          padding-right: 14px;
-          white-space: nowrap;
-        }
 
         &.expand {
           @media screen and (min-width: $screen-sm) {
@@ -86,8 +84,9 @@
           }
 
           &:not(.collapsed) {
-            background-color: $brand-info;
-            border-bottom-left-radius: 0;
+            background-color: darken($brand-primary, 3%);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
           }
         }
 
@@ -111,8 +110,10 @@
         img,
         [class^="icon-"] {
           & + .text {
-            display: inline-block;
-            margin-left: 12px;
+            @media screen and (min-width: $screen-sm) {
+              display: inline-block;
+              margin-left: 12px;
+            }
           }
         }
       }
@@ -151,16 +152,25 @@
         }
       }
 
-      .collapse {
-        background-color: $brand-primary;
+      & > li {
+        & > a {
+          @media screen and (min-width: $screen-sm) {
+            padding-left: 14px;
+            padding-right: 14px;
+            white-space: nowrap;
+          }
+        }
       }
 
-      .well {
-        :first-child {
-          margin-top: 0;
-        }
-        :last-child {
-          margin-bottom: 0;
+      .nav-content {
+        background-color: darken($brand-primary, 3%);
+        padding: $grid-gutter-width*0.5;
+
+        @media screen and (min-width: $screen-sm) {
+          position: absolute;
+          bottom: 100%;
+          right: 0;
+          border-top-left-radius: $border-radius-large;
         }
 
         a {
@@ -348,6 +358,11 @@
           }
         }
 
+        .logo {
+          box-sizing: border-box;
+          width: $collapsed-menu-width;
+        }
+
         .nav {
           padding-right: $grid-gutter-width/2;
 
@@ -362,9 +377,11 @@
             }
           }
 
-          .feedback {
-            // TODO: incorporate feedback into collapsed view
-            display: none;
+          .nav-content {
+            right: auto;
+            width: 300px;
+            border-top-right-radius: $border-radius-large;
+            border-bottom-right-radius: $border-radius-large;
           }
         }
 

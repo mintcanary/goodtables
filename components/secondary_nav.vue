@@ -2,8 +2,8 @@
   <ul class="nav secondary">
     <li class="feedback">
       <a class="expand collapsed" data-toggle="collapse" href="#feedback" aria-expanded="false" aria-controls="feedback"><img src="~assets/img/feedback.svg" alt=""> <span class="text">Feedback</span></a>
-      <div class="collapse" id="feedback">
-        <div class="well">
+      <div class="nav-content collapse" id="feedback">
+        <div>
           <p>To provide feedback or report an issue:</p>
           <ul>
             <li>Give feedback <a href="https://discuss.okfn.org/t/launching-goodtables-io-tell-us-what-you-think" target="_blank">thread</a> on the Open Knowledge International forum.</li>
