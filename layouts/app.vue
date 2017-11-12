@@ -1,5 +1,5 @@
 <template>
-  <div class="app" :class="[menuView, sideView]">
+  <div class="app" :class="menuView">
     <div class="inner">
       <nav class="main-nav">
         <logo/>
@@ -34,8 +34,7 @@ export default {
   },
   data () {
     return {
-      menuView: 'default-menu-view',
-      sideView: 'default-side-view'
+      menuView: 'default-menu-view'
     }
   }
 }

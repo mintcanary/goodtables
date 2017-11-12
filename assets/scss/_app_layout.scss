@@ -7,7 +7,6 @@
     display: none;
 
     @media screen and (min-width: $screen-sm) {
-      display: block;
       position: absolute;
       top: $grid-gutter-width;
       width: 0;
@@ -32,6 +31,18 @@
   }
   .expand-view {
     display: none;
+  }
+  .collapse-view {
+    &.left {
+      @media screen and (min-width: $screen-sm) {
+        display: block;
+      }
+    }
+    &.right {
+      @media screen and (min-width: $screen-lg) {
+        display: block;
+      }
+    }
   }
 
   .main-nav {
@@ -287,6 +298,20 @@
       @media screen and (min-width: $screen-lg) {
         padding-left: 0;
         padding-right: 0;
+
+        .collapse-view,
+        .expand-view {
+          top: 1.2em;
+        }
+        .collapse-view {
+          left: $grid-gutter-width/2;
+
+          & + .aside-title {
+            .text {
+              margin-left: 1em;
+            }
+          }
+        }
       }
 
       h1 {
@@ -310,6 +335,7 @@
   .main {
     background-color: $body-bg;
     padding: $grid-gutter-width $grid-gutter-width/2;
+    position: relative;
 
     @media screen and (min-width: $screen-lg) {
       display: table-cell;
@@ -317,11 +343,13 @@
       padding-left: $grid-gutter-width;
       padding-right: $grid-gutter-width;
       vertical-align: top;
+      @include transition(width 0.4s);
     }
   }
 
   .aside {
     background-color: $gray-lighter;
+    position: relative;
 
     @media screen and (min-width: $screen-sm) {
       margin-left: -$grid-gutter-width/2;
@@ -331,6 +359,7 @@
       display: table-cell;
       width: 25%;
       vertical-align: top;
+      @include transition(width 0.4s);
     }
 
     & > div {
@@ -339,6 +368,10 @@
 
     .aside-title {
       margin: 0 0 $padding-large-vertical 0;
+
+      [class^="icon-"] {
+        display: none;
+      }
     }
   }
 
@@ -396,6 +429,56 @@
 
       .expand-view.right {
         display: block;
+      }
+    }
+  }
+
+  .collapsed-side-view {
+    @media screen and (min-width: $screen-lg) {
+      .expand-view {
+        display: block;
+      }
+      .collapse-view {
+        display: none;
+      }
+      .main {
+        width: 99%;
+      }
+      .aside {
+        width: 86px;
+        text-align: center;
+
+        .aside-title {
+          font-size: 1em;
+
+          [class^="icon-"] {
+            display: block;
+          }
+          .text {
+            display: none;
+          }
+        }
+
+        .source-item {
+          .panel {
+            border: none;
+          }
+
+          .avatar {
+            float: none;
+            margin: 0;
+          }
+
+          .label {
+            margin: 0;
+          }
+
+          .panel-title,
+          .jobcount,
+          .time {
+            display: none;
+          }
+        }
       }
     }
   }

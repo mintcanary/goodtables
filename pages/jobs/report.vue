@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="sideView">
     <div class="primary-secondary source-view">
       <a class="integration icon-github"></a>
       <h1>okfn/test-data</h1>
@@ -30,11 +30,12 @@
           </div>
 
           <report></report>
-
+          <a v-on:click="sideView = 'default-side-view'" class="expand-view left">Expand sidebar</a>
         </section>
         <section class="history aside">
           <div>
-            <h3 class="aside-title">Job history</h3>
+            <a v-on:click="sideView = 'collapsed-side-view'" class="collapse-view right">Collapse sidebar</a>
+            <h3 class="aside-title"><span class="icon-clock"></span><span class="text">Job history</span></h3>
             <div class="source-item">
               <div class="panel panel-info">
                 <div class="github">
@@ -111,6 +112,11 @@
     head () {
       return {
         title: `Goodtables Report`
+      }
+    },
+    data () {
+      return {
+        sideView: 'default-side-view'
       }
     },
     mounted: () => {
