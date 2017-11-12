@@ -5,16 +5,16 @@
         <div class="inner">
           <div class="container">
             <div class="main-nav">
+            <no-ssr>
               <div class="container">
-              <no-ssr>
                 <logo/>
                 <nav>
                   <router-link to="/dashboard">
                     <span class="link-icon icon-login"></span> <span class="link-text">Sign in with GitHub</span>
                   </router-link>
                 </nav>
-              </no-ssr>
               </div>
+            </no-ssr>
             </div>
 
             <div class="content">
