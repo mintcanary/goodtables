@@ -2,7 +2,9 @@
   <div class="app" :class="menuView">
     <div class="inner">
       <nav class="main-nav">
-        <logo/>
+        <no-ssr>
+          <logo/>
+        </no-ssr>
         <PrimaryNav/>
         <SecondaryNav loggedin="true"/>
         <a v-on:click="menuView = 'collapsed-menu-view'" class="collapse-view left">Collapse sidebar</a>
