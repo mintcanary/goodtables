@@ -1,5 +1,4 @@
 <template>
-<no-ssr>
   <div class="landing">
     <header class="main-header">
       <div class="pattern">
@@ -114,7 +113,6 @@
     </section>
     <my-footer/>
   </div>
-</no-ssr>
 </template>
 
 <script>
