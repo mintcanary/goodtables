@@ -170,14 +170,27 @@
         border-radius: ($table-border-radius - 1);
         overflow: hidden;
 
-        tr :first-child {
-          border-left-color: transparent;
+        tr {
+
+          :first-child {
+            border-left-color: transparent;
+          }
+
+          &.fail {
+            td {
+              background-color: $state-danger-bg;
+            }
+          }
         }
 
         td {
           border-style: solid;
           border-color: $table-border-colour;
           border-width: 0 0 1px 1px;
+
+          &.fail {
+            background-color: $state-danger-bg;
+          }
         }
       }
 
