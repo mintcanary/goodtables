@@ -134,20 +134,17 @@
                       'status': 'has-fail',
                       'cells': [
                         {
-                          'label': 'id',
-                          'status': 'pass'
+                          'label': 'id'
                         },
                         {
-                          'label': 'name',
-                          'status': 'before-fail'
+                          'label': 'name'
                         },
                         {
                           'label': '',
                           'status': 'fail'
                         },
                         {
-                          'label': 'name',
-                          'status': 'after-fail'
+                          'label': 'name'
                         }
                       ]
                     },
@@ -156,20 +153,16 @@
                       'status': 'after-fail',
                       'cells': [
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         }
                       ]
                     }
@@ -186,16 +179,14 @@
                       'status': 'has-fails',
                       'cells': [
                         {
-                          'label': 'id',
-                          'status': 'before-fail'
+                          'label': 'id'
                         },
                         {
                           'label': 'name',
                           'status': 'fail'
                         },
                         {
-                          'label': '',
-                          'status': 'after-fail'
+                          'label': ''
                         },
                         {
                           'label': 'name',
@@ -208,20 +199,16 @@
                       'status': 'after-fail',
                       'cells': [
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         }
                       ]
                     }
@@ -238,20 +225,16 @@
                       'status': 'before-fail',
                       'cells': [
                         {
-                          'label': 'id',
-                          'status': 'pass'
+                          'label': 'id'
                         },
                         {
-                          'label': 'name',
-                          'status': 'pass'
+                          'label': 'name'
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': 'name',
-                          'status': 'pass'
+                          'label': 'name'
                         }
                       ]
                     },
@@ -260,12 +243,10 @@
                       'status': 'fail',
                       'cells': [
                         {
-                          'label': '1',
-                          'status': 'pass'
+                          'label': '1'
                         },
                         {
-                          'label': 'english',
-                          'status': 'pass'
+                          'label': 'english'
                         }
                       ]
                     },
@@ -274,12 +255,10 @@
                       'status': 'fail',
                       'cells': [
                         {
-                          'label': '1',
-                          'status': 'pass'
+                          'label': '1'
                         },
                         {
-                          'label': 'english',
-                          'status': 'pass'
+                          'label': 'english'
                         }
                       ]
                     },
@@ -288,24 +267,19 @@
                       'status': 'fail',
                       'cells': [
                         {
-                          'label': '1',
-                          'status': 'pass'
+                          'label': '1'
                         },
                         {
-                          'label': 'german',
-                          'status': 'pass'
+                          'label': 'german'
                         },
                         {
-                          'label': '1',
-                          'status': 'pass'
+                          'label': '1'
                         },
                         {
-                          'label': '2',
-                          'status': 'pass'
+                          'label': '2'
                         },
                         {
-                          'label': '3',
-                          'status': 'pass'
+                          'label': '3'
                         }
                       ]
                     },
@@ -314,20 +288,16 @@
                       'status': 'after-fail',
                       'cells': [
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         }
                       ]
                     }
@@ -344,20 +314,16 @@
                       'status': 'before-fail',
                       'cells': [
                         {
-                          'label': 'id',
-                          'status': 'pass'
+                          'label': 'id'
                         },
                         {
-                          'label': 'name',
-                          'status': 'pass'
+                          'label': 'name'
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': 'name',
-                          'status': 'pass'
+                          'label': 'name'
                         }
                       ]
                     },
@@ -366,12 +332,10 @@
                       'status': 'fail',
                       'cells': [
                         {
-                          'label': '1',
-                          'status': 'pass'
+                          'label': '1'
                         },
                         {
-                          'label': 'english',
-                          'status': 'pass'
+                          'label': 'english'
                         }
                       ]
                     },
@@ -380,12 +344,10 @@
                       'status': 'after-fail',
                       'cells': [
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         }
                       ]
                     }
@@ -418,20 +380,17 @@
                       'status': 'has-fail',
                       'cells': [
                         {
-                          'label': 'id',
-                          'status': 'pass'
+                          'label': 'id'
                         },
                         {
-                          'label': 'name',
-                          'status': 'before-fail'
+                          'label': 'name'
                         },
                         {
                           'label': '',
                           'status': 'fail'
                         },
                         {
-                          'label': 'name',
-                          'status': 'after-fail'
+                          'label': 'name'
                         }
                       ]
                     },
@@ -440,20 +399,16 @@
                       'status': 'after-fail',
                       'cells': [
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': ''
                         }
                       ]
                     }
