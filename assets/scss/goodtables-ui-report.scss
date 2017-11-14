@@ -155,25 +155,23 @@
     }
 
     .table-view {
-      border: solid 1px $table-border-colour;
-      border-radius: $table-border-radius;
-      margin-top: 15px;
       position: relative;
 
       .inner {
         overflow-x: auto;
+        padding-top: 15px;
       }
 
       table {
         margin: 0;
         color: $table-text-colour;
-        border-radius: ($table-border-radius - 1);
-        overflow: hidden;
+        border-collapse: separate;
 
         tr {
+          position: relative;
 
-          :first-child {
-            border-left-color: transparent;
+          :last-child {
+            border-right-width: 1px;
           }
 
           &.fail {
@@ -181,15 +179,93 @@
               background-color: $state-danger-bg;
             }
           }
+
+          &:first-child {
+            font-weight: 600;
+
+            :first-child {
+              border-top-left-radius: $table-border-radius;
+            }
+
+            :last-child {
+              border-top-right-radius: $table-border-radius;
+            }
+          }
+
+          &.row-pass {
+            &:not(:first-child) {
+              display: none;
+
+              & + .row-before-fail {
+                &:after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  left: -5px;
+                  right: -5px;
+                  background-color: $report-bg-colour;
+                  height: 10px;
+                  border-top: solid 1px $table-border-colour;
+                  border-bottom: solid 1px $table-border-colour;
+                  outline: solid 4px $report-bg-colour;
+                }
+              }
+            }
+          }
         }
 
         td {
           border-style: solid;
           border-color: $table-border-colour;
-          border-width: 0 0 1px 1px;
+          border-width: 1px 0 0 1px;
+          position: relative;
 
           &.fail {
             background-color: $state-danger-bg;
+          }
+
+          @mixin truncate($side:left) {
+            &:before,
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              bottom: 0;
+              top: -5px;
+              background-color: $report-bg-colour;
+            }
+            &:before {
+              width: 14px;
+              @if $side == left {
+                left: 6px;
+              }
+              @if $side == right {
+                right: 6px;
+              }
+            }
+            &:after {
+              width: 10px;
+              @if $side == left {
+                left: 8px;
+              }
+              @if $side == right {
+                right: 8px;
+              }
+              border-left: solid 1px $table-border-colour;
+              border-right: solid 1px $table-border-colour;
+            }
+          }
+
+          &.col-pass {
+            display: none;
+
+            & + .col-before-fail {
+              @include truncate;
+            }
+          }
+
+          &.col-after-fail:not(:last-child) {
+            @include truncate(right);
           }
         }
       }

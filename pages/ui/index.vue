@@ -74,51 +74,841 @@
             'pass': false,
             'errors': [
               {
-                'count': '1',
-                'name': 'Missing Header',
+                'count': 2,
+                'name': 'Duplicate Row',
                 'table': {
                   'rows': [
                     {
                       'line': 1,
-                      'status': 'has-fail',
+                      'status': 'row-pass',
                       'cells': [
                         {
-                          'label': 'id',
-                          'status': 'pass'
+                          'label': 'file'
                         },
                         {
-                          'label': 'name',
-                          'status': 'before-fail'
+                          'label': 'year'
                         },
                         {
-                          'label': '',
-                          'status': 'fail'
+                          'label': 'manufacturer'
                         },
                         {
-                          'label': 'name',
-                          'status': 'after-fail'
+                          'label': 'model'
+                        },
+                        {
+                          'label': 'description'
+                        },
+                        {
+                          'label': 'euro_standard'
+                        },
+                        {
+                          'label': 'tax_band'
+                        },
+                        {
+                          'label': 'transmission'
+                        },
+                        {
+                          'label': 'transmission_type'
+                        },
+                        {
+                          'label': 'engine_capacity'
+                        },
+                        {
+                          'label': 'fuel_type'
+                        },
+                        {
+                          'label': 'urban_metric'
+                        },
+                        {
+                          'label': 'extra_urban_metric'
+                        },
+                        {
+                          'label': 'combined_metric'
+                        },
+                        {
+                          'label': 'urban_imperial'
+                        },
+                        {
+                          'label': 'extra_urban_imperial'
+                        },
+                        {
+                          'label': 'combined_imperial'
+                        },
+                        {
+                          'label': 'noise_level'
+                        },
+                        {
+                          'label': 'co2'
+                        },
+                        {
+                          'label': 'thc_emissions'
+                        },
+                        {
+                          'label': 'co_emissions'
+                        },
+                        {
+                          'label': 'nox_emissions'
+                        },
+                        {
+                          'label': 'thc_nox_emissions'
+                        },
+                        {
+                          'label': 'particulates_emissions'
+                        },
+                        {
+                          'label': 'fuel_cost_12000_miles'
+                        },
+                        {
+                          'label': 'fuel_cost_6000_miles'
+                        },
+                        {
+                          'label': 'standard_12_months'
+                        },
+                        {
+                          'label': 'standard_6_months'
+                        },
+                        {
+                          'label': 'first_year_12_months'
+                        },
+                        {
+                          'label': 'first_year_6_months'
+                        },
+                        {
+                          'label': 'date_of_change'
                         }
                       ]
                     },
                     {
                       'line': 2,
-                      'status': 'after-fail',
+                      'status': 'row-before-fail',
                       'cells': [
                         {
-                          'label': '1',
-                          'status': 'pass'
+                          'label': 'DatapartC_july2000.csv'
                         },
                         {
-                          'label': 'english',
-                          'status': 'pass'
+                          'label': '2000'
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': 'Alfa Romeo'
                         },
                         {
-                          'label': '',
-                          'status': 'pass'
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        }
+                      ]
+                    },
+                    {
+                      'line': 3,
+                      'status': 'fail',
+                      'cells': [
+                        {
+                          'label': 'DatapartC_july2000.csv'
+                        },
+                        {
+                          'label': '2000'
+                        },
+                        {
+                          'label': 'Alfa Romeo'
+                        },
+                        {
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        }
+                      ]
+                    },
+                    {
+                      'line': 4,
+                      'status': 'row-after-fail',
+                      'cells': [
+                        {
+                          'label': 'DatapartC_july2000.csv'
+                        },
+                        {
+                          'label': '2000'
+                        },
+                        {
+                          'label': 'Alfa Romeo'
+                        },
+                        {
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        }
+                      ]
+                    },
+                    {
+                      'line': 5,
+                      'status': 'row-pass',
+                      'cells': [
+                        {
+                          'label': 'DatapartC_july2000.csv'
+                        },
+                        {
+                          'label': '2000'
+                        },
+                        {
+                          'label': 'Alfa Romeo'
+                        },
+                        {
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        }
+                      ]
+                    },
+                    {
+                      'line': 6,
+                      'status': 'row-before-fail',
+                      'cells': [
+                        {
+                          'label': 'DatapartC_july2000.csv'
+                        },
+                        {
+                          'label': '2000'
+                        },
+                        {
+                          'label': 'Alfa Romeo'
+                        },
+                        {
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        }
+                      ]
+                    },
+                    {
+                      'line': 7,
+                      'status': 'fail',
+                      'cells': [
+                        {
+                          'label': 'DatapartC_july2000.csv'
+                        },
+                        {
+                          'label': '2000'
+                        },
+                        {
+                          'label': 'Alfa Romeo'
+                        },
+                        {
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        }
+                      ]
+                    },
+                    {
+                      'line': 8,
+                      'status': 'row-after-fail',
+                      'cells': [
+                        {
+                          'label': 'DatapartC_july2000.csv'
+                        },
+                        {
+                          'label': '2000'
+                        },
+                        {
+                          'label': 'Alfa Romeo'
+                        },
+                        {
+                          'label': '145'
+                        },
+                        {
+                          'label': 'Range'
+                        },
+                        {
+                          'label': '1.6'
+                        },
+                        {
+                          'label': 'Twin Spark'
+                        },
+                        {
+                          'label': '16v'
+                        },
+                        {
+                          'label': '2'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': 'M5'
+                        },
+                        {
+                          'label': 'Manual'
+                        },
+                        {
+                          'label': '1598'
+                        },
+                        {
+                          'label': 'Petrol'
+                        },
+                        {
+                          'label': '11.1'
+                        },
+                        {
+                          'label': '6.5'
+                        },
+                        {
+                          'label': '8.2'
+                        },
+                        {
+                          'label': '25.4'
+                        },
+                        {
+                          'label': '43.5'
+                        },
+                        {
+                          'label': '34.4'
+                        },
+                        {
+                          'label': '74'
+                        },
+                        {
+                          'label': '195'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '980'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': '618'
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
+                        },
+                        {
+                          'label': ''
                         }
                       ]
                     }
