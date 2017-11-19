@@ -125,8 +125,10 @@
             'pass': false,
             'errors': [
               {
-                'count': '1',
                 'name': 'Missing Header',
+                'messages': [
+                  'Missing header in row 1, column 3'
+                ],
                 'table': {
                   'rows': [
                     {
@@ -170,8 +172,10 @@
                 }
               },
               {
-                'count': '1',
                 'name': 'Duplicate Header',
+                'messages': [
+                  'Column 2 is a duplicate of column 4'
+                ],
                 'table': {
                   'rows': [
                     {
@@ -216,8 +220,81 @@
                 }
               },
               {
-                'count': '72',
                 'name': 'Defective Row',
+                'messages': [
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message',
+                  'Message'
+                ],
                 'table': {
                   'rows': [
                     {
@@ -305,8 +382,10 @@
                 }
               },
               {
-                'count': '1',
                 'name': 'Duplicate Row',
+                'messages': [
+                  'Row 3 is a duplicate of row 2'
+                ],
                 'table': {
                   'rows': [
                     {
@@ -371,8 +450,10 @@
             'pass': false,
             'errors': [
               {
-                'count': '1',
                 'name': 'Missing Header',
+                'messages': [
+                  'Missing header in row 1, column 3'
+                ],
                 'table': {
                   'rows': [
                     {

@@ -74,8 +74,11 @@
             'pass': false,
             'errors': [
               {
-                'count': 2,
                 'name': 'Duplicate Row',
+                'messages': [
+                  'Row 4 is a duplicate of row 3',
+                  'Row 7 is a duplicate of row 6'
+                ],
                 'table': {
                   'rows': [
                     {

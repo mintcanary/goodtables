@@ -21,7 +21,7 @@
         </li>
       </ul>
 
-      <report-error v-for="e of r.errors" v-bind:title="e.name" v-bind:count="e.count" description="Header column is empty.">
+      <report-error v-for="(e, index) in r.errors" v-bind:title="e.name" v-if="e.messages" v-bind:count="e.messages.length" v-bind:messages="e.messages" v-bind:filenumber="r.number" v-bind:errornumber="index +1">
         <table class="table">
           <tbody>
             <tr v-for="tr of e.table.rows" v-bind:class="tr.status">
