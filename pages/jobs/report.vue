@@ -545,19 +545,23 @@
       }
     },
     mounted: () => {
-      /* TODO debug - doesn't work correctly at some windows heights
+      /* TODO implement and test after passed test toggle has been removed / moved
       function stickyHeading () {
-        // TODO: Needs offset for subsequent headings, once a sticky heading is active
+        // TODO: Myabe needs offset for subsequent headings, once a sticky heading is active
         $('.file-heading').each(function () {
           var windowTop = $(window).scrollTop()
           var divTop = $(this).offset().top
           if (windowTop > divTop) {
-            $('.file-heading span').removeClass('stick')
-            $('.file-heading span').width('100%')
-            $(this).children('span').addClass('stick')
-            $(this).children('span').width($(this).parents('.report').outerWidth())
+            $('.file-heading .inner').removeClass('stick')
+            $('.file-heading .inner').width('100%')
+            $(this).children('.inner').addClass('stick')
+            if ($(this).parents('.report').css('display') === 'table-cell') {
+              $(this).children('.inner').width($(this).parents('.report').outerWidth() - 60)
+            } else {
+              $(this).children('.inner').width($(this).parents('.report').outerWidth() - 30)
+            }
           } else {
-            $(this).children('span').removeClass('stick').width('100%')
+            $(this).children('.inner').removeClass('stick').width('100%')
           }
         })
       }
