@@ -54,8 +54,8 @@
         position: absolute;
         top: -10px;
         bottom: 1px;
-        left: -30px;
-        right: -30px;
+        left: -$container-gutter-width;
+        right: -$container-gutter-width;
         background-color: $report-bg-colour;
         z-index: -1;
         border-bottom: solid 1px $file-heading-border-colour;
