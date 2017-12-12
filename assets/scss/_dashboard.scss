@@ -182,6 +182,19 @@
     position: static;
     padding-bottom: $grid-gutter-width/2;
 
+    @media screen and (min-width: $screen-md) {
+      padding: 0;
+
+      & > .inner {
+        position: sticky;
+        top: 0;
+
+        .vb {
+          height: 100vh;
+        }
+      }
+    }
+
     h1 {
       background-color: $gray-lighter;
     }

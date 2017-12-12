@@ -1,6 +1,10 @@
 .app {
   overflow-x: hidden;
 
+  @media screen and (min-width: $screen-lg) {
+    overflow: visible; // required for position sticky
+  }
+
   .collapse-view,
   .expand-view {
     $btn-size: 10px;
@@ -316,7 +320,8 @@
           }
         }
         .expand-view {
-          right: $grid-gutter-width/2;
+          right: 20px;
+          top: 1.4em;
         }
       }
 
@@ -381,19 +386,47 @@
       @include transition(width 0.4s);
     }
 
-    & > div {
+    & > .inner {
       padding: $grid-gutter-width/2;
 
       @media screen and (min-width: $screen-lg) {
-        padding-left: 0;
+        padding: 0;
+        position: sticky;
+        top: 0;
+
+        .collapse-view {
+          position: relative;
+          float: left;
+          top: 0.2em;
+        }
+
+        .vb {
+          height: 100vh;
+
+          .vb-content {
+            padding-top: $grid-gutter-width/2;
+          }
+
+          &.vb-invisible {
+            .vb-content {
+              padding-right: $grid-gutter-width/2;
+            }
+          }
+
+          &.vb-visible {
+            .vb-content {
+              padding-right: 20px;
+            }
+          }
+        }
       }
     }
 
     .aside-title {
       margin: 0 0 $padding-large-vertical 0;
 
-      [class^="icon-"] {
-        display: none;
+      @media screen and (min-width: $screen-lg) {
+        text-align: right;
       }
     }
   }
@@ -468,15 +501,18 @@
         width: 99%;
       }
       .aside {
-        width: 86px;
+        $collapsed-side-width: 68px;
+        width: $collapsed-side-width;
         text-align: center;
+
+        .vb {
+          width: $collapsed-side-width;
+        }
 
         .aside-title {
           font-size: 1em;
+          margin: 0;
 
-          [class^="icon-"] {
-            display: block;
-          }
           .text {
             display: none;
           }

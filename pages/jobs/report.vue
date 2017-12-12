@@ -35,62 +35,358 @@
 
         </section>
         <section class="history aside">
-          <div>
-            <a v-on:click="sideView = 'collapsed-side-view'" class="collapse-view right">Collapse sidebar</a>
-            <h3 class="aside-title"><span class="icon-clock"></span><span class="text">Job history</span></h3>
-            <div class="source-item">
-              <div class="panel panel-info">
-                <div class="github">
-                  <span class="source">
-                    <a class="avatar">
-                      <img src="~static/avatar/48.png" alt="" />
-                    </a>
-                    <h3 class="panel-title">Job restarted</h3>
-                  </span>
-                  <a class="job">
-                    <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
-                    <span class="label label-info"><span class="icon-dots-three-horizontal"><i>Info</i></span></span>
-                    <span class="time"> A minute ago</span>
-                  </a>
+          <div class="inner">
+            <div>
+              <div v-bar>
+                <div>
+                  <a v-on:click="sideView = 'collapsed-side-view'" class="collapse-view right">Collapse sidebar</a>
+                  <h3 class="aside-title"><span class="text">Job history</span></h3>
+                  <div class="source-item">
+                    <div class="panel panel-info">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="~static/avatar/48.png" alt="" />
+                          </a>
+                          <h3 class="panel-title">Job restarted</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-info"><span class="icon-dots-three-horizontal"><i>Info</i></span></span>
+                          <span class="time"> A minute ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-success">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
+                          <span class="time"> 7 minutes ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="source-item">
+                    <div class="panel panel-danger">
+                      <div class="github">
+                        <span class="source">
+                          <a class="avatar">
+                            <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
+                          </a>
+                          <h3 class="panel-title">Pushed on master</h3>
+                        </span>
+                        <a class="job">
+                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+                          <span class="time"> 8 days ago</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
 
-            <div class="source-item">
-              <div class="panel panel-success">
-                <div class="github">
-                  <span class="source">
-                    <a class="avatar">
-                      <img src="https://avatars1.githubusercontent.com/u/557395?s=48" alt="" />
-                    </a>
-                    <h3 class="panel-title">Pushed on master</h3>
-                  </span>
-                  <a class="job">
-                    <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
-                    <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
-                    <span class="time"> 7 minutes ago</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="source-item">
-              <div class="panel panel-danger">
-                <div class="github">
-                  <span class="source">
-                    <a class="avatar">
-                      <img src="https://avatars1.githubusercontent.com/u/200230?s=48" alt="" />
-                    </a>
-                    <h3 class="panel-title">Pushed on master</h3>
-                  </span>
-                  <a class="job">
-                    <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
-                    <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
-                    <span class="time"> 8 days ago</span>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </div>

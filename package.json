@@ -32,6 +32,7 @@
     "parts-selector": "github:smth/parts-selector",
     "push-dir": "^0.4.1",
     "raleway-webfont": "^3.0.1",
-    "sass-loader": "^6.0.2"
+    "sass-loader": "^6.0.2",
+    "vuebar": "0.0.17"
   }
 }
