@@ -267,6 +267,7 @@
       border-bottom: solid 1px $gray-light;
       margin-top: 0;
       padding: $grid-gutter-width*0.75 $grid-gutter-width/2;
+      background-color: $body-bg;
     }
 
     @media screen and (min-width: $screen-sm) {

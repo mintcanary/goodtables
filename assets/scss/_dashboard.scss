@@ -181,5 +181,9 @@
   .jobs {
     position: static;
     padding-bottom: $grid-gutter-width/2;
+
+    h1 {
+      background-color: $gray-lighter;
+    }
   }
 }

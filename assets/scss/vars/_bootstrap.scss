@@ -437,7 +437,7 @@ $nav-tabs-link-hover-border-color:          $nav-tabs-border-color !default;
 
 $nav-tabs-active-link-hover-bg:             #fff !default;
 $nav-tabs-active-link-hover-color:          $text-color !default;
-$nav-tabs-active-link-hover-border-color:   transparent !default;
+$nav-tabs-active-link-hover-border-color:   $nav-tabs-border-color !default;
 
 $nav-tabs-justified-link-border-color:            #ddd !default;
 $nav-tabs-justified-active-link-border-color:     $body-bg !default;
