@@ -15,6 +15,7 @@
   $divider-image-width:         29px;
   $divider-image-height:        10px;
   $divider-mask-path:           "~assets/img/zigzagmask.svg";
+  $small-width:                 $screen-sm;
 
 
   background-color: $report-bg-colour;
@@ -64,42 +65,24 @@
     }
 
     .file-count,
-    .file-name,
-    .test-counts {
+    .file-name {
+      height: 64px;
+      vertical-align: middle;
+    }
+    .file-name {
       display: table-cell;
       color: $report-text-colour;
       text-decoration: none;
-      height: 64px;
-      vertical-align: middle;
 
       &:hover {
         color: inherit;
       }
     }
+    .file-count {
+      display: none;
 
-    .test-counts {
-      width: 1%;
-
-      .label {
-        margin-left: $label-margin/2;
-        position: relative;
-        top: -0.2em;
-        border: solid 1px $report-bg-colour;
-
-        &.passed {
-          border-color: $pass-colour;
-          color: $pass-colour;
-
-          &.collapsed {
-            background-color: $pass-colour;
-            color: $report-bg-colour;
-          }
-        }
-
-        &.failed {
-          border-color: $fail-colour;
-          color: $fail-colour;
-        }
+      @media screen and (min-width: $small-width) {
+        display: table-cell;
       }
     }
   }

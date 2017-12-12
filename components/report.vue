@@ -4,8 +4,8 @@
     <div v-if="report_data && !r.pass" v-for="r of report_data" class="invalid file">
       <h4 class="file-heading">
         <div class="inner">
-          <a class="file-name">{{ r.path }}<strong>{{ r.name }}</strong> <span v-if="r.errors" class="badge" data-toggle="tooltip" data-placement="top" :title="r.errors.length + ' errors found for this table'">{{ r.errors.length }}</span></a>
-          <a class="file-count">Table {{ r.number }} of {{ report_data.length }}</a>
+          <a class="file-name">{{ r.path }}<strong>{{ r.name }}</strong> <span v-if="r.errors" class="badge" data-toggle="tooltip" data-placement="right" :title="r.errors.length + ' errors found for this table'">{{ r.errors.length }}</span></a>
+          <span class="file-count">Table {{ r.number }} of {{ report_data.length }}</span>
         </div>
       </h4>
 
@@ -31,7 +31,7 @@
       <h4 class="file-heading">
         <div class="inner">
           <a class="file-name">{{ r.path }}<strong>{{ r.name }}</strong></a>
-          <a class="file-count">Table {{ r.number }} of {{ report_data.length }}</a>
+          <span class="file-count">Table {{ r.number }} of {{ report_data.length }}</span>
         </div>
       </h4>
 
