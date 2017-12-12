@@ -20,7 +20,7 @@
   background-color: $report-bg-colour;
 
   .file-heading {
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 20px;
     padding-bottom: 10px;
     margin-top: 0;
@@ -75,10 +75,6 @@
       &:hover {
         color: inherit;
       }
-    }
-
-    .file-name {
-      font-size: 14px;
     }
 
     .test-counts {
