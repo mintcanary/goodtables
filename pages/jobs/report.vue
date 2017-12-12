@@ -101,7 +101,7 @@
 <script>
   import SourceItem from '~/components/source_list_item.vue'
   import Report from '~/components/report.vue'
-  // import $ from 'jquery'
+  import $ from 'jquery'
 
   export default {
     layout: 'app',
@@ -545,13 +545,11 @@
       }
     },
     mounted: () => {
-      /* TODO implement and test after passed test toggle has been removed / moved
       function stickyHeading () {
-        // TODO: Myabe needs offset for subsequent headings, once a sticky heading is active
         $('.file-heading').each(function () {
           var windowTop = $(window).scrollTop()
           var divTop = $(this).offset().top
-          if (windowTop > divTop) {
+          if (windowTop > (divTop - 30)) {
             $('.file-heading .inner').removeClass('stick')
             $('.file-heading .inner').width('100%')
             $(this).children('.inner').addClass('stick')
@@ -568,7 +566,6 @@
       $(function () {
         $(window).scroll(stickyHeading)
       })
-      */
     }
   }
 </script>
