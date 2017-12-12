@@ -4,22 +4,10 @@
     <div v-if="report_data && !r.pass" v-for="r of report_data" class="invalid file">
       <h4 class="file-heading">
         <div class="inner">
-          <a class="file-name">{{ r.path }}<strong>{{ r.name }}</strong></a>
+          <a class="file-name">{{ r.path }}<strong>{{ r.name }}</strong> <span v-if="r.errors" class="badge" data-toggle="tooltip" data-placement="top" :title="r.errors.length + ' errors found for this table'">{{ r.errors.length }}</span></a>
           <a class="file-count">Table {{ r.number }} of {{ report_data.length }}</a>
-          <div class="test-counts">
-            <a v-if="r.passes" class="label passed collapsed" data-toggle="collapse" v-bind:href="'#file_' + r.number + '_passed'" aria-expanded="false" v-bind:aria-controls="'file_' + r.number + '_passed'">{{ r.passes.length }}</a>
-            <span v-else class="label passed">0</span>
-            <span v-if="r.errors" class="label failed">{{ r.errors.length }}</span>
-            <span v-else class="label failed">0</span>
-          </div>
         </div>
       </h4>
-
-      <ul class="passed-tests result collapse" v-bind:id="'file_' + r.number + '_passed'">
-        <li v-for="p of r.passes">
-          <span class="label label-success">{{ p.name }}</span>
-        </li>
-      </ul>
 
       <report-error v-for="(e, index) in r.errors" v-bind:title="e.name" v-if="e.messages" v-bind:count="e.messages.length" v-bind:messages="e.messages" v-bind:filenumber="r.number" v-bind:errornumber="index +1">
         <table class="table">
@@ -31,6 +19,12 @@
           </tbody>
         </table>
       </report-error>
+
+      <ul class="passed-tests result" v-bind:id="'file_' + r.number + '_passed'">
+        <li v-for="p of r.passes">
+          <span class="label label-success">{{ p.name }}</span>
+        </li>
+      </ul>
     </div>
 
     <div v-if="report_data && r.pass" v-for="r of report_data" class="valid file">
@@ -38,14 +32,10 @@
         <div class="inner">
           <a class="file-name">{{ r.path }}<strong>{{ r.name }}</strong></a>
           <a class="file-count">Table {{ r.number }} of {{ report_data.length }}</a>
-          <div class="test-counts">
-            <a v-if="r.passes" class="label passed collapsed" data-toggle="collapse" v-bind:href="'#file_' + r.number + '_passed'" aria-expanded="false" v-bind:aria-controls="'file_' + r.number + '_passed'">{{ r.passes.length }}</a>
-            <span class="label failed">0</span>
-          </div>
         </div>
       </h4>
 
-      <ul class="passed-tests result collapse" v-bind:id="'file_' + r.number + '_passed'">
+      <ul class="passed-tests result" v-bind:id="'file_' + r.number + '_passed'">
         <li v-for="p of r.passes">
           <span class="label label-success">{{ p.name }}</span>
         </li>

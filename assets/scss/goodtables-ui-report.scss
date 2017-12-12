@@ -106,6 +106,14 @@
 
 
   .file {
+    .badge {
+      font-size: 10px;
+      vertical-align: super;
+      margin-left: 0.4em;
+      min-width: 1.6em;
+      padding: 0.25em;
+    }
+
     &.valid {
       .file-heading {
         .inner:before {
@@ -124,6 +132,9 @@
         }
         strong {
           color: $fail-colour;
+        }
+        .badge {
+          background-color: $fail-colour;
         }
       }
     }
