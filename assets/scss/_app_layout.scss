@@ -291,6 +291,7 @@
     }
 
     .primary-secondary {
+      background-color: $gray-lighter;
 
       @media screen and (min-width: $screen-sm) {
         padding-left: $grid-gutter-width/2;
@@ -353,7 +354,6 @@
   }
 
   .main {
-    background-color: $gray-lighter;
     padding: $grid-gutter-width $grid-gutter-width/2;
     position: relative;
 
@@ -368,7 +368,6 @@
   }
 
   .aside {
-    background-color: $gray-lighter;
     position: relative;
 
     @media screen and (min-width: $screen-sm) {
