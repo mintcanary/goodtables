@@ -1,6 +1,6 @@
 .goodtables-ui-report {
 
-  $container-gutter-width:      $grid-gutter-width;
+  $container-gutter-width:      $grid-gutter-width*0.75;
   $spacer:                      $grid-gutter-width;
   $report-bg-colour:            $body-bg;
   $report-text-colour:          $text-color;

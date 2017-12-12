@@ -5,32 +5,34 @@
       <h1>okfn/test-data</h1>
       <div>
         <section class="main report">
+          <div class="inner">
+            <div class="latest-job">
+              <div class="icon">
+                <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
+              </div>
+              <div class="status invalid">
+                <h2>
+                  Validation failed
+                  <small>Pushed by amercader on master branch</small>
+                </h2>
+              </div>
+              <div class="meta">
+                <ul>
+                  <li>
+                    8 days ago
+                  </li>
+                  <li>
+                    Job #2928dd
+                  </li>
+                </ul>
+              </div>
 
-          <div class="latest-job">
-            <div class="icon">
-              <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
-            </div>
-            <div class="status invalid">
-              <h2>
-                Validation failed
-                <small>Pushed by amercader on master branch</small>
-              </h2>
-            </div>
-            <div class="meta">
-              <ul>
-                <li>
-                  8 days ago
-                </li>
-                <li>
-                  #2928dd
-                </li>
-              </ul>
             </div>
 
+            <report :report_data="report"></report>
+            <a v-on:click="sideView = 'default-side-view'" class="expand-view left">Expand sidebar</a>
           </div>
 
-          <report :report_data="report"></report>
-          <a v-on:click="sideView = 'default-side-view'" class="expand-view left">Expand sidebar</a>
         </section>
         <section class="history aside">
           <div>
@@ -553,11 +555,7 @@
             $('.file-heading .inner').removeClass('stick')
             $('.file-heading .inner').width('100%')
             $(this).children('.inner').addClass('stick')
-            if ($(this).parents('.report').css('display') === 'table-cell') {
-              $(this).children('.inner').width($(this).parents('.report').outerWidth() - 60)
-            } else {
-              $(this).children('.inner').width($(this).parents('.report').outerWidth() - 30)
-            }
+            $(this).children('.inner').width($(this).parents('.report .inner').outerWidth() - 45)
           } else {
             $(this).children('.inner').removeClass('stick').width('100%')
           }
