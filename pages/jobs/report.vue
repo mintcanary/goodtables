@@ -4,13 +4,13 @@
       <a class="integration icon-github"></a>
       <h1>okfn/test-data</h1>
       <div>
-        <section class="main report">
+        <section class="main invalid report">
           <div class="inner">
             <div class="latest-job">
               <div class="icon">
                 <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
               </div>
-              <div class="status invalid">
+              <div class="status">
                 <h2>
                   Validation failed
                   <small>Pushed by amercader on master branch</small>

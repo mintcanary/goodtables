@@ -46,12 +46,6 @@
         display: block;
         color: $gray-dark;
       }
-
-      &.invalid {
-        & > * {
-          color: $brand-danger;
-        }
-      }
     }
 
     .meta {
@@ -80,6 +74,28 @@
             padding: 0;
           }
         }
+      }
+    }
+  }
+
+  .report {
+    & > .inner {
+      border-top: solid 4px $brand-info;
+    }
+
+    &.invalid {
+      & > .inner {
+        border-color: $brand-danger;
+
+        .status > * {
+          color: $brand-danger;
+        }
+      }
+    }
+
+    &.valid {
+      & > .inner {
+        border-color: $brand-success;
       }
     }
   }
