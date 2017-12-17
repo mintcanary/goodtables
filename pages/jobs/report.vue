@@ -40,7 +40,7 @@
               <div v-bar>
                 <div>
                   <a v-on:click="sideView = 'collapsed-side-view'" class="collapse-view right">Collapse sidebar</a>
-                  <h3 class="aside-title"><span class="text">Job history</span></h3>
+                  <h3 class="aside-title"><span class="text">18 jobs</span></h3>
                   <div class="source-item">
                     <div class="panel panel-info">
                       <div class="github">
