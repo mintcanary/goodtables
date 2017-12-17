@@ -1,8 +1,21 @@
-# goodtables-ui
+# Goodtables Mockup
 
-> Nuxt.js project
+## Pages
 
-## Build Setup
+- [Dashboard](http://p.smth.uk/goodtables/dashboard)
+- [Jobs](http://p.smth.uk/goodtables/jobs)
+- [Report](http://p.smth.uk/goodtables/jobs/report)
+- [Sources](http://p.smth.uk/goodtables/sources)
+
+## UI
+
+- [Report](http://p.smth.uk/goodtables/ui/report)
+
+## Dev
+
+This is built using [Nuxt.js](https://nuxtjs.org/).
+
+### Build Setup
 
 ``` bash
 # install dependencies
@@ -26,4 +39,4 @@ $ npm run generate
 $ npm run deploy
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+For an explanation on how Nuxt works, see the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
