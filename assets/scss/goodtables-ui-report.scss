@@ -11,6 +11,7 @@
   $table-border-colour:         $gray;
   $fail-colour:                 $brand-danger;
   $pass-colour:                 $brand-success;
+  $fail-bg:                     $state-danger-bg;
   $divider-image-path:          "~assets/img/zigzag.svg";
   $divider-image-width:         29px;
   $divider-image-height:        10px;
@@ -169,7 +170,7 @@
           border-top: solid 1px $fail-colour;
 
           .error-list-heading {
-            background-color: rgba($state-danger-bg,0.5);
+            background-color: rgba($fail-bg,0.5);
           }
         }
       }
@@ -190,7 +191,7 @@
           font-size: 0.85em;
           margin: 0;
           padding: $padding-small-vertical 0;
-          background-color: rgba($state-danger-bg,0.3);
+          background-color: rgba($fail-bg,0.3);
 
           li {
             padding: $padding-small-vertical $spacer/2;
@@ -226,7 +227,7 @@
 
           &.fail {
             td {
-              background-color: $state-danger-bg;
+              background-color: $fail-bg;
             }
           }
 
@@ -271,7 +272,7 @@
           position: relative;
 
           &.fail {
-            background-color: $state-danger-bg;
+            background-color: $fail-bg;
           }
 
           @mixin truncate($side:left) {
