@@ -11,7 +11,7 @@
       <h3 class="panel-title">{{ integration }}/{{ title }}<span class="jobnumber">#{{ jobnumber }}</span></h3>
     </router-link>
     <router-link to="/jobs/report" class="job" v-bind:class="{ active: job }">
-      <span class="jobcount"><span class="jobnumber"> #{{ jobnumber }}</span><span class="jobtotal"> of {{ jobtotal }}</span></span><span class="icon-clock"></span><span class="time"> {{ time }}</span>
+      <span class="jobcount"><span class="jobnumber"> #{{ jobnumber }}</span><span class="jobid"> ({{ jobid }})</span></span><span class="icon-clock"></span><span class="time"> {{ time }}</span>
     </router-link>
     <router-link to="/jobs/report" v-if="integration === 'github'" class="integration icon-github"></router-link>
     <router-link to="/jobs/report" v-else-if="integration === 'aws'" class="integration icon-amazon"></router-link>
@@ -20,6 +20,6 @@
 
 <script>
   export default {
-    props: ['title', 'integration', 'jobnumber', 'jobtotal', 'status', 'time', 'source', 'job']
+    props: ['title', 'integration', 'jobnumber', 'jobid', 'status', 'time', 'source', 'job']
   }
 </script>

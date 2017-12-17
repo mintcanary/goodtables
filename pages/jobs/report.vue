@@ -12,17 +12,17 @@
               </div>
               <div class="status">
                 <h2>
-                  Validation failed
-                  <small>Pushed by amercader on master branch</small>
+                  Job #16 failed
+                  <small>8 days ago</small>
                 </h2>
               </div>
               <div class="meta">
                 <ul>
                   <li>
-                    8 days ago
+                    Pushed by <a>amercader</a>
                   </li>
                   <li>
-                    Job #2928dd
+                    <a>2928dd</a> on <a>master</a>
                   </li>
                 </ul>
               </div>
@@ -51,7 +51,7 @@
                           <h3 class="panel-title">Job restarted</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-info"><span class="icon-dots-three-horizontal"><i>Info</i></span></span>
                           <span class="time"> A minute ago</span>
                         </a>
@@ -69,7 +69,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -87,7 +87,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -105,7 +105,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -123,7 +123,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -141,7 +141,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -159,7 +159,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -177,7 +177,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -195,7 +195,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -213,7 +213,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -231,7 +231,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -249,7 +249,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -267,7 +267,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -285,7 +285,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -303,7 +303,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -321,7 +321,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -339,7 +339,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
@@ -357,7 +357,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-success"><span class="icon-checkmark"><i>Valid</i></span></span>
                           <span class="time"> 7 minutes ago</span>
                         </a>
@@ -375,7 +375,7 @@
                           <h3 class="panel-title">Pushed on master</h3>
                         </span>
                         <a class="job">
-                          <span class="jobcount"><span class="jobnumber"> #2928dd</span></span>
+                          <span class="jobcount"><span class="jobnumber"> 2928dd</span></span>
                           <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
                           <span class="time"> 8 days ago</span>
                         </a>
