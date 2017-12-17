@@ -9,7 +9,7 @@
             <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
             <h3 class="panel-title">
               okfn/test-data
-              <small>1 day ago (#2928dd)</small>
+              <small>1 day ago (2928dd)</small>
             </h3>
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               <span class="icon-keyboard_arrow_down"><i>Toggle details</i></span>
@@ -31,7 +31,7 @@
             <span class="label label-danger"><span class="icon-cross"><i>Invalid</i></span></span>
             <h3 class="panel-title">
               okfn/more-data
-              <small>2 days ago (#2928dd)</small>
+              <small>2 days ago (2928dd)</small>
             </h3>
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <span class="icon-keyboard_arrow_down"><i>Toggle details</i></span>
@@ -60,18 +60,18 @@
             <div>
               <h1>Jobs</h1>
               <div class="source-list">
-                <source-item title="okfn/my-data" integration="github" jobnumber="77" jobtotal="77" status="valid" time="7 minutes ago"/>
-                <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobtotal="2"  status="valid" time="20 minutes ago"/>
-                <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago"/>
-                <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobtotal="1"  status="invalid" time="2 days ago"/>
-                <source-item title="okfn/my-data" integration="github" jobnumber="77" jobtotal="77" status="valid" time="7 minutes ago"/>
-                <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobtotal="2"  status="valid" time="20 minutes ago"/>
-                <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago"/>
-                <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobtotal="1"  status="invalid" time="2 days ago"/>
-                <source-item title="okfn/my-data" integration="github" jobnumber="77" jobtotal="77" status="valid" time="7 minutes ago"/>
-                <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobtotal="2"  status="valid" time="20 minutes ago"/>
-                <source-item title="okfn/test-data" integration="github" jobnumber="8" jobtotal="8"  status="invalid" time="1 day ago"/>
-                <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobtotal="1"  status="invalid" time="2 days ago"/>
+                <source-item title="okfn/my-data" integration="github" jobnumber="77" jobid="2928dd" status="valid" time="7 minutes ago"/>
+                <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobid="2928dd"  status="valid" time="20 minutes ago"/>
+                <source-item title="okfn/test-data" integration="github" jobnumber="8" jobid="2928dd"  status="invalid" time="1 day ago"/>
+                <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobid="2928dd"  status="invalid" time="2 days ago"/>
+                <source-item title="okfn/my-data" integration="github" jobnumber="77" jobid="2928dd" status="valid" time="7 minutes ago"/>
+                <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobid="2928dd"  status="valid" time="20 minutes ago"/>
+                <source-item title="okfn/test-data" integration="github" jobnumber="8" jobid="2928dd"  status="invalid" time="1 day ago"/>
+                <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobid="2928dd"  status="invalid" time="2 days ago"/>
+                <source-item title="okfn/my-data" integration="github" jobnumber="77" jobid="2928dd" status="valid" time="7 minutes ago"/>
+                <source-item title="okfn/some-data" integration="aws" jobnumber="2" jobid="2928dd"  status="valid" time="20 minutes ago"/>
+                <source-item title="okfn/test-data" integration="github" jobnumber="8" jobid="2928dd"  status="invalid" time="1 day ago"/>
+                <source-item title="okfn/more-data" integration="aws" jobnumber="1" jobid="2928dd"  status="invalid" time="2 days ago"/>
               </div>
             </div>
           </div>
