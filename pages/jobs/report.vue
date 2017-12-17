@@ -77,7 +77,7 @@
                     </div>
                   </div>
 
-                  <div class="source-item">
+                  <div class="source-item active">
                     <div class="panel panel-danger">
                       <div class="github">
                         <span class="source">
