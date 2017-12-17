@@ -157,6 +157,7 @@
         margin: $grid-gutter-width/2 0 0 0;
         padding: 0 0 $grid-gutter-width $grid-gutter-width;
         position: relative;
+        color: $gray-darker;
 
         @media screen and (min-width: 1600px) {
           width: 33.3333%;
@@ -169,10 +170,56 @@
           right: 0;
           height: 26px;
           line-height: 18px;
+          z-index: 1;
         }
+      }
 
-        img {
-          margin-right: $grid-gutter-width/2;
+      .report-thumb {
+        $table-border-colour: $gray;
+
+        overflow: hidden;
+        border: solid 1px $table-border-colour;
+        padding-top: 46%;
+        position: relative;
+        border-radius: 0.5vw;
+        margin-right: $grid-gutter-width/2;
+        margin-bottom: 2px;
+
+        table {
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          white-space: nowrap;
+          border-collapse: separate;
+          font-size: 1.6vw;
+          color: $gray;
+
+          @media screen and (min-width: $screen-sm) {
+            font-size: 1.1vw;
+          }
+
+          @media screen and (min-width: $screen-md) {
+            font-size: 0.61vw;
+          }
+
+          @media screen and (min-width: 1600px) {
+            font-size: 0.5vw;
+          }
+
+          tr:nth-child(even) {
+            background-color: rgba($gray-lighter,0.5);
+          }
+
+          td {
+            border-style: solid;
+            border-color: $table-border-colour;
+            border-width: 1px 0 0 1px;
+            padding: 1em 2em;
+
+            &:first-child {
+              background-color: rgba($gray-lighter,0.8);
+            }
+          }
         }
       }
     }
