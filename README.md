@@ -6,6 +6,7 @@
 - [Jobs](http://p.smth.uk/goodtables/jobs)
 - [Report](http://p.smth.uk/goodtables/jobs/report)
 - [Sources](http://p.smth.uk/goodtables/sources)
+- [404](http://p.smth.uk/goodtables/404)
 
 ## UI
 
