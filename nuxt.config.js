@@ -31,7 +31,6 @@ module.exports = {
   },
 
   plugins: [
-    { src: '~/plugins/scrollto' },
     { src: '~/plugins/jquery.finderSelect.js', ssr: false },
     { src: '~/plugins/parts-selector', ssr: false },
     { src: '~/plugins/vuebar' }
