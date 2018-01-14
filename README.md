@@ -2,6 +2,7 @@
 
 ## Pages
 
+- [Home](http://p.smth.uk/goodtables)
 - [Dashboard](http://p.smth.uk/goodtables/dashboard)
 - [Jobs](http://p.smth.uk/goodtables/jobs)
 - [Report](http://p.smth.uk/goodtables/jobs/report)
