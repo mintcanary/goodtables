@@ -42,15 +42,34 @@
         </p>
       </router-link>
     </section>
+    <section class="orgs">
+      <div class="container">
+        <ul class="logos">
+          <li>
+            <okiLogo/>
+          </li>
+          <li class="fd">
+            <fdLogo/>
+          </li>
+        </ul>
+        <p>
+          GoodTables is part of the Frictionless Data project from Open Knowledge International, which supports a wider discussion around Open Data quality. We believe that GoodTables can reduce the processing time of your data publication workflow, whatever it may be.
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import okiLogo from '~/components/oki_logo.vue'
+import fdLogo from '~/components/fd_logo.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    okiLogo,
+    fdLogo
   },
   computed: {
     title () {

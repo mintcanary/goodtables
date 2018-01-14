@@ -222,10 +222,52 @@
     }
   }
 
+  .features {
+    @include make-row();
+
+    figure {
+      @include make-sm-column(6);
+      @include make-md-column(3);
+      margin-bottom: $grid-gutter-width;
+
+      img {
+        display: inline-block;
+        max-width: 170px;
+        border: solid 2px $gray-light;
+        border-radius: 50%;
+        margin-bottom: 1em;
+      }
+
+      figcaption {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .info {
+    @include make-row();
+
+    .item {
+      text-align: left;
+      @include make-sm-column(4);
+      margin-top: $grid-gutter-width/2;
+      line-height: 1.5;
+
+      .inner {
+        background-color: $gray-lighter;
+        padding: $grid-gutter-width/2 $grid-gutter-width;
+      }
+    }
+  }
+
   .main-content {
     text-align: center;
+    padding-bottom: $grid-gutter-width*2;
 
     h2 {
+      margin-bottom: 1em;
+
       @media screen and (min-width: $screen-sm) {
         font-size: 26px;
       }
@@ -234,6 +276,64 @@
       }
       @media screen and (min-width: $screen-lg) {
         font-size: 36px;
+      }
+    }
+  }
+
+  .orgs {
+    background-color: $gray-lighter;
+    color: $gray-dark;
+    text-align: center;
+    padding-top: $grid-gutter-width/2;
+    padding-bottom: $grid-gutter-width;
+    line-height: 1.6;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: $screen-md;
+    }
+
+    svg {
+      fill: $gray-dark;
+    }
+
+    .logos {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        display: inline-block;
+        padding: $grid-gutter-width;
+
+        svg {
+          width: 100%;
+          height: 40px;
+
+          @media screen and (min-width: $screen-sm) {
+            height: 52px;
+          }
+
+          @media screen and (min-width: $screen-md) {
+            height: 64px;
+          }
+        }
+
+        &.fd {
+          svg {
+            @media screen and (min-width: $screen-sm) {
+              height: 42px;
+            }
+            @media screen and (min-width: $screen-md) {
+              height: 48px;
+            }
+          }
+        }
       }
     }
   }
